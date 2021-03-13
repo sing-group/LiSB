@@ -1,7 +1,8 @@
 import importlib
 import pkgutil
 from typing import Sequence
-from email.message import EmailMessage
+
+from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering.Filter import Filter
 
 
@@ -14,6 +15,11 @@ class FilteringManager:
 
     @staticmethod
     def set_up_filters():
+        """
+        This static method sets up all the configured filters
+
+        :return: A list of all the filter objects
+        """
         print("[ FilteringManager ] Setting up filters")
         # Get all Filter classes
         filter_classes = {cls.__name__: cls for cls in Filter.__subclasses__()}
@@ -28,7 +34,13 @@ class FilteringManager:
             filters.append(filter_object)
         return filters
 
-    def apply_filters(self, msg: EmailMessage):
+    def apply_filters(self, msg: EmailEnvelope):
+        """
+        When called, this method applies all filters to the email message. Hence, deciding whether it is spam or not.
+
+        :param msg: The email message to be filtered
+        :return: True, if msg is detected as spam; False, if else
+        """
         is_spam = False
         current_filter = 0
         n_filters = len(self.filters)

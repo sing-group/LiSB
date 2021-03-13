@@ -1,13 +1,17 @@
 import smtpd
 import email
 import email.utils
+
+from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.MailForwarder import MailForwarder
 from spamfilter.filtering.FilteringManager import FilteringManager
 
 
 class SpamFilter(smtpd.SMTPServer):
+    filtering_mgr: FilteringManager
+    forwarder: MailForwarder
     _REJECTION_MSG_RFC_5321 = "450 Requested mail action not taken: mailbox unavailable (e.g., mailbox busy or " \
-                              "temporarily blocked for policy reasons) "
+                              "temporarily blocked for policy reasons)"
 
     def __init__(self, localaddr, remoteaddr, data_size_limit=smtpd.DATA_SIZE_DEFAULT,
                  map=None, enable_SMTPUTF8=False, decode_data=False):
@@ -22,11 +26,26 @@ class SpamFilter(smtpd.SMTPServer):
         print("[ SpamFilter ] Waiting for mails to filter...")
 
     def process_message(self, peer, mailfrom, rcpttos, data, **kwargs):
+        """
+        This method processes incoming email. It determines wether it is spam or not.
+
+        :param peer: The remote host’s address
+        :param mailfrom: The SMTP envelope originator
+        :param rcpttos: The SMTP envelope recipients
+        :param data: The contents of the email in RFC 5321 format
+        :param kwargs: Arbitrary keyword arguments
+        :return: None to request a normal 250 Ok response, RFC 53214-compliant 450 code when spam is detected
+        """
+
         print("[ SpamFilter ] A new message has been received")
-        # Parse byte message to EmailMessage object
-        msg = email.message_from_bytes(data)
+
+        # Parse message to EmailEnvelope
+        msg_data = email.message_from_bytes(data)
+        msg = EmailEnvelope(peer, mailfrom, rcpttos, msg_data, **kwargs)
+
         # Check if parsed message is spam: reject it if it is (code 450), forward it if it isn't
         is_spam = self.filtering_mgr.apply_filters(msg)
+
         if is_spam:
             print("[ SpamFilter ] Spam detected: rejecting message (450)...")
             return self._REJECTION_MSG_RFC_5321
