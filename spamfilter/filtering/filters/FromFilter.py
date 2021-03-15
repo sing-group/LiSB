@@ -12,11 +12,11 @@ class FromFilter(Filter):
         :param msg: The message to be filtered
         :return: False if the originators are the same, True if else (Spam)
         """
-        envelope_from = self.parse_from_and_to(msg.mail_from)
-        msg_from = self.parse_from_and_to(msg.email_msg.get("From"))
 
-        if envelope_from != msg_from:
-            print(f"[ FromFilter ] Froms differ: '{envelope_from}' in envelope VS. '{msg_from}' in message")
+        parsed_msg_from = self.parse_from_and_to(msg.email_msg.get("From"))
+
+        if msg.mail_from != parsed_msg_from:
+            print(f"[ FromFilter ] Senders differ: '{msg.mail_from}' in envelope VS. '{parsed_msg_from}' in message")
             return True
 
         return False

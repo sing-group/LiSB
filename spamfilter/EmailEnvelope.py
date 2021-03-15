@@ -24,3 +24,12 @@ class EmailEnvelope:
         self.rcpt_tos = rcpt_tos
         self.email_msg = email_msg
         self.kwargs = kwargs
+
+    def __str__(self):
+        msg_verbose = "======================================================\n" \
+                      f"Peer: {self.peer}\n" \
+                      f"Mail From: {self.mail_from}\n" \
+                      f"Recipients: {self.rcpt_tos}\n" \
+                      "------------------------------------------------------\n" \
+                      f"{self.email_msg}\n"
+        return msg_verbose

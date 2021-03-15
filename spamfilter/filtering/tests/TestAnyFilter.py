@@ -57,16 +57,48 @@ class TestAnyFilter(TestCase):
                 is_spam = self.tested_filter.filter(ewf.msg)
                 self.assertFalse(is_spam, msg=f"Email '{ewf.file_name}' was detected as spam but it is not")
 
+    def test_valid_1(self):
+        if type(self) == TestAnyFilter:
+            self.assertTrue(True)
+        else:
+            valid = self.create_email(
+                peer=self.this_ip,
+                mail_from="from@mail.com",
+                rcpt_tos=["to1@mail.com", "to2@mail.com"],
+                email_from=("Author", "from@mail.com"),
+                email_tos=[("Recipient1", "to1@mail.com"), ("Recipient2", "to2@mail.com")],
+                email_subject="Valid",
+                email_contents="This is a valid mail for testing purposes"
+            )
+            print("TESTING VALID 1:\n", valid)
+            not_spam = self.tested_filter.filter(valid)
+            self.assertFalse(not_spam, "Filter detected spam incorrectly")
+
+    def test_valid_2(self):
+        if type(self) == TestAnyFilter:
+            self.assertTrue(True)
+        else:
+            valid = self.create_email(
+                peer=self.this_ip,
+                mail_from="from@mail.com",
+                rcpt_tos=["to@mail.com"],
+                email_from=("Author", "from@mail.com"),
+                email_tos=[("Recipient", "to@mail.com")],
+                email_subject="Valid",
+                email_contents="This is a valid mail for testing purposes"
+            )
+            print("TESTING VALID 2:\n", valid)
+            not_spam = self.tested_filter.filter(valid)
+            self.assertFalse(not_spam, "Filter detected spam incorrectly")
+
     @staticmethod
     def create_email(peer, mail_from, rcpt_tos, email_from, email_tos, email_subject, email_contents) -> EmailEnvelope:
-
         # Create the message
         msg = MIMEText(email_contents)
-        msg['To'] = email.utils.formataddr(", ".join(email_tos))
+        msg['To'] = ", ".join([email.utils.formataddr(to) for to in email_tos])
         msg['From'] = email.utils.formataddr(email_from)
         msg['Subject'] = email_subject
 
-        # Create the envelope
+        # Create and return the envelope
         envelope = EmailEnvelope(peer, mail_from, rcpt_tos, msg)
-
         return envelope
