@@ -62,7 +62,7 @@ class TestAnyFilter(TestCase):
 
         # Create the message
         msg = MIMEText(email_contents)
-        msg['To'] = email.utils.formataddr(email_tos)
+        msg['To'] = email.utils.formataddr(", ".join(email_tos))
         msg['From'] = email.utils.formataddr(email_from)
         msg['Subject'] = email_subject
 

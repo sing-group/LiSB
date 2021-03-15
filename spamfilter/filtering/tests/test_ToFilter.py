@@ -1,7 +1,7 @@
 from spamfilter.filtering.tests.TestAnyFilter import TestAnyFilter
 
 
-class TestFromFilter(TestAnyFilter):
+class TestToFilter(TestAnyFilter):
 
     def test_valid_1(self):
         invalid = self.create_email(
