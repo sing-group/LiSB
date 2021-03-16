@@ -17,7 +17,7 @@ class ToFilter(Filter):
 
         msg_tos = [self.parse_from_and_to(to_parse) for to_parse in msg.email_msg.get("To").split(",")]
 
-        if set(msg.rcpt_tos) == set(msg_tos):
+        if set(msg.rcpt_tos) != set(msg_tos):
             print(f"[ ToFilter ] Recipients differ: {msg.rcpt_tos} in envelope VS. {msg_tos} in message")
             return True
 

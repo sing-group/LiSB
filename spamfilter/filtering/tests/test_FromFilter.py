@@ -1,4 +1,4 @@
-from spamfilter.filtering.tests.TestAnyFilter import TestAnyFilter
+from spamfilter.filtering.tests.test_AnyFilter import TestAnyFilter
 
 
 class TestFromFilter(TestAnyFilter):
