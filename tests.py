@@ -11,10 +11,18 @@ table_scheme = {
     ]
 }
 
-data = [
-    ('cmrodriguez17@esei.uvigo.es', 'ehlo1'),
-    ('eacappello17@esei.uvigo.es', 'ehlo2'),
-    ('imalvarez17@esei.uvigo.es', 'ehlo2')
-]
+data = {
+    'cmrodriguez17@esei.uvigo.es': {
+        'ehlo': 'ehlo1'
+    },
+    'eacappello17@esei.uvigo.es': {
+        'ehlo': 'ehlo2'
+    },
+    'imalvarez17@esei.uvigo.es': {
+        'ehlo': 'ehlo3'
+    }
+}
 
 sql_mgr.update_info_in_db(table_scheme, data)
+obtained_data = sql_mgr.get_info_from_db(table_scheme)
+print(data)
