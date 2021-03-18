@@ -10,3 +10,6 @@ class DBFilter(Filter):
 
     def get_data(self):
         return self.data
+
+    def debug(self):
+        print(f"Current contents of dictionary:\n{self.data}\n\n")

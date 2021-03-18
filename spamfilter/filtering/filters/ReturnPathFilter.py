@@ -11,8 +11,12 @@ class ReturnPathFilter(Filter):
         :param envelope: the email to be filtered
         :return: False if the email is not spam, True if it is
         """
+
+        # Get Return-Path from email. If not None, analyze it
         return_path = envelope.email_msg.get("Return-Path")
         if return_path is not None:
+
+            # Parse and check whether it is the sender or one of the recipients. If not, then it is spam
             parsed_return_path = self.parse_from_and_to(return_path)
             is_spam = parsed_return_path != envelope.mail_from and parsed_return_path not in envelope.rcpt_tos
             if is_spam:
