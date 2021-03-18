@@ -38,14 +38,12 @@ class TestXFilter(TestAnyFilter):
             email_tos=[("Recipient", "to@mail.com")],
             email_subject="Spam",
             email_contents="This is a valid mail for testing purposes",
-            other_headers={}
-        )
-        x_filter: XFilter = self.tested_filter
-        x_filter.set_initial_data(
-            {
+            other_headers={
                 "mail.com": {'X-Header1': 'value1', 'X-Header2': 'value2', 'X-Header3': 'value3'}
             }
         )
+        x_filter: XFilter = self.tested_filter
+        x_filter.set_initial_data({})
         x_filter.filter(valid)
         is_spam = self.tested_filter.filter(valid)
         self.assertFalse(is_spam, "XFilter failed when checking ham")
