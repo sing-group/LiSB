@@ -49,12 +49,18 @@ class TestAnyFilter(TestCase):
                 # Read and parse email
                 file = open(join(path, file_name), "r")
                 msg_data = email.message_from_file(file)
-                env_from = Filter.parse_from_and_to(msg_data.get('From'))
-                if msg_data.get('To') is not None:
-                    env_tos = [Filter.parse_from_and_to(to_parse) for to_parse in msg_data.get("To").split(",")]
+                if path == "./valid_msgs":
+                    env_from = Filter.parse_from_and_to(msg_data.get('From'))
+                    if msg_data.get('To') is not None:
+                        env_tos = [Filter.parse_from_and_to(to_parse) for to_parse in msg_data.get("To").split(",")]
+                    else:
+                        env_tos = ['to@mail.com']
+                        msg_data.set_param('To', 'to@mail.com')
                 else:
-                    env_tos = ['to@email.com']
-                    msg_data.set_param('To', 'to@email.com')
+                    env_from = 'other_from@mail.com'
+                    env_tos = ['other_to@mail.com']
+                    if msg_data.get('To') is None:
+                        msg_data.set_param('To', 'other_to@mail.com')
                 envelope = EmailEnvelope(self.this_ip, env_from, env_tos, msg_data)
                 # Append to list with file
                 ewf = EmailWithFile(file_name, envelope)
