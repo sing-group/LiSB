@@ -17,3 +17,7 @@ class Filter:
         aux_list = header.split("<")
         list_length = len(aux_list)
         return aux_list[0] if list_length == 1 else aux_list[list_length - 1][:-1]
+
+    @staticmethod
+    def get_domain(email:str):
+        return email.split("@")[1]
