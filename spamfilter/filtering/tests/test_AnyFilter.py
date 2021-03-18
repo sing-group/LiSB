@@ -38,8 +38,8 @@ class TestAnyFilter(TestCase):
         s.close()
 
         # Load all mails to be tested in the filter
-        self.valid_emails = self.load_mails("./valid_msgs")
-        self.invalid_emails = self.load_mails("./invalid_msgs")
+        self.valid_emails = self.load_mails("msgs/valid_msgs")
+        self.invalid_emails = self.load_mails("msgs/invalid_msgs")
 
     def load_mails(self, path):
         all_file_names = [f for f in listdir(path) if isfile(join(path, f))]
@@ -49,7 +49,7 @@ class TestAnyFilter(TestCase):
                 # Read and parse email
                 file = open(join(path, file_name), "r")
                 msg_data = email.message_from_file(file)
-                if path == "./valid_msgs":
+                if path == "./msgs/valid_msgs":
                     env_from = Filter.parse_from_and_to(msg_data.get('From'))
                     if msg_data.get('To') is not None:
                         env_tos = [Filter.parse_from_and_to(to_parse) for to_parse in msg_data.get("To").split(",")]

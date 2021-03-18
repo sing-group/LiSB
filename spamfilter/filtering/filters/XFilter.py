@@ -1,7 +1,7 @@
 from email.message import EmailMessage
 
 from spamfilter.EmailEnvelope import EmailEnvelope
-from spamfilter.filtering import DBFilter
+from spamfilter.filtering.filters.DBFilter import DBFilter
 
 
 class XFilter(DBFilter):
@@ -12,8 +12,7 @@ class XFilter(DBFilter):
             'primary_key': {'name': 'id', 'type': 'integer autoincrement'},
             'attribute_info': [
                 {'name': 'email_domain', 'type': 'text', 'nullness': 'NOT_NULL', 'uniqueness': ''},
-                {'name': 'x_header', 'type': 'text', 'nullness': 'NOT_NULL', 'uniqueness': ''},
-                {'name': 'x_value', 'type': 'text', 'nullness': 'NOT_NULL', 'uniqueness': ''}
+                {'name': 'x_header', 'type': 'text', 'nullness': 'NOT_NULL', 'uniqueness': ''}
             ]
         }
 
@@ -44,15 +43,10 @@ class XFilter(DBFilter):
                 return True
 
             # If the number is the same, then check that the headers are the same
-            # and check that they have the same values
             else:
                 for (x_header, value) in x_headers.items():
                     if x_header not in self.data[domain]:
                         print(f"[ XFilter ] '{x_header}' header was not present in past communications")
-                        return True
-                    if self.data[domain][x_header] != value:
-                        print(f"[ XFilter ] '{x_header}: {value}' differs from past  "
-                              f"'{x_header}: {self.data[domain][x_header]}'")
                         return True
         return False
 
