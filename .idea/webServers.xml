@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="56b05931-f2b8-42b1-86ee-a14fd8adbceb" name="SMTPServer" url="http://192.168.1.188">
+        <fileTransfer rootFolder="/home/cesarino/SMTPServer" accessType="SFTP" host="192.168.1.188" port="22" sshConfigId="bbc8ed97-43c3-41a3-8532-c25caf5b1594" sshConfig="cesarino@192.168.1.188:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
