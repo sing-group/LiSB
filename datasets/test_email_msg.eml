@@ -1,0 +1,166 @@
+X-Account-Key: account5
+X-Mozilla-Keys:                                                                                 
+Delivered-To: silvana.gomez.meire@gmail.com
+Received: by 2002:a17:907:3e92:0:0:0:0 with SMTP id hs18csp1170397ejc;
+        Thu, 17 Dec 2020 05:35:44 -0800 (PST)
+X-Received: by 2002:a5d:61ca:: with SMTP id q10mr43761363wrv.124.1608212143964;
+        Thu, 17 Dec 2020 05:35:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1608212143; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fPMKexjaxQZgtUBVWXGNpDKBTEqj41M1F3FxdNOICfN78qfb6CMuQBY4RqTASS+IeQ
+         EyjjkluQ1HiBv3na+gJJSOddeLFp0ZQiueeXSBM8A5x1p4oScC5XpiJqgPaSPsMc5pRG
+         yuCZFSN8bVKAuGF7Iq3SW7+SBOtFTqM/yEn72HOpDJ503hM3odWMPAT0yyCWnPYiU3NH
+         Oj/0c9YGrwQKF5FqWrFhfaf2JG/sAbtzn92eNXGBaaxVJeXKsKnPLpQxEWLuFGA2mk3e
+         Q3mAEWIhtbTdcG27H5lVVjwWfIHozHca2qHrXdkjLENjtTmLVtEJyXNq0Z8C8wAH8WIy
+         h51w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:cc:to:subject:message-id:date:from
+         :in-reply-to:references:mime-version:dkim-signature;
+        bh=3cn+9nfnRFM8b6Vu+vlxm603SnkzRNopvQXekO/9mGk=;
+        b=I++cwAzk+eguppfKQXUUHJeErbl7C5Eqz+E3Bhf8QhxzzGtuNukhIbdrUBNV+gtzJ/
+         vgBLuilTIgZOIMykSKA2yRn0T+aXq0M38MT/e9UbNtACXnwrfIvx7ssU6WJNy2ieaOI6
+         yarh9xxAyeXQFmUPbuh4QgnlDK/tUbslCTiyV/9a0qFoWPjyAIxlBKkYfzSp4zFppbFE
+         gS64zUQ9LX2R2VEKDnEldi8GU1WyjNHjzDY9STlC22cjYMMp7qZZmhhRhAe1HZ9FaiyA
+         80zQ5mpCww2LBd3hriRTSkBYq7RRar3sIdcLkh5IY/xtTWH8uMap/BOMvFCTXk661nKR
+         sIdQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mondragon.edu header.s=google header.b=Uwedk9pr;
+       spf=pass (google.com: domain of uzurutuza@mondragon.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=uzurutuza@mondragon.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mondragon.edu
+Return-Path: <uzurutuza@mondragon.edu>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id b134sor2864766wme.10.2020.12.17.05.35.43
+        for <silvana.gomez.meire@gmail.com>
+        (Google Transport Security);
+        Thu, 17 Dec 2020 05:35:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of uzurutuza@mondragon.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mondragon.edu header.s=google header.b=Uwedk9pr;
+       spf=pass (google.com: domain of uzurutuza@mondragon.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=uzurutuza@mondragon.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mondragon.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=mondragon.edu; s=google;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc:content-transfer-encoding;
+        bh=3cn+9nfnRFM8b6Vu+vlxm603SnkzRNopvQXekO/9mGk=;
+        b=Uwedk9prfqkrAd2C/38b69//1LffLcFSQ+bnWO7ck/y+YaD/9V4lP6TKvOKdu/YoKm
+         J3c2a6p1wqyQBVHxzVEHH/2aGnHEvnPNAdrurptKXf+siuXI02sde1PymcpAoWMOqMps
+         2r/Mr0JKDb4YkU8wZp9cWnH9JuB1scZbjqVuE=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc:content-transfer-encoding;
+        bh=3cn+9nfnRFM8b6Vu+vlxm603SnkzRNopvQXekO/9mGk=;
+        b=RuQJ+fWkemC4ZgAMoX1HfPcgcS2CS150Ztd3VPZxlfJ8K2J7NrJur+aAEm1eBO1vlZ
+         lSuBQVpXjAwtIhdv3LuTippsnQXWZNOlpbksnt7YwoICdaeJEeyN6H+iLleoh2EOj1xl
+         xxrkFF94DolWVgi8xtnH7BxWU4W5l03lr2wdOaoCuAj81utyU5PlPaSCAdvE9mKgJBHm
+         IN2UiITLZilhBMpJKXwb/4xBH5d7GYUpAh7fuSp25ermtdF80K1cmb/keGC/hAqhOqVd
+         6bxxNx6pr1+VU+irq20uTdCtkS6HYEZgUjBaSxaVnqIHgeyfdmnAQcYfZTOTQvVUmGRA
+         LNBg==
+X-Gm-Message-State: AOAM532FkICyqMrflZLkFsytu7vUKOrzjDJmJuNIvtw4OybH0ELrRyvX
+	lLaAZMQ1cPbMXsZM1b3ZH2XcXxD1XY9ki3xeinm0Q/UoPOtpaw0z
+X-Google-Smtp-Source: ABdhPJwujJbo5YLEz1ZXWOuOYwFSQu8Wo1fKpLV2Z0kXmRF3W9i6XaPXMF405oLr0Fwz7sSubTZpTRw9NDJdh6hZpsk=
+X-Received: by 2002:a05:6402:1c04:: with SMTP id ck4mr38412748edb.320.1608212142989;
+ Thu, 17 Dec 2020 05:35:42 -0800 (PST)
+MIME-Version: 1.0
+References: <020501d6c3fb$10124a10$3036de30$@uvigo.es> <b1546575-0d8b-76ec-cb4e-d7461b7253fa@uvigo.es>
+ <CAJCJsse2=qHeNJXGMXBBnitczAzXHTGdX6R4+V-KHbCxmNSgqg@mail.gmail.com>
+ <000e01d6d3c6$932fd860$b98f8920$@uvigo.es> <C49C2BF5-7E14-4D7D-B562-4B3F7B3D6A7B@uvigo.es>
+In-Reply-To: <C49C2BF5-7E14-4D7D-B562-4B3F7B3D6A7B@uvigo.es>
+From: Urko Zurutuza <uzurutuza@mondragon.edu>
+Date: Thu, 17 Dec 2020 14:35:16 +0100
+Message-ID: <CALcJYKovaqJFZmQt1OrYvibtug1Sbs=NO=3uspT9p8NDq34Nog@mail.gmail.com>
+Subject: Re: Retos subido a la plataforma
+To: =?UTF-8?B?Sm9zw6kgUmFtw7NuIE3DqW5kZXogUmVib3JlZG8=?= <moncho.mendez@uvigo.es>
+Cc: =?UTF-8?B?UmV5ZXMgUGF2w7NuIFBhdsOzbiBSaWFs?= <pavon@uvigo.es>, 
+	=?UTF-8?Q?I=C3=B1aki_Velez_de_Mendizabal?= <ivelez@mondragon.edu>, 
+	=?UTF-8?Q?Rosal=C3=ADa_Laza_Fidalgo?= <rlaza@uvigo.es>, 
+	Enaitz Ezpeleta <eezpeleta@mondragon.edu>, 
+	=?UTF-8?Q?Silvana_G=C3=B3mez_Meire?= <silvana.gomez.meire@gmail.com>, 
+	Vitor Basto Fernandes <vitor.basto.fernandes@gmail.com>, =?UTF-8?Q?Mar=C3=ADa_Novo_Loures?= <mnloures@gmail.com>
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Muchas gracias a todos y buena noticia tambi=C3=A9n la tuya Moncho!
+
+Ojal=C3=A1 salga adelante, y podemos seguir juntos!
+--
+Urko Zurutuza Ortega
+Data analysis and cybersecurity
+
+Mondragon Unibertsitatea - Faculty of Engineering
+Loramendi, 4; 20500 Arrasate - Mondrag=C3=B3n (Gipuzkoa)
+Tel. : +(34) 649210323 / +(34) 943794700 + Ext. 5209
+www.mondragon.edu
+
+
+El jue, 17 dic 2020 a las 13:13, Jos=C3=A9 Ram=C3=B3n M=C3=A9ndez Reboredo
+(<moncho.mendez@uvigo.es>) escribi=C3=B3:
+>
+> Me alegra un mont=C3=B3n! Es una estupenda noticia.
+>
+> A mi me dieron ayer el alta y me vine para casa. Aunque es cierto que aye=
+r estuve un poco desconectado y habitu=C3=A1ndome a la nueva situaci=C3=B3n=
+, hoy ya estoy por aqu=C3=AD viendo el correo y haciendo alguna cosilla. En=
+ general la operaci=C3=B3n ha ido bien y estoy bien. Ma=C3=B1ana tengo que =
+hacer curas y ahora mismo tengo pocos deberes m=C3=A9dicos (hacer unos movi=
+mientos 4-5 veces al d=C3=ADa). Ahora toca la recuperaci=C3=B3n y bueno a l=
+a vuelta de navidad espero estar bastante mejor. Espero que para entonces y=
+a pueda conducir con normalidad.
+>
+> Bueno pues ahora a cruzar los dedos y a ver que pasa.
+>
+> Un abrazote.
+>
+> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+> Special issue on =E2=80=9CNovel Tools for the Management, Representation,=
+ and Exploitation of Textual Information=E2=80=9D. More info here.
+>
+> Jos=C3=A9 Ram=C3=B3n M=C3=A9ndez Reboredo
+> Escuela Superior de Ingenier=C3=ADa Inform=C3=A1tica
+> Campus As Lagoas S/N
+> 32004 - Ourense
+> Tlf.: 988 387 015
+> Fax.: 988 38 70 01
+> e-mail: moncho.mendez@uvigo.es
+> http://moncho.mdez-reboredo.info
+>
+> El 16 dic 2020, a las 17:14, Reyes Pavon <pavon@uvigo.es> escribi=C3=B3:
+>
+> Gracias!!!
+> Ojal=C3=A1 podamos repetir la experiencia
+>
+> Un saludo
+> reyes
+>
+> De: I=C3=B1aki Velez de Mendizabal [mailto:ivelez@mondragon.edu]
+> Enviado el: mi=C3=A9rcoles, 16 de diciembre de 2020 16:35
+> Para: Rosalia <rlaza@uvigo.es>; Reyes Pav=C3=B3n <pavon@uvigo.es>; Jos=C3=
+=A9 Ram=C3=B3n M=C3=A9ndez Reboredo <moncho.mendez@uvigo.es>; Enaitz Ezpele=
+ta <eezpeleta@mondragon.edu>; URKO ZURUTUZ <uzurutuza@mondragon.edu>; silva=
+na.gomez.meire@gmail.com; Vitor Basto Fernandes <vitor.basto.fernandes@gmai=
+l.com>; Mar=C3=ADa Novo <mnloures@gmail.com>
+> Asunto: Retos subido a la plataforma
+>
+> Hola equipo,
+>
+> Os escribo para confirmaros que ya est=C3=A1 todo el proyecto cargado en =
+la plataforma. Urko ha estado a la ma=C3=B1ana pele=C3=A1ndose con los form=
+ularios en la web del ministerio para dejar todo mallado (como dice Moncho)=
+ para que desde nuestra administraci=C3=B3n no nos pusieran ninguna pega.
+>
+> Me consta que a Urko ya le han mandado un mensaje desde administraci=C3=
+=B3n para confirmar que ya estaba todo firmado y terminado, pero me parece =
+que no ha tenido libre ni el minuto que le hace falta para mandarnos ese me=
+nsaje.
+>
+> Ahora a cruzar los dedos y a ver si sale.
+>
+> Moncho, espero que est=C3=A9s leyendo esto desde casa y que solo hayas pa=
+sado la noche de ayer en el hospital. Ya nos ir=C3=A1s contando como va la =
+recuperaci=C3=B3n.
+>
+> Un abrazo!!
+>
+>
