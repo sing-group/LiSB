@@ -16,10 +16,13 @@ class SpamFilter(smtpd.SMTPServer):
     def __init__(self, localaddr, remoteaddr, data_size_limit=smtpd.DATA_SIZE_DEFAULT,
                  map=None, enable_SMTPUTF8=False, decode_data=False):
         print("[ SpamFilter ] Settting up SpamFilter server")
+
         # Call parent constructor
         super().__init__(localaddr, remoteaddr, data_size_limit, map, enable_SMTPUTF8, decode_data)
+
         # Create mail forwarder, which will forward valid emails
-        self.forwarder = MailForwarder(self._remoteaddr[0], self._remoteaddr[1], 4)
+        self.forwarder = MailForwarder(self._remoteaddr[0], self._remoteaddr[1], 1)
+
         # Create filtering manager, which will filter all incoming messages
         self.filtering_mgr = FilteringManager()
         print(f"[ SpamFilter ] Running SpamFilter server on {localaddr}")
@@ -39,6 +42,8 @@ class SpamFilter(smtpd.SMTPServer):
 
         print("[ SpamFilter ] A new message has been received")
 
+        # SpamFilter._debug(peer=peer, mailfrom=mailfrom, rcpttos=rcpttos, data=data, **kwargs)
+
         # Parse message to EmailEnvelope
         msg_data = email.message_from_bytes(data)
         msg = EmailEnvelope(peer, mailfrom, rcpttos, msg_data, **kwargs)
@@ -52,3 +57,8 @@ class SpamFilter(smtpd.SMTPServer):
         else:
             self.forwarder.forward(msg)
             return None
+
+    @staticmethod
+    def _debug(**kwargs):
+        for arg in kwargs:
+            print(f"{arg} : {kwargs[arg]}\n")

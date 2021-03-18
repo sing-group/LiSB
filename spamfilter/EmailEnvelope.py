@@ -31,5 +31,6 @@ class EmailEnvelope:
                       f"Mail From: {self.mail_from}\n" \
                       f"Recipients: {self.rcpt_tos}\n" \
                       "------------------------------------------------------\n" \
-                      f"{self.email_msg}\n"
+                      f"{self.email_msg}\n\n" \
+                      f"-----------------------------------------------------"
         return msg_verbose

@@ -11,7 +11,7 @@ class MailForwarder:
     _forward_ip = None
     _forward_port = None
 
-    def __init__(self, ip: str, port: int = 1, n_threads: int = mp.cpu_count()):
+    def __init__(self, ip: str, port: int = 1025, n_threads: int = mp.cpu_count()):
         """
         This method creates a multi-thread mail forwarder based on queues
 
@@ -47,14 +47,20 @@ class MailForwarder:
         """
         try:
             server = smtplib.SMTP(ip, port)
-            print(f"[ {th.current_thread().name} ] Ready to forward")
-            try:
-                while True:
-                    msg = msgs.get()
-                    print(f"[ {th.current_thread().name} ] Forwarding message")
-                    server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg)
-                    print(f"[ {th.current_thread().name} ] Message forwarded")
-            finally:
-                server.quit()
+            print(f"[ {th.current_thread().name} ] Ready to forward to {(ip, port)}")
+            while True:
+                msg: EmailEnvelope = msgs.get()
+                print(f"[ {th.current_thread().name} ] Forwarding message")
+                server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
+                print(f"[ {th.current_thread().name} ] Message forwarded")
         except TimeoutError as e:
             print(f'\033[91m[ {th.current_thread().name} ] Timeout while connecting to remote server\033[0m')
+        except smtplib.SMTPServerDisconnected as e:
+            print(f'\033[91m[ {th.current_thread().name} ] Remote server unexpectedly closed the connection\033[0m')
+        except ConnectionRefusedError as e:
+            print(f'\033[91m[ {th.current_thread().name} ] Could not connect to remote server (conn. refused)\033[0m')
+        except Exception as e:
+            print(f'\033[91m[ {th.current_thread().name} ] An unexpected error occurred: {e}\033[0m')
+        finally:
+            if server:
+                server.quit()
