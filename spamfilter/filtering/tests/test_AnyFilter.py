@@ -49,10 +49,10 @@ class TestAnyFilter(TestCase):
                 # Read and parse email
                 file = open(join(path, file_name), "r")
                 msg_data = email.message_from_file(file)
-                if path == "./msgs/valid_msgs":
-                    env_from = Filter.parse_from_and_to(msg_data.get('From'))
+                if path == "msgs/valid_msgs":
+                    env_from = TestAnyFilter.parse_from_and_to(msg_data.get('From'))
                     if msg_data.get('To') is not None:
-                        env_tos = [Filter.parse_from_and_to(to_parse) for to_parse in msg_data.get("To").split(",")]
+                        env_tos = [TestAnyFilter.parse_from_and_to(to_parse) for to_parse in msg_data.get("To").split(",")]
                     else:
                         env_tos = ['to@mail.com']
                         msg_data.set_param('To', 'to@mail.com')
@@ -162,3 +162,13 @@ class TestAnyFilter(TestCase):
         # Create and return the envelope
         envelope = EmailEnvelope(peer, mail_from, rcpt_tos, msg)
         return envelope
+
+    @staticmethod
+    def parse_from_and_to(header: str) -> str:
+        aux_list = header.split("<")
+        list_length = len(aux_list)
+        return aux_list[0] if list_length == 1 else aux_list[list_length - 1][:-1]
+
+    @staticmethod
+    def get_domain(email:str):
+        return email.split("@")[1]

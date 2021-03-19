@@ -4,9 +4,10 @@ from unittest import TestCase
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering import Filter
 from spamfilter.filtering.filters.DKIMFilter import DKIMFilter
+from spamfilter.filtering.tests.test_AnyFilter import TestAnyFilter
 
 
-class TestDKIMFilter(TestCase):
+class TestDKIMFilter(TestAnyFilter):
     tested_filter = DKIMFilter()
 
     def test_valid_1(self):
@@ -14,8 +15,8 @@ class TestDKIMFilter(TestCase):
         msg = email.message_from_file(file)
         envelope = EmailEnvelope(
             peer='192.168.1.2',
-            mail_from=Filter.parse_from_and_to(msg.get('From')),
-            rcpt_tos=[Filter.parse_from_and_to(to_parse) for to_parse in msg.get("To").split(",")],
+            mail_from=TestAnyFilter.parse_from_and_to(msg.get('From')),
+            rcpt_tos=[TestAnyFilter.parse_from_and_to(to_parse) for to_parse in msg.get("To").split(",")],
             email_msg=msg
         )
         self.tested_filter.set_initial_data({})
@@ -27,14 +28,14 @@ class TestDKIMFilter(TestCase):
         msg = email.message_from_file(file)
         envelope = EmailEnvelope(
             peer='192.168.1.2',
-            mail_from=Filter.parse_from_and_to(msg.get('From')),
-            rcpt_tos=[Filter.parse_from_and_to(to_parse) for to_parse in msg.get("To").split(",")],
+            mail_from=TestAnyFilter.parse_from_and_to(msg.get('From')),
+            rcpt_tos=[TestAnyFilter.parse_from_and_to(to_parse) for to_parse in msg.get("To").split(",")],
             email_msg=msg
         )
-        dkim = DKIMFilter.get_dkim_params(msg)
+        dkim = envelope.get_dkim_params()
         self.tested_filter.set_initial_data(
             {
-                Filter.get_domain(envelope.mail_from): {
+                envelope.get_sender_domain(): {
                     's': dkim['s'],
                     'd': dkim['d']
                 }
@@ -48,14 +49,14 @@ class TestDKIMFilter(TestCase):
         msg = email.message_from_file(file)
         envelope = EmailEnvelope(
             peer='192.168.1.2',
-            mail_from=Filter.parse_from_and_to(msg.get('From')),
-            rcpt_tos=[Filter.parse_from_and_to(to_parse) for to_parse in msg.get("To").split(",")],
+            mail_from=TestAnyFilter.parse_from_and_to(msg.get('From')),
+            rcpt_tos=[TestAnyFilter.parse_from_and_to(to_parse) for to_parse in msg.get("To").split(",")],
             email_msg=msg
         )
-        dkim = DKIMFilter.get_dkim_params(msg)
+        dkim = envelope.get_dkim_params()
         self.tested_filter.set_initial_data(
             {
-                Filter.get_domain(envelope.mail_from): {
+                envelope.get_sender_domain(): {
                     's': 'other_s',
                     'd': 'other_d'
                 }

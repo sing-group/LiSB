@@ -24,7 +24,7 @@ class MailForwarder:
         self._forward_port = port
         self._n_threads = n_threads
         for i in range(n_threads):
-            worker = th.Thread(target=self._forward_msg, name=f"Forwarder-{i}",
+            worker = th.Thread(target=MailForwarder.__forward_msg, name=f"Forwarder-{i}",
                                args=(self._msgs_to_forward, self._forward_ip, self._forward_port))
             worker.start()
 
@@ -37,7 +37,7 @@ class MailForwarder:
         self._msgs_to_forward.put(msg)
 
     @staticmethod
-    def _forward_msg(msgs: mp.Queue, ip: str, port: int):
+    def __forward_msg(msgs: mp.Queue, ip: str, port: int):
         """
         This static method is executed by the worker threads in order to forward the email messages from the queue
 

@@ -26,11 +26,11 @@ class XFilter(DBFilter):
         """
 
         # Get X-Headers and analyze them if there are any
-        x_headers = self.get_x_headers(envelope.email_msg)
+        x_headers = envelope.get_x_headers()
         if x_headers:
 
             # Get sender domain
-            domain = self.get_domain(envelope.mail_from)
+            domain = envelope.get_sender_domain()
 
             # If we haven't any previous data from that domain, then store it for next time and return False
             if domain not in self.data:
@@ -49,16 +49,3 @@ class XFilter(DBFilter):
                         print(f"[ XFilter ] '{x_header}' header was not present in past communications")
                         return True
         return False
-
-    @staticmethod
-    def get_x_headers(msg: EmailMessage):
-        """
-        This utility method gets all x-headers from the passed email message
-        :param msg: the email message to extract the x-headers from
-        :return: the x-headers in dictionary format
-        """
-        x_headers = {}
-        for (header, value) in msg.items():
-            if "X-" in header:
-                x_headers[header] = value
-        return x_headers

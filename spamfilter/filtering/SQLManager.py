@@ -30,11 +30,11 @@ class SQLManager:
                 parsed_data.append(row)
 
             # Create table if not created
-            parsed_create_query = self._parse_create_table_query(table_scheme)
+            parsed_create_query = SQLManager.__parse_create_table_query(table_scheme)
             cursor.execute(parsed_create_query)
 
             # Update data in table
-            parsed_replace_query = self._parse_replace_query(table_scheme)
+            parsed_replace_query = SQLManager.__parse_replace_query(table_scheme)
             cursor.executemany(parsed_replace_query, parsed_data)
 
         except sql.Error as e:
@@ -83,7 +83,7 @@ class SQLManager:
         return data
 
     @staticmethod
-    def _parse_create_table_query(table_scheme: dict):
+    def __parse_create_table_query(table_scheme: dict):
         """
         This method parses the info in table_scheme into a CREATE TABLE statement.
 
@@ -100,7 +100,7 @@ class SQLManager:
         return query
 
     @staticmethod
-    def _parse_replace_query(table_scheme: dict):
+    def __parse_replace_query(table_scheme: dict):
         """
         This method parses the info in table_scheme into a REPLACE INTO statement.
 

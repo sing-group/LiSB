@@ -13,11 +13,9 @@ class ReturnPathFilter(Filter):
         """
 
         # Get Return-Path from email. If not None, analyze it
-        return_path = envelope.email_msg.get("Return-Path")
-        if return_path is not None:
-
-            # Parse and check whether it is the sender or one of the recipients. If not, then it is spam
-            parsed_return_path = self.parse_from_and_to(return_path)
+        parsed_return_path = envelope.get_parsed_return_path()
+        if parsed_return_path is not None:
+            # Check whether it is the sender or one of the recipients. If not, then it is spam
             is_spam = parsed_return_path != envelope.mail_from and parsed_return_path not in envelope.rcpt_tos
             if is_spam:
                 print(f"[ ReturnPathFilter ] Return-Path '{parsed_return_path}' is not sender '{envelope.mail_from}' "

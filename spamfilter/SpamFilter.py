@@ -42,7 +42,7 @@ class SpamFilter(smtpd.SMTPServer):
 
         print("[ SpamFilter ] A new message has been received")
 
-        # SpamFilter._debug(peer=peer, mailfrom=mailfrom, rcpttos=rcpttos, data=data, **kwargs)
+        # SpamFilter.__debug(peer=peer, mailfrom=mailfrom, rcpttos=rcpttos, data=data, **kwargs)
 
         # Parse message to EmailEnvelope
         msg_data = email.message_from_bytes(data)
@@ -59,6 +59,6 @@ class SpamFilter(smtpd.SMTPServer):
             return None
 
     @staticmethod
-    def _debug(**kwargs):
+    def __debug(**kwargs):
         for arg in kwargs:
             print(f"{arg} : {kwargs[arg]}\n")

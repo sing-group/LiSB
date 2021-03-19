@@ -17,9 +17,15 @@ class DKIMFilter(DBFilter):
         }
 
     def filter(self, envelope: EmailEnvelope) -> bool:
-        dkim_params = DKIMFilter.get_dkim_params(envelope.email_msg)
+        """
+        This method determines whether email domain's DKIM parameters have changed from previous times
+        :param envelope: the email to be filtered
+        :return: True, if the DKIM parameters have varied; False if they haven't or if it is the \
+        first time that DKIM is analyzed for that domain
+        """
+        dkim_params = envelope.get_dkim_params()
         if dkim_params:
-            domain = DKIMFilter.get_domain(envelope.mail_from)
+            domain = envelope.get_sender_domain()
             if domain not in self.data:
                 self.data[domain] = {
                     's': dkim_params['s'],
@@ -31,16 +37,3 @@ class DKIMFilter(DBFilter):
                           f"changed from previous data (s:{self.data[domain]['s']}; d:{self.data[domain]['d']})")
                     return True
         return False
-
-    @staticmethod
-    def get_dkim_params(msg: EmailMessage):
-        """
-        This utility method gets all DKIM parameters from the passed email message
-        :param msg: the email message to extract the DKIM parameters from
-        :return: the DKIM parameters in dictionary format
-        """
-        dkim_params = {}
-        for to_parse in msg.get('DKIM-Signature').split(';'):
-            parsed = to_parse.replace("\n", "").strip().split('=')
-            dkim_params[parsed[0]] = parsed[1].strip()
-        return dkim_params

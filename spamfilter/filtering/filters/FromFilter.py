@@ -13,7 +13,7 @@ class FromFilter(Filter):
         :return: False if the originators are the same, True if else (Spam)
         """
 
-        parsed_msg_from = self.parse_from_and_to(envelope.email_msg.get("From"))
+        parsed_msg_from = envelope.get_parsed_from()
 
         if envelope.mail_from != parsed_msg_from:
             print(f"[ FromFilter ] Senders differ: '{envelope.mail_from}' in envelope VS. '{parsed_msg_from}' in message")

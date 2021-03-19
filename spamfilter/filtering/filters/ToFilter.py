@@ -15,7 +15,7 @@ class ToFilter(Filter):
         :return: False if the recipients are the same, True if else (Spam)
         """
 
-        msg_tos = [self.parse_from_and_to(to_parse) for to_parse in envelope.email_msg.get("To").split(",")]
+        msg_tos = envelope.get_parsed_to_list()
 
         if set(envelope.rcpt_tos) != set(msg_tos):
             print(f"[ ToFilter ] Recipients differ: {envelope.rcpt_tos} in envelope VS. {msg_tos} in message")
