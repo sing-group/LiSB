@@ -6,7 +6,7 @@ class TestXFilter(TestAnyFilter):
 
     def test_valid_1(self):
         valid = self.create_email(
-            peer=self.this_ip,
+            peer=self.peer,
             mail_from="from@mail.com",
             rcpt_tos=["to@mail.com"],
             email_from=("Author", "from@mail.com"),
@@ -31,7 +31,7 @@ class TestXFilter(TestAnyFilter):
 
     def test_valid_2(self):
         valid = self.create_email(
-            peer=self.this_ip,
+            peer=self.peer,
             mail_from="from@mail.com",
             rcpt_tos=["to@mail.com"],
             email_from=("Author", "from@mail.com"),
@@ -50,7 +50,7 @@ class TestXFilter(TestAnyFilter):
 
     def test_spam_1(self):
         invalid = self.create_email(
-            peer=self.this_ip,
+            peer=self.peer,
             mail_from="from@mail.com",
             rcpt_tos=["to@mail.com"],
             email_from=("Author", "from@mail.com"),
@@ -75,7 +75,7 @@ class TestXFilter(TestAnyFilter):
 
     def test_spam_2(self):
         invalid = self.create_email(
-            peer=self.this_ip,
+            peer=self.peer,
             mail_from="from@mail.com",
             rcpt_tos=["to@mail.com"],
             email_from=("Author", "from@mail.com"),
