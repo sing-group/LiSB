@@ -6,16 +6,6 @@ from spamfilter.filtering.filters.DBFilter import DBFilter
 
 class XFilter(DBFilter):
 
-    def __init__(self):
-        self.table_scheme = {
-            'table_name': 'XFilter',
-            'primary_key': {'name': 'id', 'type': 'integer autoincrement'},
-            'attribute_info': [
-                {'name': 'email_domain', 'type': 'text', 'nullness': 'NOT_NULL', 'uniqueness': ''},
-                {'name': 'x_header', 'type': 'text', 'nullness': 'NOT_NULL', 'uniqueness': ''}
-            ]
-        }
-
     def filter(self, envelope: EmailEnvelope) -> bool:
         """
         This filter detected whether the email's X-Headers (if any) \

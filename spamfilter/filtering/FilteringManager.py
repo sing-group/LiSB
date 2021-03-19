@@ -3,20 +3,21 @@ import pkgutil
 from typing import Sequence
 
 from spamfilter.EmailEnvelope import EmailEnvelope
+from spamfilter.filtering.StorageManager import StorageManager
 from spamfilter.filtering.filters.DBFilter import DBFilter
 from spamfilter.filtering.filters.Filter import Filter
-from spamfilter.filtering.SQLManager import SQLManager
 
 
 class FilteringManager:
     filters: Sequence[Filter]
     n_threads: int
-    sql_mgr: SQLManager
+    storage_mgr: StorageManager
 
-    def __init__(self, n_threads: int = 1):
+    def __init__(self, n_threads: int = 1, storing_frequency: int = 300):
         self.n_threads = n_threads
-        self.sql_mgr = SQLManager("SpamFilter.db")
+        self.storage_mgr = StorageManager("data/", storing_frequency)
         self.filters = self.set_up_filters()
+        self.storage_mgr.launch_storage_daemon(self.filters)
 
     def set_up_filters(self):
         """
@@ -43,10 +44,8 @@ class FilteringManager:
             filter_object = filter_classes[filter_class]()
             filters.append(filter_object)
             if issubclass(filter_classes[filter_class], DBFilter):
-                data = self.sql_mgr.get_info_from_db(filter_object.table_scheme)
+                data = self.storage_mgr.load_data(filter_class)
                 filter_object.set_initial_data(data)
-                print(f"[ FilteringManager ] Initial data retrieved for {filter_class}")
-
         return filters
 
     def apply_filters(self, msg: EmailEnvelope):

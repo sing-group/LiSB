@@ -45,6 +45,7 @@ class MailForwarder:
         :param ip: the IP of the server to forward emails to
         :param port: the port of the server to forward emails to
         """
+        server = None
         try:
             server = smtplib.SMTP(ip, port)
             print(f"[ {th.current_thread().name} ] Ready to forward to {(ip, port)}")

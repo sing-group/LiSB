@@ -3,6 +3,7 @@ from spamfilter.filtering.filters.Filter import Filter
 
 
 class ReturnPathFilter(Filter):
+
     def filter(self, envelope: EmailEnvelope) -> bool:
         """
         This filter determines that an email is spam when the Return-Path header \

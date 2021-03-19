@@ -1,20 +1,8 @@
-from email.message import EmailMessage
-
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering.filters.DBFilter import DBFilter
 
 
 class DKIMFilter(DBFilter):
-
-    def __init__(self):
-        self.table_scheme = {
-            'table_name': 'DKIMFilter',
-            'primary_key': {'name': 'email_domain', 'type': 'text'},
-            'attribute_info': [
-                {'name': 's', 'type': 'text', 'nullness': 'NOT_NULL', 'uniqueness': ''},
-                {'name': 'd', 'type': 'text', 'nullness': 'NOT_NULL', 'uniqueness': ''}
-            ]
-        }
 
     def filter(self, envelope: EmailEnvelope) -> bool:
         """

@@ -50,7 +50,6 @@ class SpamFilter(smtpd.SMTPServer):
 
         # Check if parsed message is spam: reject it if it is (code 450), forward it if it isn't
         is_spam = self.filtering_mgr.apply_filters(msg)
-
         if is_spam:
             print("[ SpamFilter ] Spam detected: rejecting message (450)...")
             return self._REJECTION_MSG_RFC_5321

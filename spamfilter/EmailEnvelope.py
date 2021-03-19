@@ -122,7 +122,7 @@ class EmailEnvelope:
         dig_data = {}
         for to_parse in dns.resolver.query(domain, 'TXT'):
             parsed = str(to_parse).replace("\"", "").split('=', 1)
-            dig_data[parsed[0]] = parsed[1]
+            dig_data[parsed[0]] = parsed[1] if len(parsed) > 1 else ''
         ip_ranges = re.findall("ip[4|6]:([^ ]+)", dig_data['v'])
         includes = re.findall("include:([^ ]+)", dig_data['v'])
         redirect = re.findall("redirect=([^ ]+)", dig_data['v'])

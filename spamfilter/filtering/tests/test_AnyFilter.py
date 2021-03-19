@@ -49,6 +49,7 @@ class TestAnyFilter(TestCase):
                 # Read and parse email
                 file = open(join(path, file_name), "r")
                 msg_data = email.message_from_file(file)
+                file.close()
                 if path == "msgs/valid_msgs":
                     env_from = TestAnyFilter.parse_from_and_to(msg_data.get('From'))
                     if msg_data.get('To') is not None:

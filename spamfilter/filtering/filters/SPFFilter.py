@@ -5,15 +5,6 @@ from spamfilter.filtering.filters.DBFilter import DBFilter
 
 
 class SPFFilter(DBFilter):
-    def __init__(self):
-        self.table_scheme = {
-            'table_name': 'XFilter',
-            'primary_key': {'name': 'id', 'type': 'integer autoincrement'},
-            'attribute_info': [
-                {'name': 'email_domain', 'type': 'text', 'nullness': 'NOT_NULL', 'uniqueness': ''},
-                {'name': 'x_header', 'type': 'text', 'nullness': 'NOT_NULL', 'uniqueness': ''}
-            ]
-        }
 
     def filter(self, envelope: EmailEnvelope) -> bool:
         """
@@ -36,4 +27,3 @@ class SPFFilter(DBFilter):
                     return False
             print(f"[ SPFFilter ] Sender IP '{sender_ip}' does not belong to the sender domain '{domain}'")
             return True
-
