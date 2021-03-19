@@ -16,7 +16,7 @@ class TestAnyFilter(TestCase):
     valid_emails: Sequence[EmailWithFile]
     invalid_emails: Sequence[EmailWithFile]
     tested_filter: Filter
-    this_ip: str
+    peer: tuple
 
     def __init__(self, *args, **kwargs):
 
@@ -34,7 +34,7 @@ class TestAnyFilter(TestCase):
         # Get this PC's IP address. It will be used as the peer address
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.connect(("8.8.8.8", 80))
-        self.this_ip = s.getsockname()[0]
+        self.peer = (s.getsockname()[0], 1025)
         s.close()
 
         # Load all mails to be tested in the filter
@@ -52,7 +52,8 @@ class TestAnyFilter(TestCase):
                 if path == "msgs/valid_msgs":
                     env_from = TestAnyFilter.parse_from_and_to(msg_data.get('From'))
                     if msg_data.get('To') is not None:
-                        env_tos = [TestAnyFilter.parse_from_and_to(to_parse) for to_parse in msg_data.get("To").split(",")]
+                        env_tos = [TestAnyFilter.parse_from_and_to(to_parse) for to_parse in
+                                   msg_data.get("To").split(",")]
                     else:
                         env_tos = ['to@mail.com']
                         msg_data.set_param('To', 'to@mail.com')
@@ -61,7 +62,7 @@ class TestAnyFilter(TestCase):
                     env_tos = ['other_to@mail.com']
                     if msg_data.get('To') is None:
                         msg_data.set_param('To', 'other_to@mail.com')
-                envelope = EmailEnvelope(self.this_ip, env_from, env_tos, msg_data)
+                envelope = EmailEnvelope(self.peer, env_from, env_tos, msg_data)
                 # Append to list with file
                 ewf = EmailWithFile(file_name, envelope)
                 emails.append(ewf)
@@ -113,7 +114,7 @@ class TestAnyFilter(TestCase):
             self.assertTrue(True)
         else:
             valid = self.create_email(
-                peer=self.this_ip,
+                peer=self.peer,
                 mail_from="from@mail.com",
                 rcpt_tos=["to1@mail.com", "to2@mail.com"],
                 email_from=("Author", "from@mail.com"),
@@ -133,7 +134,7 @@ class TestAnyFilter(TestCase):
             self.assertTrue(True)
         else:
             valid = self.create_email(
-                peer=self.this_ip,
+                peer=self.peer,
                 mail_from="from@mail.com",
                 rcpt_tos=["to@mail.com"],
                 email_from=("Author", "from@mail.com"),
@@ -170,5 +171,5 @@ class TestAnyFilter(TestCase):
         return aux_list[0] if list_length == 1 else aux_list[list_length - 1][:-1]
 
     @staticmethod
-    def get_domain(email:str):
+    def get_domain(email: str):
         return email.split("@")[1]

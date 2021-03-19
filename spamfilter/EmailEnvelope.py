@@ -1,7 +1,7 @@
+import re
+import dns.resolver
+from typing import Sequence
 from email.message import EmailMessage
-from typing import Sequence, re
-
-import dns
 
 
 class EmailEnvelope:

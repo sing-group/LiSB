@@ -26,7 +26,7 @@ class SPFFilter(DBFilter):
         # Get sender domain and check if we have data for it. If we don't then look up the IP ranges and return False.
         # If we do then check the IP.
         domain = envelope.get_sender_domain()
-        if not self.data[domain]:
+        if domain not in self.data:
             self.data[domain] = envelope.get_all_sender_ip_ranges()
             return False
         else:
@@ -34,5 +34,6 @@ class SPFFilter(DBFilter):
             for ip_range in self.data[domain]:
                 if ipaddress.ip_address(sender_ip) in ipaddress.ip_network(ip_range):
                     return False
+            print(f"[ SPFFilter ] Sender IP '{sender_ip}' does not belong to the sender domain '{domain}'")
             return True
 

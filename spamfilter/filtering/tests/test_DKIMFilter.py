@@ -8,7 +8,6 @@ from spamfilter.filtering.tests.test_AnyFilter import TestAnyFilter
 
 
 class TestDKIMFilter(TestAnyFilter):
-    tested_filter = DKIMFilter()
 
     def test_valid_1(self):
         file = open("msgs/test_email_msg.eml")

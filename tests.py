@@ -27,6 +27,6 @@ def ip_belongs_to_domain(ip, domain):
     return False
 
 
-print("\n".join(get_all_ip_ranges('uvigo.gal')))
+print("\n".join(get_all_ip_ranges('gmail.com')))
 print(ip_belongs_to_domain('2a01:4180:4051:0400::', 'usc.es'))
 
