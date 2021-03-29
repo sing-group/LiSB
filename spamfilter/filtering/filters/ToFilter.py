@@ -1,4 +1,4 @@
-import collections
+import logging
 
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering.filters.Filter import Filter
@@ -18,7 +18,7 @@ class ToFilter(Filter):
         msg_tos = envelope.get_parsed_to_list()
 
         if set(envelope.rcpt_tos) != set(msg_tos):
-            print(f"[ ToFilter ] Recipients differ: {envelope.rcpt_tos} in envelope VS. {msg_tos} in message")
+            logging.warning(f"[ ToFilter ] Recipients differ: {envelope.rcpt_tos} in envelope VS. {msg_tos} in message")
             return True
 
         return False

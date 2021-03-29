@@ -86,10 +86,10 @@ class EmailEnvelope:
         This method gets all X-headers from the email message
         :return: the X-headers in dictionary format
         """
-        x_headers = {}
-        for (header, value) in self.email_msg.items():
+        x_headers = []
+        for header in self.email_msg:
             if "X-" in header:
-                x_headers[header] = value
+                x_headers.append(header)
         return x_headers
 
     def get_dkim_params(self):
@@ -98,9 +98,11 @@ class EmailEnvelope:
         :return: the DKIM parameters in dictionary format
         """
         dkim_params = {}
-        for to_parse in self.email_msg.get('DKIM-Signature').split(';'):
-            parsed = to_parse.replace("\n", "").strip().split('=')
-            dkim_params[parsed[0]] = parsed[1].strip()
+        dkim_data = self.email_msg.get('DKIM-Signature')
+        if  dkim_data is not None:
+            for to_parse in dkim_data.split(';'):
+                parsed = to_parse.replace("\n", "").strip().split('=')
+                dkim_params[parsed[0]] = parsed[1].strip()
         return dkim_params
 
     def get_all_sender_ip_ranges(self):

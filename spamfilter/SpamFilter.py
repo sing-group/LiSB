@@ -1,3 +1,8 @@
+import json
+import logging
+import logging.config
+import logging.handlers
+import os
 import smtpd
 import email
 import email.utils
@@ -15,7 +20,11 @@ class SpamFilter(smtpd.SMTPServer):
 
     def __init__(self, localaddr, remoteaddr, data_size_limit=smtpd.DATA_SIZE_DEFAULT,
                  map=None, enable_SMTPUTF8=False, decode_data=False):
-        print("[ SpamFilter ] Settting up SpamFilter server")
+
+        # Config logging
+        SpamFilter.config_logging()
+
+        logging.info("[ SpamFilter ] Setting up SpamFilter server")
 
         # Call parent constructor
         super().__init__(localaddr, remoteaddr, data_size_limit, map, enable_SMTPUTF8, decode_data)
@@ -24,9 +33,9 @@ class SpamFilter(smtpd.SMTPServer):
         self.forwarder = MailForwarder(self._remoteaddr[0], self._remoteaddr[1], 1)
 
         # Create filtering manager, which will filter all incoming messages
-        self.filtering_mgr = FilteringManager()
-        print(f"[ SpamFilter ] Running SpamFilter server on {localaddr}")
-        print("[ SpamFilter ] Waiting for mails to filter...")
+        self.filtering_mgr = FilteringManager(storing_frequency=600)
+        logging.info(f"[ SpamFilter ] Running SpamFilter server on {localaddr}")
+        logging.info("[ SpamFilter ] Waiting for mails to filter...")
 
     def process_message(self, peer, mailfrom, rcpttos, data, **kwargs):
         """
@@ -40,9 +49,7 @@ class SpamFilter(smtpd.SMTPServer):
         :return: None to request a normal 250 Ok response, RFC 53214-compliant 450 code when spam is detected
         """
 
-        print("[ SpamFilter ] A new message has been received")
-
-        # SpamFilter.__debug(peer=peer, mailfrom=mailfrom, rcpttos=rcpttos, data=data, **kwargs)
+        logging.info("[ SpamFilter ] A new message has been received")
 
         # Parse message to EmailEnvelope
         msg_data = email.message_from_bytes(data)
@@ -51,13 +58,21 @@ class SpamFilter(smtpd.SMTPServer):
         # Check if parsed message is spam: reject it if it is (code 450), forward it if it isn't
         is_spam = self.filtering_mgr.apply_filters(msg)
         if is_spam:
-            print("[ SpamFilter ] Spam detected: rejecting message (450)...")
+            logging.warning("[ SpamFilter ] Spam detected: rejecting message (450)...")
             return self._REJECTION_MSG_RFC_5321
         else:
             self.forwarder.forward(msg)
             return None
 
     @staticmethod
-    def __debug(**kwargs):
-        for arg in kwargs:
-            print(f"{arg} : {kwargs[arg]}\n")
+    def config_logging():
+
+        # Create logs directory if it doesn't exist
+        path = 'logs/'
+        if not os.path.exists(path):
+            os.makedirs(path)
+
+        with open('conf/logging.json', 'r') as file:
+            config = json.load(file)
+
+        logging.config.dictConfig(config)

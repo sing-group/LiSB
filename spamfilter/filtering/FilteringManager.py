@@ -1,6 +1,8 @@
 import importlib
 import pkgutil
+import logging
 from typing import Sequence
+
 
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering.StorageManager import StorageManager
@@ -25,7 +27,7 @@ class FilteringManager:
 
         :return: A list of all the filter objects
         """
-        print("[ FilteringManager ] Setting up filters")
+        logging.info("[ FilteringManager ] Setting up filters")
 
         # Import all Filter classes
         for (module_loader, name, ispkg) in pkgutil.iter_modules(["spamfilter.filtering.filters"]):
@@ -40,7 +42,7 @@ class FilteringManager:
         # Get past data for filters that need it
         filters = list()
         for filter_class in filter_classes:
-            print(f"[ FilteringManager ] {filter_class} has been set up")
+            logging.info(f"[ FilteringManager ] {filter_class} has been set up")
             filter_object = filter_classes[filter_class]()
             filters.append(filter_object)
             if issubclass(filter_classes[filter_class], DBFilter):

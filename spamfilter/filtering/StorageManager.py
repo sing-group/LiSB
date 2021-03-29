@@ -1,7 +1,7 @@
 import os
 import json
 import time
-
+import logging
 import schedule
 import threading as th
 from os.path import join
@@ -33,7 +33,7 @@ class StorageManager:
         :param data: The data to be stored as a JSON file
         """
         whole_filename = join(self.path, filename + '.json')
-        print(f"[ StorageManager ] Storing data to '{whole_filename}'")
+        logging.info(f"[ StorageManager ] Storing data to '{whole_filename}'")
         with open(join(self.path, filename + '.json'), 'w') as json_file:
             json.dump(data, json_file, sort_keys=True)
 
@@ -45,7 +45,7 @@ class StorageManager:
         :return: If the file exists, it returns the data stored in it. If it doesn't, it returns an empty dictionary.
         """
         whole_filename = join(self.path, filename + '.json')
-        print(f"[ StorageManager ] Retrieving data from '{whole_filename}'")
+        logging.info(f"[ StorageManager ] Retrieving data from '{whole_filename}'")
         if not os.path.exists(whole_filename):
             return {}
         else:

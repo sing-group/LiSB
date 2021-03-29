@@ -1,0 +1,28 @@
+{
+    "version" : 1,
+    "formatters": {
+        "default": {
+            "format": "[ %(asctime)s ] [ %(levelname)s ] %(message)s"
+        }
+    },
+    "handlers": {
+        "console" : {
+            "class": "logging.StreamHandler",
+            "formatter": "default",
+            "level": "DEBUG",
+            "stream": "ext://sys.stdout"
+        },
+        "file": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "formatter": "default",
+            "filename": "logs/log",
+            "when": "h",
+            "interval": 1,
+            "level": "DEBUG"
+        }
+    },
+    "root": {
+        "level" : "DEBUG",
+        "handlers": ["console", "file"]
+    }
+}

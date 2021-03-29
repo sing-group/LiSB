@@ -1,3 +1,5 @@
+import logging
+
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering.filters.DBFilter import DBFilter
 
@@ -21,7 +23,7 @@ class DKIMFilter(DBFilter):
                 }
             else:
                 if dkim_params['s'] != self.data[domain]['s'] or dkim_params['d'] != self.data[domain]['d']:
-                    print(f"[ DKIMFilter ] Received DKIM params (s:{dkim_params['s']}; d:{dkim_params['d']}) "
-                          f"changed from previous data (s:{self.data[domain]['s']}; d:{self.data[domain]['d']})")
+                    logging.warning(f"[ DKIMFilter ] Received DKIM params (s:{dkim_params['s']}; d:{dkim_params['d']}) "
+                                 f"changed from previous data (s:{self.data[domain]['s']}; d:{self.data[domain]['d']})")
                     return True
         return False

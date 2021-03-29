@@ -1,3 +1,4 @@
+import logging
 from spamfilter.filtering.filters.Filter import Filter
 
 
@@ -10,5 +11,3 @@ class DBFilter(Filter):
     def get_data(self):
         return self.data
 
-    def debug(self):
-        print(f"Current contents of dictionary:\n{self.data}\n\n")

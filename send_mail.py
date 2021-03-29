@@ -2,19 +2,26 @@ import smtplib
 import email
 import socket
 from email.mime.text import MIMEText
-
-# Create the message
-# msg = MIMEText('Hi Cesar! I hope you are doing great! When can we meet up? It\'s been so long. Love, Eliana')
-# msg['To'] = email.utils.formataddr(('Recipient', 'cmrodriguez17@example.com'))
-# msg['From'] = email.utils.formataddr(('Author', 'eacappello17@example.com'))
-# msg['Return-Path'] = 'cmrodriguez17@example.com'
-# msg['Subject'] = 'Hi Cesar!'
-from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering.tests.test_AnyFilter import TestAnyFilter
 
-file = open("spamfilter/filtering/tests/msgs/test_email_msg.eml")
-msg = email.message_from_file(file)
-file.close()
+
+def msg1():
+    # Create the message
+    msg = MIMEText('Hi Cesar! I hope you are doing great! When can we meet up? It\'s been so long. Love, Eliana')
+    msg['To'] = email.utils.formataddr(('Recipient', 'cmrodriguez17@example.com'))
+    msg['From'] = email.utils.formataddr(('Author', 'eacappello17@example.com'))
+    msg['Return-Path'] = 'cmrodriguez17@example.com'
+    msg['Subject'] = 'Hi Cesar!'
+    return msg
+
+
+def msg2():
+    with open("spamfilter/filtering/tests/msgs/test_email_msg.eml") as file:
+        return email.message_from_file(file)
+
+
+# Create msg
+msg = msg2()
 
 # Get private IP
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

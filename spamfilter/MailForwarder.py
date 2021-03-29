@@ -1,7 +1,7 @@
 import smtplib
 import threading as th
 import multiprocessing as mp
-from typing import Sequence
+import logging
 
 from spamfilter.EmailEnvelope import EmailEnvelope
 
@@ -48,20 +48,20 @@ class MailForwarder:
         server = None
         try:
             server = smtplib.SMTP(ip, port)
-            print(f"[ {th.current_thread().name} ] Ready to forward to {(ip, port)}")
+            logging.info(f"[ {th.current_thread().name} ] Ready to forward to {(ip, port)}")
             while True:
                 msg: EmailEnvelope = msgs.get()
-                print(f"[ {th.current_thread().name} ] Forwarding message")
+                logging.info(f"[ {th.current_thread().name} ] Forwarding message")
                 server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
-                print(f"[ {th.current_thread().name} ] Message forwarded")
+                logging.info(f"[ {th.current_thread().name} ] Message forwarded")
         except TimeoutError as e:
-            print(f'\033[91m[ {th.current_thread().name} ] Timeout while connecting to remote server\033[0m')
+            logging.error(f'\033[91m[ {th.current_thread().name} ] Timeout while connecting to remote server\033[0m')
         except smtplib.SMTPServerDisconnected as e:
-            print(f'\033[91m[ {th.current_thread().name} ] Remote server unexpectedly closed the connection\033[0m')
+            logging.error(f'\033[91m[ {th.current_thread().name} ] Remote server unexpectedly closed the connection\033[0m')
         except ConnectionRefusedError as e:
-            print(f'\033[91m[ {th.current_thread().name} ] Could not connect to remote server (conn. refused)\033[0m')
+            logging.error(f'\033[91m[ {th.current_thread().name} ] Could not connect to remote server (conn. refused)\033[0m')
         except Exception as e:
-            print(f'\033[91m[ {th.current_thread().name} ] An unexpected error occurred: {e}\033[0m')
+            logging.error(f'\033[91m[ {th.current_thread().name} ] An unexpected error occurred: {e}\033[0m')
         finally:
             if server:
                 server.quit()
