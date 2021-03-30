@@ -72,7 +72,7 @@ class EmailEnvelope:
     def get_parsed(header_value):
         """
         This utility method parses 'From', 'To' and 'Return-Path' headers to only email format
-        :param header: the header to be parsed
+        :param header_value: the header to be parsed
         :return: The parsed header
         """
         if header_value is not None:

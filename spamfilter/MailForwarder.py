@@ -2,6 +2,7 @@ import smtplib
 import threading as th
 import multiprocessing as mp
 import logging
+import time
 
 from spamfilter.EmailEnvelope import EmailEnvelope
 
@@ -46,22 +47,26 @@ class MailForwarder:
         :param port: the port of the server to forward emails to
         """
         server = None
-        try:
-            server = smtplib.SMTP(ip, port)
-            logging.info(f"[ {th.current_thread().name} ] Ready to forward to {(ip, port)}")
-            while True:
-                msg: EmailEnvelope = msgs.get()
-                logging.info(f"[ {th.current_thread().name} ] Forwarding message")
-                server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
-                logging.info(f"[ {th.current_thread().name} ] Message forwarded")
-        except TimeoutError as e:
-            logging.error(f'\033[91m[ {th.current_thread().name} ] Timeout while connecting to remote server\033[0m')
-        except smtplib.SMTPServerDisconnected as e:
-            logging.error(f'\033[91m[ {th.current_thread().name} ] Remote server unexpectedly closed the connection\033[0m')
-        except ConnectionRefusedError as e:
-            logging.error(f'\033[91m[ {th.current_thread().name} ] Could not connect to remote server (conn. refused)\033[0m')
-        except Exception as e:
-            logging.error(f'\033[91m[ {th.current_thread().name} ] An unexpected error occurred: {e}\033[0m')
-        finally:
-            if server:
-                server.quit()
+        while True:
+            try:
+                server = smtplib.SMTP(ip, port)
+                logging.info(f"Ready to forward to {(ip, port)}")
+                while True:
+                    msg: EmailEnvelope = msgs.get()
+                    logging.info(f"Forwarding message")
+                    server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
+                    logging.info(f"Message forwarded")
+            except TimeoutError as e:
+                logging.error(f'Timeout while connecting to remote server')
+            except smtplib.SMTPServerDisconnected as e:
+                logging.error(f'Remote server unexpectedly closed the connection')
+            except ConnectionRefusedError as e:
+                logging.error(f'Could not connect to remote server (conn. refused)')
+            except Exception as e:
+                logging.error(f'An unexpected error occurred: {e}')
+            finally:
+                if msg is not None:
+                    logging.info(f'Email has been put back in queue after error')
+                    msgs.put(msg)
+                    msg = None
+                time.sleep(15)

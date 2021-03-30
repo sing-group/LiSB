@@ -19,7 +19,7 @@ class FromFilter(Filter):
 
         if envelope.mail_from != parsed_msg_from:
             logging.warning(
-                f"[ FromFilter ] Senders differ: '{envelope.mail_from}' in envelope VS. '{parsed_msg_from}' in message")
+                f"Senders differ: '{envelope.mail_from}' in envelope VS. '{parsed_msg_from}' in message")
             return True
 
         return False
