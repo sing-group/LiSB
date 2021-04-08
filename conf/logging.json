@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "formatters": {
+    "default": {
+      "format": "[ %(asctime)s ] [ %(levelname)s ] [ %(module)s : %(threadName)s ] %(message)s"
+    }
+  },
+  "handlers": {
+    "console": {
+      "class": "logging.StreamHandler",
+      "formatter": "default",
+      "level": "DEBUG",
+      "stream": "ext://sys.stdout"
+    },
+    "file": {
+      "class": "logging.handlers.TimedRotatingFileHandler",
+      "formatter": "default",
+      "filename": "logs/log",
+      "when": "h",
+      "interval": 1,
+      "level": "INFO"
+    }
+  },
+  "root": {
+    "level": "DEBUG",
+    "handlers": [
+      "console",
+      "file"
+    ]
+  },
+  "email-alerts": {
+    "status": "enabled",
+    "level": "WARNING",
+    "msg-template": "A new alert has been generated at %(asctime)s by %(module)s : %(message)s"
+  }
+}

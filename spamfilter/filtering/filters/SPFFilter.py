@@ -1,5 +1,7 @@
 import ipaddress
 
+import logging
+
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering.filters.DBFilter import DBFilter
 
@@ -25,5 +27,5 @@ class SPFFilter(DBFilter):
             for ip_range in self.data[domain]:
                 if ipaddress.ip_address(sender_ip) in ipaddress.ip_network(ip_range):
                     return False
-            print(f"[ SPFFilter ] Sender IP '{sender_ip}' does not belong to the sender domain '{domain}'")
+            logging.warning(f"Sender IP '{sender_ip}' does not belong to the sender domain '{domain}'")
             return True

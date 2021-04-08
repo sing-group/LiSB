@@ -1,3 +1,5 @@
+import logging
+
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering.filters.Filter import Filter
 
@@ -16,7 +18,8 @@ class FromFilter(Filter):
         parsed_msg_from = envelope.get_parsed_from()
 
         if envelope.mail_from != parsed_msg_from:
-            print(f"[ FromFilter ] Senders differ: '{envelope.mail_from}' in envelope VS. '{parsed_msg_from}' in message")
+            logging.warning(
+                f"Senders differ: '{envelope.mail_from}' in envelope VS. '{parsed_msg_from}' in message")
             return True
 
         return False

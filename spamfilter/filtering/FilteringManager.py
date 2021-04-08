@@ -1,22 +1,25 @@
 import importlib
 import pkgutil
+import logging
 from typing import Sequence
 
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering.StorageManager import StorageManager
+from spamfilter.filtering.filters.BlackListFilter import BlackListFilter
 from spamfilter.filtering.filters.DBFilter import DBFilter
 from spamfilter.filtering.filters.Filter import Filter
 
 
 class FilteringManager:
     filters: Sequence[Filter]
+    black_list_filter: BlackListFilter
     n_threads: int
     storage_mgr: StorageManager
 
     def __init__(self, n_threads: int = 1, storing_frequency: int = 300):
         self.n_threads = n_threads
         self.storage_mgr = StorageManager("data/", storing_frequency)
-        self.filters = self.set_up_filters()
+        self.set_up_filters()
         self.storage_mgr.launch_storage_daemon(self.filters)
 
     def set_up_filters(self):
@@ -25,7 +28,7 @@ class FilteringManager:
 
         :return: A list of all the filter objects
         """
-        print("[ FilteringManager ] Setting up filters")
+        logging.info("Setting up filters")
 
         # Import all Filter classes
         for (module_loader, name, ispkg) in pkgutil.iter_modules(["spamfilter.filtering.filters"]):
@@ -38,15 +41,21 @@ class FilteringManager:
 
         # Instantiate all Filters from filter class names and append to filters list
         # Get past data for filters that need it
-        filters = list()
+        self.filters = list()
         for filter_class in filter_classes:
-            print(f"[ FilteringManager ] {filter_class} has been set up")
+            logging.info(f"{filter_class} has been set up")
             filter_object = filter_classes[filter_class]()
-            filters.append(filter_object)
+            self.filters.append(filter_object)
             if issubclass(filter_classes[filter_class], DBFilter):
                 data = self.storage_mgr.load_data(filter_class)
                 filter_object.set_initial_data(data)
-        return filters
+
+        # Instantiate BlackListFilter
+        logging.info(f"BlackListFilter has been set up")
+        self.black_list_filter = BlackListFilter(limit=0)
+        blf_data = self.storage_mgr.load_data(filter_class)
+        self.black_list_filter.set_initial_data(blf_data)
+        self.filters.append(self.black_list_filter)
 
     def apply_filters(self, msg: EmailEnvelope):
         """
@@ -61,4 +70,6 @@ class FilteringManager:
         while (current_filter < n_filters) and (not is_spam):
             is_spam = is_spam or self.filters[current_filter].filter(msg)
             current_filter += 1
+        if is_spam:
+            self.black_list_filter.add_to_black_list(msg.peer[0])
         return is_spam
