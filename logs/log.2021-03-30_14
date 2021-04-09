@@ -1,0 +1,622 @@
+[ 2021-03-30 12:07:15,546 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:07:15,558 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:07:15,558 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:07:15,558 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:07:15,558 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:07:15,558 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:07:15,558 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:07:15,559 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:07:15,559 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:07:15,561 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:07:15,561 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:07:15,561 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:07:15,561 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:10:00,001 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 12:10:00,001 ] [ WARNING ] [ SpamFilter ] Spam detected: rejecting message (450)...
+[ 2021-03-30 12:10:01,741 ] [ ERROR ] [91m[ Forwarder-0 ] Timeout while connecting to remote server[0m
+[ 2021-03-30 12:10:43,856 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:10:43,868 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:10:43,869 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:10:43,869 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:10:43,869 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:10:43,869 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:10:43,869 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:10:43,869 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:10:43,869 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:10:43,869 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:10:43,869 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:10:43,870 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:10:43,870 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:11:04,903 ] [ ERROR ] [91m[ Forwarder-0 ] Timeout while connecting to remote server[0m
+[ 2021-03-30 12:11:07,031 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 12:11:07,034 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 12:11:07,034 ] [ WARNING ] [ SpamFilter ] Spam detected: rejecting message (450)...
+[ 2021-03-30 12:14:11,093 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:14:11,104 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:14:11,104 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:14:11,104 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:14:11,104 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:14:11,104 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:14:11,104 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:14:11,105 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:14:11,105 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:14:11,105 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:14:11,105 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:14:11,105 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:14:11,106 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:14:12,154 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:15:38,259 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:15:38,271 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:15:38,271 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:15:38,271 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:15:38,271 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:15:38,271 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:15:38,271 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:15:38,271 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:15:38,272 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:15:38,272 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:15:38,272 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:15:38,273 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:15:38,273 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:15:39,153 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:16:00,143 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 12:16:00,145 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 12:16:00,145 ] [ WARNING ] [ SpamFilter ] Spam detected: rejecting message (450)...
+[ 2021-03-30 12:19:55,363 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:19:55,375 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:19:55,375 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:19:55,375 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:19:55,375 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:19:55,375 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:19:55,375 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:19:55,375 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:19:55,376 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:19:55,376 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:19:55,376 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:19:55,376 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:19:55,377 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:19:57,378 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:19:59,383 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:01,386 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:03,391 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:05,395 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:07,400 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:09,403 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:11,406 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:13,413 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:15,419 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:17,422 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:19,431 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:21,435 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:23,440 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:25,446 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:27,451 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:29,456 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:31,461 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:33,465 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:35,470 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:37,477 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:39,479 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:41,485 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:43,489 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:45,494 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:47,499 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:49,505 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:51,507 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:53,513 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:55,519 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:57,524 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:20:59,529 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:01,535 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:03,540 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:05,545 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:07,550 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:09,557 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:11,562 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:13,569 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:15,573 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:17,575 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:19,581 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:21,586 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:23,591 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:25,597 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:27,602 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:29,606 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:31,612 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:33,616 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:35,620 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:37,627 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:39,632 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:41,637 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:43,643 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:45,648 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:47,655 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:49,660 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:51,665 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:53,668 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:55,673 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:57,676 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:21:59,682 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:01,685 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:03,690 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:05,695 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:07,700 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:09,704 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:11,709 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:13,713 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:15,717 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:17,722 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:19,727 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:21,731 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:23,739 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:25,745 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:27,749 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:22:30,096 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:23:21,269 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:23:21,280 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:23:21,281 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:23:21,281 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:23:21,281 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:23:21,281 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:23:21,281 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:23:21,281 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:23:21,281 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:23:21,281 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:23:21,281 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:23:21,282 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:23:21,282 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:23:23,284 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:23:40,290 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:23:51,666 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:23:51,680 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:23:51,681 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:23:51,681 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:23:51,681 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:23:51,681 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:23:51,681 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:23:51,681 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:23:51,681 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:23:51,682 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:23:51,682 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:23:51,682 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:23:51,682 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:23:53,687 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:24:10,693 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:24:27,697 ] [ ERROR ] [91m[ Forwarder-0 ] Could not connect to remote server (conn. refused)[0m
+[ 2021-03-30 12:24:43,544 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:27:12,725 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:27:12,736 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:27:12,737 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:27:12,737 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:27:12,737 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:27:12,737 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:27:12,737 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:27:12,737 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:27:12,737 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:27:12,738 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:27:12,738 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:27:12,738 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:27:12,738 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:27:13,578 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:27:27,020 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 12:27:27,022 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 12:27:27,023 ] [ WARNING ] [ SpamFilter ] Spam detected: rejecting message (450)...
+[ 2021-03-30 12:27:49,187 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:27:49,198 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:27:49,199 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:27:49,199 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:27:49,199 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:27:49,199 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:27:49,199 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:27:49,199 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:27:49,199 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:27:49,199 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:27:49,200 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:27:49,200 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:27:49,200 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:27:51,204 ] [ ERROR ] [ Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-03-30 12:28:07,051 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:28:26,592 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 12:28:26,594 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 12:28:26,598 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 12:28:26,601 ] [ ERROR ] [ Forwarder-0 ] Remote server unexpectedly closed the connection
+[ 2021-03-30 12:30:08,660 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:30:08,671 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:30:08,673 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:30:08,673 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:30:08,673 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:30:08,673 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:30:08,673 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:30:08,673 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:30:08,673 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:30:08,673 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:30:08,673 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:30:08,674 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:30:08,674 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:30:10,675 ] [ ERROR ] [ Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-03-30 12:30:26,520 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:30:49,300 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 12:30:49,303 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 12:30:49,304 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 12:30:49,306 ] [ ERROR ] [ Forwarder-0 ] Remote server unexpectedly closed the connection
+[ 2021-03-30 12:31:06,310 ] [ ERROR ] [ Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-03-30 12:31:22,150 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:33:59,574 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:33:59,586 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:33:59,587 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:33:59,587 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:33:59,587 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:33:59,587 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:33:59,587 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:33:59,587 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:33:59,587 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:33:59,587 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:33:59,587 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:33:59,588 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:33:59,588 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:34:00,432 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:37:51,940 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:37:51,952 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:37:51,952 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:37:51,953 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:37:51,953 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:37:51,953 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:37:51,953 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:37:51,953 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:37:51,953 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:37:51,954 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:37:51,954 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:37:51,955 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:37:51,955 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:37:52,802 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:38:08,693 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 12:38:08,695 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 12:38:08,697 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 12:38:08,699 ] [ ERROR ] [ Forwarder-0 ] Remote server unexpectedly closed the connection
+[ 2021-03-30 12:38:08,699 ] [ INFO ] [ Forwarder-0 ] Email has been put back in queue after error
+[ 2021-03-30 12:38:25,704 ] [ ERROR ] [ Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-03-30 12:38:25,705 ] [ INFO ] [ Forwarder-0 ] Email has been put back in queue after error
+[ 2021-03-30 12:38:42,710 ] [ ERROR ] [ Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-03-30 12:38:42,710 ] [ INFO ] [ Forwarder-0 ] Email has been put back in queue after error
+[ 2021-03-30 12:38:59,718 ] [ ERROR ] [ Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-03-30 12:38:59,718 ] [ INFO ] [ Forwarder-0 ] Email has been put back in queue after error
+[ 2021-03-30 12:39:15,557 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:39:15,560 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 12:39:15,611 ] [ INFO ] [ Forwarder-0 ] Message forwarded
+[ 2021-03-30 12:39:15,611 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 12:39:15,630 ] [ INFO ] [ Forwarder-0 ] Message forwarded
+[ 2021-03-30 12:39:15,631 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 12:39:15,635 ] [ INFO ] [ Forwarder-0 ] Message forwarded
+[ 2021-03-30 12:39:15,636 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 12:39:15,661 ] [ INFO ] [ Forwarder-0 ] Message forwarded
+[ 2021-03-30 12:40:15,919 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 12:40:15,934 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 12:40:15,935 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 12:40:15,935 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 12:40:15,935 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 12:40:15,935 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 12:40:15,935 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 12:40:15,935 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 12:40:15,936 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 12:40:15,936 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 12:40:15,936 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 12:40:15,937 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 12:40:15,937 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 12:40:16,777 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:40:36,453 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 12:40:36,456 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 12:40:36,457 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 12:40:36,459 ] [ ERROR ] [ Forwarder-0 ] Remote server unexpectedly closed the connection
+[ 2021-03-30 12:40:36,460 ] [ INFO ] [ Forwarder-0 ] Email has been put back in queue after error
+[ 2021-03-30 12:40:53,464 ] [ ERROR ] [ Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-03-30 12:41:10,470 ] [ ERROR ] [ Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-03-30 12:41:26,310 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 12:41:26,311 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 12:41:26,362 ] [ INFO ] [ Forwarder-0 ] Message forwarded
+[ 2021-03-30 12:50:16,296 ] [ INFO ] [ StorageManager ] Storing data to 'data/DKIMFilter.json'
+[ 2021-03-30 12:50:16,298 ] [ INFO ] [ StorageManager ] Storing data to 'data/SPFFilter.json'
+[ 2021-03-30 12:50:16,299 ] [ INFO ] [ StorageManager ] Storing data to 'data/XFilter.json'
+[ 2021-03-30 13:00:16,651 ] [ INFO ] [ StorageManager ] Storing data to 'data/DKIMFilter.json'
+[ 2021-03-30 13:00:16,652 ] [ INFO ] [ StorageManager ] Storing data to 'data/SPFFilter.json'
+[ 2021-03-30 13:00:16,653 ] [ INFO ] [ StorageManager ] Storing data to 'data/XFilter.json'
+[ 2021-03-30 13:10:17,010 ] [ INFO ] [ StorageManager ] Storing data to 'data/DKIMFilter.json'
+[ 2021-03-30 13:10:17,013 ] [ INFO ] [ StorageManager ] Storing data to 'data/SPFFilter.json'
+[ 2021-03-30 13:10:17,015 ] [ INFO ] [ StorageManager ] Storing data to 'data/XFilter.json'
+[ 2021-03-30 13:20:17,376 ] [ INFO ] [ StorageManager ] Storing data to 'data/DKIMFilter.json'
+[ 2021-03-30 13:20:17,377 ] [ INFO ] [ StorageManager ] Storing data to 'data/SPFFilter.json'
+[ 2021-03-30 13:20:17,378 ] [ INFO ] [ StorageManager ] Storing data to 'data/XFilter.json'
+[ 2021-03-30 13:29:43,441 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:29:43,458 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:29:43,459 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:29:43,459 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 13:29:43,459 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 13:29:43,459 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 13:29:43,459 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 13:29:43,459 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 13:29:43,459 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 13:29:43,460 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 13:29:43,460 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 13:29:43,460 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 13:29:43,461 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 13:29:44,343 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:38:32,423 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:38:32,435 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:38:32,436 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:38:32,436 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 13:38:32,436 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 13:38:32,436 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 13:38:32,436 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 13:38:32,436 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 13:38:32,436 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 13:38:32,436 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 13:38:32,436 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 13:38:32,437 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 13:38:32,437 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 13:38:33,277 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:39:06,198 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 13:39:06,201 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 13:39:06,204 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 13:39:06,252 ] [ INFO ] [ Forwarder-0 ] Message forwarded
+[ 2021-03-30 13:41:35,451 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 13:41:35,453 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 13:41:35,453 ] [ INFO ] [ Forwarder-0 ] Forwarding message
+[ 2021-03-30 13:41:35,462 ] [ INFO ] [ Forwarder-0 ] Message forwarded
+[ 2021-03-30 13:41:40,621 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:41:40,633 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:41:40,633 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:41:40,633 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 13:41:40,633 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 13:41:40,633 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 13:41:40,633 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 13:41:40,634 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 13:41:40,634 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 13:41:40,634 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 13:41:40,634 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 13:41:40,635 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 13:41:40,635 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 13:41:41,476 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:41:46,693 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 13:41:46,695 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 13:41:46,696 ] [ WARNING ] [ SpamFilter ] Spam detected: rejecting message (450)...
+[ 2021-03-30 13:44:54,086 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:44:54,098 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:44:54,098 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:44:54,098 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 13:44:54,098 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 13:44:54,098 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 13:44:54,098 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 13:44:54,099 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 13:44:54,099 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 13:44:54,099 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 13:44:54,099 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 13:44:54,100 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 13:44:54,100 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 13:44:54,940 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:47:16,859 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:47:16,869 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:47:16,870 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:47:16,870 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 13:47:16,870 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 13:47:16,870 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 13:47:16,870 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 13:47:16,870 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 13:47:16,870 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 13:47:16,871 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 13:47:16,871 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 13:47:16,872 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 13:47:16,872 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 13:47:17,712 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:47:25,066 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 13:47:25,068 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 13:47:25,069 ] [ WARNING ] [ SpamFilter ] Spam detected: rejecting message (450)...
+[ 2021-03-30 13:48:55,122 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:48:55,134 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:48:55,135 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:48:55,135 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 13:48:55,135 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 13:48:55,135 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 13:48:55,135 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 13:48:55,135 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 13:48:55,135 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 13:48:55,136 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 13:48:55,136 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 13:48:55,137 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 13:48:55,137 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 13:48:55,977 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:50:16,485 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:50:21,512 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:51:05,175 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:51:05,188 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:51:05,188 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:51:05,188 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 13:51:05,189 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 13:51:05,189 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 13:51:05,189 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 13:51:05,189 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 13:51:05,189 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 13:51:05,189 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 13:51:05,189 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 13:51:05,190 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 13:51:05,190 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 13:51:06,030 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:51:37,203 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 13:51:37,206 ] [ WARNING ] [ SPFFilter ] Sender IP '192.168.1.138' does not belong to the sender domain 'mondragon.edu'
+[ 2021-03-30 13:51:42,232 ] [ WARNING ] [ SpamFilter ] Spam detected: rejecting message (450)...
+[ 2021-03-30 13:54:58,566 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:54:58,578 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:54:58,578 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:54:58,578 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 13:54:58,578 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 13:54:58,578 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 13:54:58,578 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 13:54:58,579 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 13:54:58,579 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 13:54:58,579 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 13:54:58,579 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 13:54:58,580 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 13:54:58,580 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 13:54:59,454 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:56:04,992 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:56:05,003 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:56:05,004 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:56:05,004 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 13:56:05,004 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 13:56:05,004 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 13:56:05,004 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 13:56:05,004 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 13:56:05,004 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 13:56:05,005 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 13:56:05,005 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 13:56:05,006 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 13:56:05,006 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 13:56:05,845 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:57:16,226 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:57:21,239 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:57:22,088 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:57:26,251 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:59:12,013 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 13:59:17,027 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 13:59:17,871 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 13:59:22,040 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 13:59:32,068 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 13:59:37,080 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 13:59:39,094 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 13:59:41,107 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 13:59:43,127 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 13:59:45,140 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 13:59:47,143 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 13:59:49,158 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 13:59:51,162 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 13:59:53,173 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 14:01:51,178 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 14:01:56,194 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 14:01:57,038 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 14:02:01,206 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 14:02:11,231 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 14:02:16,241 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 14:02:18,254 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 14:02:20,267 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 14:02:22,282 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 14:02:24,297 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 14:02:26,300 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 14:02:28,313 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 14:02:30,328 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 14:02:32,342 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 14:03:26,121 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 14:03:31,137 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 14:03:31,980 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 14:03:36,151 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 14:03:46,165 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 14:03:51,166 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 14:03:53,179 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 14:03:55,194 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 14:03:57,209 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 14:03:59,214 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 14:04:01,226 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 14:04:03,239 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 14:04:05,243 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 14:04:07,257 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 14:14:05,600 ] [ INFO ] [ StorageManager ] Storing data to 'data/DKIMFilter.json'
+[ 2021-03-30 14:14:07,319 ] [ INFO ] [ SpamFilter ] A new message has been received
+[ 2021-03-30 14:14:12,326 ] [ INFO ] [ StorageManager ] Storing data to 'data/SPFFilter.json'
+[ 2021-03-30 14:14:16,450 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 14:14:21,466 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 14:14:22,344 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 14:14:26,477 ] [ INFO ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 14:14:36,494 ] [ INFO ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 14:14:41,507 ] [ INFO ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 14:14:43,520 ] [ INFO ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 14:14:45,534 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 14:14:47,550 ] [ INFO ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 14:14:49,553 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 14:14:51,555 ] [ INFO ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 14:14:53,558 ] [ INFO ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 14:14:55,561 ] [ INFO ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 14:14:57,575 ] [ INFO ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 14:15:59,691 ] [ INFO ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 14:16:04,705 ] [ INFO ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 14:16:05,548 ] [ INFO ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 14:20:53,573 ] [ INFO ] [SpamFilter] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 14:20:53,585 ] [ INFO ] [FilteringManager] [ FilteringManager ] Setting up filters
+[ 2021-03-30 14:20:53,585 ] [ INFO ] [FilteringManager] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 14:20:53,585 ] [ INFO ] [FilteringManager] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 14:20:53,585 ] [ INFO ] [FilteringManager] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 14:20:53,585 ] [ INFO ] [FilteringManager] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 14:20:53,585 ] [ INFO ] [StorageManager] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 14:20:53,586 ] [ INFO ] [FilteringManager] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 14:20:53,586 ] [ INFO ] [StorageManager] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 14:20:53,586 ] [ INFO ] [FilteringManager] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 14:20:53,586 ] [ INFO ] [StorageManager] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 14:20:53,587 ] [ INFO ] [SpamFilter] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 14:20:53,588 ] [ INFO ] [SpamFilter] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 14:20:54,429 ] [ INFO ] [MailForwarder] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 14:22:15,727 ] [ INFO ] [ SpamFilter ] [ 16372 ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 14:22:15,738 ] [ INFO ] [ FilteringManager ] [ 16372 ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 14:22:15,738 ] [ INFO ] [ FilteringManager ] [ 16372 ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 14:22:15,738 ] [ INFO ] [ FilteringManager ] [ 16372 ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 14:22:15,738 ] [ INFO ] [ FilteringManager ] [ 16372 ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 14:22:15,738 ] [ INFO ] [ FilteringManager ] [ 16372 ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 14:22:15,738 ] [ INFO ] [ StorageManager ] [ 16372 ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 14:22:15,739 ] [ INFO ] [ FilteringManager ] [ 16372 ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 14:22:15,739 ] [ INFO ] [ StorageManager ] [ 16372 ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 14:22:15,739 ] [ INFO ] [ FilteringManager ] [ 16372 ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 14:22:15,740 ] [ INFO ] [ StorageManager ] [ 16372 ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 14:22:15,741 ] [ INFO ] [ SpamFilter ] [ 16372 ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 14:22:15,741 ] [ INFO ] [ SpamFilter ] [ 16372 ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 14:22:16,582 ] [ INFO ] [ MailForwarder ] [ 12720 ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 14:23:04,974 ] [ INFO ] [ SpamFilter ] [ MainThread ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 14:23:04,989 ] [ INFO ] [ FilteringManager ] [ MainThread ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 14:23:04,989 ] [ INFO ] [ FilteringManager ] [ MainThread ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 14:23:04,989 ] [ INFO ] [ FilteringManager ] [ MainThread ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 14:23:04,990 ] [ INFO ] [ FilteringManager ] [ MainThread ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 14:23:04,990 ] [ INFO ] [ FilteringManager ] [ MainThread ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 14:23:04,990 ] [ INFO ] [ StorageManager ] [ MainThread ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 14:23:04,990 ] [ INFO ] [ FilteringManager ] [ MainThread ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 14:23:04,990 ] [ INFO ] [ StorageManager ] [ MainThread ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 14:23:04,991 ] [ INFO ] [ FilteringManager ] [ MainThread ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 14:23:04,991 ] [ INFO ] [ StorageManager ] [ MainThread ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 14:23:04,992 ] [ INFO ] [ SpamFilter ] [ MainThread ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 14:23:04,992 ] [ INFO ] [ SpamFilter ] [ MainThread ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 14:23:05,831 ] [ INFO ] [ MailForwarder ] [ Forwarder-0 ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 14:23:26,861 ] [ INFO ] [ SpamFilter:MainThread ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 14:23:26,874 ] [ INFO ] [ FilteringManager:MainThread ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 14:23:26,875 ] [ INFO ] [ FilteringManager:MainThread ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 14:23:26,875 ] [ INFO ] [ FilteringManager:MainThread ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 14:23:26,875 ] [ INFO ] [ FilteringManager:MainThread ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 14:23:26,875 ] [ INFO ] [ FilteringManager:MainThread ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 14:23:26,875 ] [ INFO ] [ StorageManager:MainThread ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 14:23:26,875 ] [ INFO ] [ FilteringManager:MainThread ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 14:23:26,876 ] [ INFO ] [ StorageManager:MainThread ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 14:23:26,876 ] [ INFO ] [ FilteringManager:MainThread ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 14:23:26,876 ] [ INFO ] [ StorageManager:MainThread ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 14:23:26,876 ] [ INFO ] [ SpamFilter:MainThread ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 14:23:26,876 ] [ INFO ] [ SpamFilter:MainThread ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 14:23:27,717 ] [ INFO ] [ MailForwarder:Forwarder-0 ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 14:23:43,979 ] [ INFO ] [ SpamFilter : MainThread ] [ SpamFilter ] Setting up SpamFilter server
+[ 2021-03-30 14:23:43,992 ] [ INFO ] [ FilteringManager : MainThread ] [ FilteringManager ] Setting up filters
+[ 2021-03-30 14:23:43,992 ] [ INFO ] [ FilteringManager : MainThread ] [ FilteringManager ] FromFilter has been set up
+[ 2021-03-30 14:23:43,992 ] [ INFO ] [ FilteringManager : MainThread ] [ FilteringManager ] ReturnPathFilter has been set up
+[ 2021-03-30 14:23:43,992 ] [ INFO ] [ FilteringManager : MainThread ] [ FilteringManager ] ToFilter has been set up
+[ 2021-03-30 14:23:43,992 ] [ INFO ] [ FilteringManager : MainThread ] [ FilteringManager ] DKIMFilter has been set up
+[ 2021-03-30 14:23:43,992 ] [ INFO ] [ StorageManager : MainThread ] [ StorageManager ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 14:23:43,993 ] [ INFO ] [ FilteringManager : MainThread ] [ FilteringManager ] SPFFilter has been set up
+[ 2021-03-30 14:23:43,993 ] [ INFO ] [ StorageManager : MainThread ] [ StorageManager ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 14:23:43,993 ] [ INFO ] [ FilteringManager : MainThread ] [ FilteringManager ] XFilter has been set up
+[ 2021-03-30 14:23:43,994 ] [ INFO ] [ StorageManager : MainThread ] [ StorageManager ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 14:23:43,994 ] [ INFO ] [ SpamFilter : MainThread ] [ SpamFilter ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 14:23:43,995 ] [ INFO ] [ SpamFilter : MainThread ] [ SpamFilter ] Waiting for mails to filter...
+[ 2021-03-30 14:23:44,840 ] [ INFO ] [ MailForwarder : Forwarder-0 ] [ Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-03-30 14:28:04,018 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-03-30 14:28:04,029 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-03-30 14:28:04,030 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-03-30 14:28:04,030 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-03-30 14:28:04,030 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-03-30 14:28:04,030 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-03-30 14:28:04,030 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-03-30 14:28:04,030 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-03-30 14:28:04,030 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-03-30 14:28:04,031 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-03-30 14:28:04,031 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-03-30 14:28:04,032 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.138', 1025)
+[ 2021-03-30 14:28:04,032 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-03-30 14:28:04,872 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)

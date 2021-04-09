@@ -23,20 +23,28 @@ class BlackListFilter(DBFilter):
         :return: True, if the peer is black-listed. False, if it is not.
         """
 
-        # Get peer and check if it is blacklisted.
-        peer = envelope.peer[0]
-
-        # If it is, increment the number of times that it has been detected as spam and check if it exceeds the limit.
-        if peer not in self.data:
-            return False
-        else:
-            n_times_detected_as_spam = self.data[peer] + 1
-            self.data[peer] = n_times_detected_as_spam
+        # Get peer ip and check if it is blacklisted or if belongs to a black-listed ip range
+        peer_ip: ipaddress.IPv4Address = ipaddress.ip_address(envelope.peer[0])
+        if peer_ip.compressed in self.data["ip_addresses"]:
+            n_times_detected_as_spam = self.data["ip_addresses"][peer_ip.compressed]
             if n_times_detected_as_spam > self.limit:
-                logging.warning(f"Sender IP has been black-listed'")
+                logging.warning(f"Sender IP {peer_ip} has been previously black-listed")
                 return True
+        else:
+            for ip_range in self.data["ip_ranges"]:
+                if peer_ip in ipaddress.ip_network(ip_range):
+                    logging.warning(f"Sender IP {peer_ip} belongs to a black-listed IP network {ip_range}")
+                    return True
 
         return False
 
-    def add_to_black_list(self, peer_ip):
-        self.data[peer_ip] = 0
+    def update_black_list(self, peer_ip):
+        """
+        This method updates the black list by including the peer_ip in it or by incrementing the number of times that it has been detected as spam
+        :param peer_ip: the peer IP to be updated in the black list
+        """
+        n_times_detected_as_spam = self.data["ip_addresses"].get(peer_ip)
+        if n_times_detected_as_spam is None:
+            n_times_detected_as_spam = 0
+        n_times_detected_as_spam += 1
+        self.data["ip_addresses"][peer_ip] = n_times_detected_as_spam
