@@ -44,18 +44,17 @@ class FilteringManager:
         self.filters = list()
         for filter_class in filter_classes:
             logging.info(f"{filter_class} has been set up")
-            filter_object = filter_classes[filter_class]()
+
+            # Store BlackListFilter independently
+            if filter_classes[filter_class] is BlackListFilter:
+                self.black_list_filter = filter_object = filter_classes[filter_class](limit=0)
+            else:
+                filter_object = filter_classes[filter_class]()
             self.filters.append(filter_object)
+
             if issubclass(filter_classes[filter_class], DBFilter):
                 data = self.storage_mgr.load_data(filter_class)
                 filter_object.set_initial_data(data)
-
-        # Instantiate BlackListFilter
-        logging.info(f"BlackListFilter has been set up")
-        self.black_list_filter = BlackListFilter(limit=0)
-        blf_data = self.storage_mgr.load_data(filter_class)
-        self.black_list_filter.set_initial_data(blf_data)
-        self.filters.append(self.black_list_filter)
 
     def apply_filters(self, msg: EmailEnvelope):
         """
@@ -71,5 +70,5 @@ class FilteringManager:
             is_spam = is_spam or self.filters[current_filter].filter(msg)
             current_filter += 1
         if is_spam:
-            self.black_list_filter.add_to_black_list(msg.peer[0])
+            self.black_list_filter.update_black_list(msg.peer[0])
         return is_spam

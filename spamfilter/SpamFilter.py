@@ -33,7 +33,7 @@ class SpamFilter(smtpd.SMTPServer):
         self.forwarder = MailForwarder(self._remoteaddr[0], self._remoteaddr[1], 1)
 
         # Create filtering manager, which will filter all incoming messages
-        self.filtering_mgr = FilteringManager(storing_frequency=600)
+        self.filtering_mgr = FilteringManager(storing_frequency=10)
         logging.info(f"Running SpamFilter server on {localaddr}")
         logging.info("Waiting for mails to filter...")
 

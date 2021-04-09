@@ -47,12 +47,13 @@ class MailForwarder:
         :param port: the port of the server to forward emails to
         """
         server = None
+        msg: EmailEnvelope = None
         while True:
             try:
                 server = smtplib.SMTP(ip, port)
                 logging.info(f"Ready to forward to {(ip, port)}")
                 while True:
-                    msg: EmailEnvelope = msgs.get()
+                    msg = msgs.get()
                     logging.info(f"Forwarding message")
                     server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
                     logging.info(f"Message forwarded")
