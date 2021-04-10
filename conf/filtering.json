@@ -1,0 +1,8 @@
+{
+  "disabled-filters": [],
+  "exceptions": {
+    "ip_addresses": [],
+    "email_addresses": [],
+    "email_domains": []
+  }
+}
