@@ -1,22 +1,18 @@
 import asyncore
+import logging
 
-import configuration
-from spamfilter import SpamFilter
+from schema import SchemaError
 
-# Looad initial configurations
-server_conf = configuration.load_server_config()
-configuration.config_logging(server_conf)
+from spamfilter import SpamFilter, configuration
 
-# Get launching params
-server_ip = configuration.get_local_ip()
-server_port = server_conf["server_params"]["local_port"]
-remote_ip = server_conf["server_params"]["remote_ip"]
-remote_port = server_conf["server_params"]["remote_ip"]
-
-# Launch SpamFilter
-SpamFilter(
-    (server_ip, server_port),
-    (remote_ip, remote_port),
-    None
-)
-asyncore.loop()
+try:
+    # Looad initial configurations
+    server_conf = configuration.load_server_config()
+    configuration.config_logging(server_conf)
+    # Launch SpamFilter
+    SpamFilter(server_conf)
+    asyncore.loop()
+except SchemaError as e:
+    logging.error(f"There was a syntax error in one of the configuration files:\n{e}")
+except Exception as e:
+    logging.error(f"An unexpected error occured:\n{e}")

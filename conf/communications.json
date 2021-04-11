@@ -1,6 +1,6 @@
 {
-  "admin-emails": [
+  "admin_emails": [
     "cmrodriguez17@esei.uvigo.es"
   ],
-  "server-email": "no-reply@spamfilter.com"
+  "server_email": "no-reply@spamfilter.com"
 }

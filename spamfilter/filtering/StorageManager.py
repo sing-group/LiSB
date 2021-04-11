@@ -33,7 +33,7 @@ class StorageManager:
         :param data: The data to be stored as a JSON file
         """
         whole_filename = join(self.path, filename + '.json')
-        logging.info(f"Storing data to '{whole_filename}'")
+        logging.info(f"Storing {filename} data to '{whole_filename}'")
         with open(join(self.path, filename + '.json'), 'w') as json_file:
             json.dump(data, json_file, sort_keys=True)
 
@@ -61,8 +61,8 @@ class StorageManager:
         :param filters: The filters to get the data from
         """
         schedule.every(self.load_frequency).seconds.do(StorageManager.store_all_data, self, filters)
-        storage_deamon = th.Thread(target=StorageManager.__daemon_job, name="StorageDaemon")
-        storage_deamon.start()
+        storage_daemon = th.Thread(target=StorageManager.__daemon_job, name="StorageDaemon")
+        storage_daemon.start()
 
     @staticmethod
     def store_all_data(storage_mgr, filters):

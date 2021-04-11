@@ -1,12 +1,8 @@
 {
+  "local_ip" : "192.168.1.156",
   "local_port" : 1025,
-  "remote_ip": "192.168.1.188",
-  "remote_port": 1025,
-  "data_size_limit": "33554432",
-  "map": "None",
-  "enable_SMTPUTF8": "False",
-  "decode_data": "False",
-  "n-filtering-threads": 1,
-  "n-forwarder-threads": 1,
-  "storing-frequency": 10
+  "data_size_limit": 33554432,
+  "map": null,
+  "enable_SMTPUTF8": false,
+  "decode_data": false
 }

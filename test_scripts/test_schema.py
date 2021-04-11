@@ -1,9 +1,9 @@
 # from spamfilter.configuration_schemas import filtering_schema, email_alerts_schema, server_params_schema
 
-from configuration import communications_schema
+from spamfilter.configuration import communications_schema
 
 # filtering_conf = {
-#     "disabled-filters": ["SPFFilter"],
+#     "disabled_filters": ["SPFFilter"],
 #     "exceptions": {
 #         "ip_addresses": ["192.168.1.1"],
 #         "email_addresses": ["cmrodriguez17@esei.es"],
@@ -15,7 +15,7 @@ from configuration import communications_schema
 # alerts = {
 #     "status": "enabled",
 #     "level": "WARNING",
-#     "msg-template": "A new alert has been generated at %(asctime)s by %(module)s : %(message)s"
+#     "msg_template": "A new alert has been generated at %(asctime)s by %(module)s : %(message)s"
 #   }
 #
 # print(email_alerts_schema.validate(alerts))
@@ -34,10 +34,10 @@ from configuration import communications_schema
 # print(logging_schema.validate(loaded))
 
 to_test = {
-  "admin-emails": [
+  "admin_emails": [
     "cmrodriguez17@esei.uvigo.es"
   ],
-  "server-email": "no-reply@spamfilter.com"
+  "server_email": "no-reply@spamfilter.com"
 }
 
 print(communications_schema.validate(to_test))

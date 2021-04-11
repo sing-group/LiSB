@@ -13,11 +13,14 @@ from spamfilter.filtering.filters.Filter import Filter
 class FilteringManager:
     filters: Sequence[Filter]
     black_list_filter: BlackListFilter
-    n_threads: int
+    n_filtering_threads: int
     storage_mgr: StorageManager
 
-    def __init__(self, n_threads: int = 1, storing_frequency: int = 300):
-        self.n_threads = n_threads
+    def __init__(self, n_filtering_threads: int = 1, storing_frequency: int = 300, disabled_filters: list = [],
+                 exceptions=None):
+        self.n_filtering_threads = n_filtering_threads
+        self.disabled_filters = disabled_filters
+        self.exceptions = exceptions
         self.storage_mgr = StorageManager("data/", storing_frequency)
         self.set_up_filters()
         self.storage_mgr.launch_storage_daemon(self.filters)
@@ -63,6 +66,17 @@ class FilteringManager:
         :param msg: The email message to be filtered
         :return: True, if msg is detected as spam; False, if else
         """
+
+        # Check if the peer IP, the email address or the email domain is allowed.
+        # If so, let the email pass without filtering
+        is_exception = self.check_if_is_exception(
+            peer_ip=msg.peer[0],
+            email_address=msg.get_parsed_from(),
+            email_domain=msg.get_sender_domain()
+        )
+        if is_exception:
+            return False
+
         is_spam = False
         current_filter = 0
         n_filters = len(self.filters)
@@ -72,3 +86,8 @@ class FilteringManager:
         if is_spam:
             self.black_list_filter.update_black_list(msg.peer[0])
         return is_spam
+
+    def check_if_is_exception(self, peer_ip, email_address, email_domain):
+        return peer_ip in self.exceptions["ip_addresses"] or \
+               email_address in self.exceptions["email_addresses"] or \
+               email_domain in self.exceptions["email_domains"]

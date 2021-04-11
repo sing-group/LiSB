@@ -1,9 +1,11 @@
+import ast
 import ipaddress
 import json
 import logging
 import os
 import re
 import socket
+from os import listdir
 
 from schema import Schema, And, Use, Optional, SchemaError, Or
 
@@ -19,7 +21,9 @@ email_regex = re.compile('^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$')
 # SCHEMA FOR THE FILTERING CONFIGURATION
 filtering_schema = Schema(
     {
-        "disabled-filters": [And(str, lambda cls: cls in filter_classes)],
+        "n_filtering_threads": And(int, lambda n: n >= 0),
+        "storing_frequency": And(int, lambda n: n > 0),
+        "disabled_filters": [And(str, lambda cls: cls in filter_classes)],
         "exceptions": {
             "ip_addresses": [
                 And(str, lambda ip: ipaddress.IPv4Address(ip))
@@ -37,10 +41,10 @@ filtering_schema = Schema(
 # SCHEMA FOR THE EMAIL ALERTS CONFIGURATION
 logging_schema = Schema(
     {
-        "email-alerts": {
+        "email_alerts": {
             "status": Or("enabled", "disabled"),
             "level": Or("CRITICAL", "ERROR", "WARNING", "INFO", "DEBUG"),
-            "msg-template": str
+            "msg_template": str
         }
     },
     ignore_extra_keys=True
@@ -49,22 +53,25 @@ logging_schema = Schema(
 # SCHEMA FOR THE COMMUNICATIONS CONFIGURATION
 communications_schema = Schema(
     {
-        "admin-emails": And(
+        "admin_emails": And(
             [And(str, lambda email: re.match(email_regex, email) is not None)],
             lambda admin_emails: admin_emails
         ),
-        "server-email": And(str, lambda email: re.match(email_regex, email) is not None)
+        "server_email": And(str, lambda email: re.match(email_regex, email) is not None)
     }
 )
 
 # SCHEMA FOR THE SERVER PARAMETERS
-# server_params_schema = Schema(
-#     {
-#         "n-filtering-threads": And(int, lambda n: n > 0),
-#         "n-forwarder-threads": And(int, lambda n: n > 0),
-#         "storing-frequency": And(int, lambda n: n > 0)
-#     }
-# )
+server_params_schema = Schema(
+    {
+        "local_ip": And(str, lambda ip: ipaddress.IPv4Address(ip)),
+        "local_port": And(int, lambda port: 0 <= port <= 65353),
+        "data_size_limit": And(int, lambda n: n > 0),
+        "map": And(lambda obj: obj is None or isinstance(obj, dict)),
+        "enable_SMTPUTF8": bool,
+        "decode_data": bool
+    }
+)
 
 
 def get_local_ip():
@@ -80,7 +87,11 @@ def load_server_config():
     This function loads and (validates if necessary) all of the server configurations located in the 'conf/' directory into the configuration dictionary
     """
     conf = {}
-    config_files = ["logging", "communications", "filtering", "server_params"]
+    config_files = [file[:-5] for file in listdir("conf/")]
+    minimum_config_files = ["logging", "communications", "filtering", "server_params", "forwarding"]
+    if set(minimum_config_files) > set(config_files):
+        raise Exception("One or more minimum configuration files are missing. Please ensure that all of"
+                        f"the following files are in the conf/ directory: {minimum_config_files}")
     for filename in config_files:
         # Open configuration file
         with open("conf/" + filename + ".json") as file:
@@ -88,8 +99,12 @@ def load_server_config():
         # Validate if necessary
         validation_schema: Schema = globals().get(filename + "_schema")
         if validation_schema is not None:
-            validation_schema.validate(conf[filename])
+            validated = validation_schema.validate(conf[filename])
+            if not validation_schema.ignore_extra_keys:
+                conf[filename] = validated
+
     return conf
+
 
 def config_logging(server_conf: dict):
     """
@@ -97,7 +112,7 @@ def config_logging(server_conf: dict):
     If any problem is encountered while setting up logging, then it defines a basic logging configuration.
     """
     # Create logging directory if it doesn't exist
-    path = 'logs/'
+    path = '../logs/'
     if not os.path.exists(path):
         os.makedirs(path)
 
@@ -108,16 +123,16 @@ def config_logging(server_conf: dict):
         logging.config.dictConfig(logging_conf)
 
         # If email alerts are configured, then create email handler and configure it to send emails to admins
-        if logging_conf['email-alerts']['status'] == 'enabled':
+        if logging_conf['email_alerts']['status'] == 'enabled':
             # Get all parameters
-            email_alerts_level = logging_conf['email-alerts']['level']
-            msg_template = logging_conf['email-alerts']['msg-template']
-            server_email = server_conf['communications']['server-email']
-            admin_emails = server_conf['communications']['admin-emails']
+            email_alerts_level = logging_conf['email_alerts']['level']
+            msg_template = logging_conf['email_alerts']['msg_template']
+            server_email = server_conf['communications']['server_email']
+            admin_emails = server_conf['communications']['admin_emails']
 
             # Set up email handler
             email_handler = logging.handlers.SMTPHandler(
-                mailhost=server_conf['forwarding']['remote-addr'],
+                mailhost=(server_conf['forwarding']['remote_ip'],server_conf['forwarding']['remote_port']),
                 fromaddr=server_email,
                 toaddrs=admin_emails,
                 subject=f"SpamFilter server alert",
@@ -130,13 +145,14 @@ def config_logging(server_conf: dict):
             logger = logging.getLogger()
             logger.addHandler(email_handler)
 
-    except Exception:
+    except Exception as e:
         logging.basicConfig(
-            filename='logs/log',
+            filename='../logs/log',
             format="[ %(asctime)s ] [ %(levelname)s ] [ %(module)s : %(threadName)s ] %(message)s",
             level=logging.WARNING
         )
-        logging.error(f"There was a problem while setting up logging. Using basic configuration:"
-                      f" - Storing logs in logs/"
-                      f" - Logging level: WARNING"
-                      f" - Using format [ %(asctime)s ] [ %(levelname)s ] [ %(module)s : %(threadName)s ] %(message)s")
+        logging.error(f"There was a problem while setting up logging. Using basic configuration:\n"
+                      f" - Storing logs in logs/\n"
+                      f" - Logging level: WARNING\n"
+                      f" - Using format [ %(asctime)s ] [ %(levelname)s ] [ %(module)s : %(threadName)s ] %(message)s\n"
+                      f"PROBLEM: {e}")

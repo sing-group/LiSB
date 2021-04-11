@@ -12,19 +12,19 @@ class MailForwarder:
     _forward_ip = None
     _forward_port = None
 
-    def __init__(self, ip: str, port: int = 1025, n_threads: int = mp.cpu_count()):
+    def __init__(self, ip: str, port: int = 1025, n_forwarder_threads: int = mp.cpu_count()):
         """
         This method creates a multi-thread mail forwarder based on queues
 
         :param ip: the IP of the server to forward emails to
         :param port: the port of the server to forward emails to
-        :param n_threads: the number of threads that will be created (number of CPUs by default)
+        :param n_forwarder_threads: the number of threads that will be created (number of CPUs by default)
         """
         self._msgs_to_forward = mp.Queue()
         self._forward_ip = ip
         self._forward_port = port
-        self._n_threads = n_threads
-        for i in range(n_threads):
+        self._n_threads = n_forwarder_threads
+        for i in range(n_forwarder_threads):
             worker = th.Thread(target=MailForwarder.__forward_msg, name=f"Forwarder-{i}",
                                args=(self._msgs_to_forward, self._forward_ip, self._forward_port))
             worker.start()

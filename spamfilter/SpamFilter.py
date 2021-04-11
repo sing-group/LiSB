@@ -1,6 +1,7 @@
 import logging
 import logging.config
 import logging.handlers
+import multiprocessing
 import os
 import smtpd
 import email
@@ -19,24 +20,42 @@ class SpamFilter(smtpd.SMTPServer):
     _REJECTION_MSG_RFC_5321 = "450 Requested mail action not taken: mailbox unavailable (e.g., mailbox busy or " \
                               "temporarily blocked for policy reasons)"
 
-    def __init__(self, localaddr, remoteaddr, data_size_limit=smtpd.DATA_SIZE_DEFAULT,
-                 map=None, enable_SMTPUTF8=False, decode_data=False):
+    def __init__(self, conf: dict):
 
         logging.info("Setting up SpamFilter server")
+        self.conf = conf
 
         # Call parent constructor
-        super().__init__(localaddr, remoteaddr, data_size_limit, map, enable_SMTPUTF8, decode_data)
+        super().__init__(
+            localaddr=(conf["server_params"]["local_ip"], conf["server_params"]["local_port"]),
+            remoteaddr=(conf["forwarding"]["remote_ip"], conf["forwarding"]["remote_port"]),
+            data_size_limit=conf["server_params"]["data_size_limit"],
+            map=conf["server_params"]["map"],
+            enable_SMTPUTF8=conf["server_params"]["enable_SMTPUTF8"],
+            decode_data=conf["server_params"]["decode_data"]
+        )
 
         # Create mail forwarder, which will forward valid emails
+        n_forwarder_threads = conf["forwarding"]["n_forwarder_threads"]
+        if n_forwarder_threads == 0:
+            n_forwarder_threads = multiprocessing.cpu_count()
         self.forwarder = MailForwarder(
             ip=self._remoteaddr[0],
             port=self._remoteaddr[1],
-            n_threads=1
+            n_forwarder_threads=n_forwarder_threads
         )
 
         # Create filtering manager, which will filter all incoming messages
-        self.filtering_mgr = FilteringManager(storing_frequency=10)
-        logging.info(f"Running SpamFilter server on {localaddr}")
+        n_filtering_threads = conf["filtering"]["n_filtering_threads"]
+        if n_filtering_threads == 0:
+            n_filtering_threads = multiprocessing.cpu_count()
+        self.filtering_mgr = FilteringManager(
+            n_filtering_threads=n_filtering_threads,
+            storing_frequency=conf["filtering"]["storing_frequency"],
+            disabled_filters=conf["filtering"]["disabled_filters"],
+            exceptions=conf["filtering"]["exceptions"]
+        )
+        logging.info(f"Running SpamFilter server on {self._localaddr}")
         logging.info("Waiting for mails to filter...")
 
     def process_message(self, peer, mailfrom, rcpttos, data, **kwargs):

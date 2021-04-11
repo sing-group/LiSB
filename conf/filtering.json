@@ -1,5 +1,7 @@
 {
-  "disabled-filters": [],
+  "n_filtering_threads": 1,
+  "storing_frequency": 300,
+  "disabled_filters": [],
   "exceptions": {
     "ip_addresses": [],
     "email_addresses": [],
