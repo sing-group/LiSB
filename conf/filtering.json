@@ -1,6 +1,6 @@
 {
-  "n_filtering_threads": 1,
-  "storing_frequency": 300,
+  "enable_threading": true,
+  "storing_frequency": 600,
   "disabled_filters": [],
   "exceptions": {
     "ip_addresses": [],

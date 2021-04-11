@@ -2,10 +2,10 @@ import logging
 import logging.config
 import logging.handlers
 import multiprocessing
-import os
 import smtpd
 import email
 import email.utils
+import time
 
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.MailForwarder import MailForwarder
@@ -46,11 +46,8 @@ class SpamFilter(smtpd.SMTPServer):
         )
 
         # Create filtering manager, which will filter all incoming messages
-        n_filtering_threads = conf["filtering"]["n_filtering_threads"]
-        if n_filtering_threads == 0:
-            n_filtering_threads = multiprocessing.cpu_count()
         self.filtering_mgr = FilteringManager(
-            n_filtering_threads=n_filtering_threads,
+            enable_threading=conf["filtering"]["enable_threading"],
             storing_frequency=conf["filtering"]["storing_frequency"],
             disabled_filters=conf["filtering"]["disabled_filters"],
             exceptions=conf["filtering"]["exceptions"]
@@ -77,7 +74,10 @@ class SpamFilter(smtpd.SMTPServer):
         msg = EmailEnvelope(peer, mailfrom, rcpttos, msg_data, **kwargs)
 
         # Check if parsed message is spam: reject it if it is (code 450), forward it if it isn't
+        start_time = time.time()
         is_spam = self.filtering_mgr.apply_filters(msg)
+        filtering_time = time.time() - start_time
+        logging.debug(f"Filtering process lasted for {filtering_time} s")
         if is_spam:
             logging.warning("Spam detected: rejecting message (450)...")
             return self._REJECTION_MSG_RFC_5321

@@ -1,6 +1,6 @@
 import smtplib
-import threading as th
-import multiprocessing as mp
+import threading
+import multiprocessing
 import logging
 import time
 
@@ -8,11 +8,11 @@ from spamfilter.EmailEnvelope import EmailEnvelope
 
 
 class MailForwarder:
-    _msgs_to_forward: mp.Queue
+    _msgs_to_forward: multiprocessing.Queue
     _forward_ip = None
     _forward_port = None
 
-    def __init__(self, ip: str, port: int = 1025, n_forwarder_threads: int = mp.cpu_count()):
+    def __init__(self, ip: str, port: int = 1025, n_forwarder_threads: int = multiprocessing.cpu_count()):
         """
         This method creates a multi-thread mail forwarder based on queues
 
@@ -20,12 +20,12 @@ class MailForwarder:
         :param port: the port of the server to forward emails to
         :param n_forwarder_threads: the number of threads that will be created (number of CPUs by default)
         """
-        self._msgs_to_forward = mp.Queue()
+        self._msgs_to_forward = multiprocessing.Queue()
         self._forward_ip = ip
         self._forward_port = port
         self._n_threads = n_forwarder_threads
         for i in range(n_forwarder_threads):
-            worker = th.Thread(target=MailForwarder.__forward_msg, name=f"Forwarder-{i}",
+            worker = threading.Thread(target=MailForwarder.__forward_msg, name=f"Forwarder-{i}",
                                args=(self._msgs_to_forward, self._forward_ip, self._forward_port))
             worker.start()
 
@@ -38,7 +38,7 @@ class MailForwarder:
         self._msgs_to_forward.put(msg)
 
     @staticmethod
-    def __forward_msg(msgs: mp.Queue, ip: str, port: int):
+    def __forward_msg(msgs: multiprocessing.Queue, ip: str, port: int):
         """
         This static method is executed by the worker threads in order to forward the email messages from the queue
 

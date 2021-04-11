@@ -21,7 +21,7 @@ email_regex = re.compile('^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$')
 # SCHEMA FOR THE FILTERING CONFIGURATION
 filtering_schema = Schema(
     {
-        "n_filtering_threads": And(int, lambda n: n >= 0),
+        "enable_threading": bool,
         "storing_frequency": And(int, lambda n: n > 0),
         "disabled_filters": [And(str, lambda cls: cls in filter_classes)],
         "exceptions": {
