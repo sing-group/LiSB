@@ -6,11 +6,11 @@ import time
 
 
 def config_logging():
-    path = 'logs/'
+    path = '../logs/'
     if not os.path.exists(path):
         os.makedirs(path)
 
-    with open('conf/logging.json', 'r') as file:
+    with open('../conf/logging.json', 'r') as file:
         config = json.load(file)
 
     logging.config.dictConfig(config)

@@ -10,5 +10,5 @@ to_parse = {
     "ip_addresses": {}
 }
 
-with open("data/BlackListFilter.json", "w") as blf_data_file:
+with open("../data/BlackListFilter.json", "w") as blf_data_file:
     json.dump(to_parse, blf_data_file, sort_keys=True)

@@ -1,0 +1,10 @@
+{
+  "enable_threading": true,
+  "storing_frequency": 600,
+  "disabled_filters": [],
+  "exceptions": {
+    "ip_addresses": [],
+    "email_addresses": [],
+    "email_domains": []
+  }
+}

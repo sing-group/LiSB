@@ -28,9 +28,9 @@
       "file"
     ]
   },
-  "email-alerts": {
+  "email_alerts": {
     "status": "enabled",
     "level": "WARNING",
-    "msg-template": "A new alert has been generated at %(asctime)s by %(module)s : %(message)s"
+    "msg_template": "A new alert has been generated at %(asctime)s by %(module)s : %(message)s"
   }
 }

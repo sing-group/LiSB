@@ -1,0 +1,910 @@
+[ 2021-04-09 12:56:26,280 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 12:56:26,335 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 12:56:26,335 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 12:56:26,335 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 12:56:26,335 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 12:56:26,335 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 12:56:47,338 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] Timeout while connecting to remote server
+[ 2021-04-09 13:06:34,739 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 13:06:34,755 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 13:06:34,755 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 13:06:34,755 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 13:06:34,756 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 13:06:34,756 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 13:06:34,756 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 13:06:34,763 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 13:06:34,763 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 13:06:34,768 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 13:06:34,768 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 13:06:34,773 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 13:06:34,773 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 13:06:34,774 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('10.100.150.142', 1025)
+[ 2021-04-09 13:06:34,774 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 13:06:55,758 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] Timeout while connecting to remote server
+[ 2021-04-09 13:08:18,131 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 13:08:18,143 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 13:08:18,143 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 13:08:18,144 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 13:08:18,144 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 13:08:18,144 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 13:08:18,144 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 13:08:18,144 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 13:08:18,144 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 13:08:18,145 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 13:08:18,145 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 13:08:18,145 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 13:08:18,145 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 13:08:18,146 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('10.100.150.142', 1025)
+[ 2021-04-09 13:08:18,146 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 13:08:39,146 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] Timeout while connecting to remote server
+[ 2021-04-09 13:10:32,069 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 13:10:32,083 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 13:10:32,083 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 13:10:32,083 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 13:10:32,084 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 13:10:32,084 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 13:10:32,084 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 13:10:32,084 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 13:10:32,084 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 13:10:32,085 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 13:10:32,085 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 13:10:32,085 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 13:10:32,085 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 13:10:32,086 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('172.20.10.5', 1025)
+[ 2021-04-09 13:10:32,086 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 13:10:45,929 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-04-09 13:12:34,410 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 13:12:34,424 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 13:12:34,425 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 13:12:34,425 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 13:12:34,425 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 13:12:34,425 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 13:12:34,425 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 13:12:34,425 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] An unexpected error occurred: [WinError 10065] Se ha intentado una operación de socket en un host no accesible
+[ 2021-04-09 13:12:34,426 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 13:12:34,427 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 13:12:34,428 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 13:12:34,428 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 13:12:34,428 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 13:12:34,428 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 13:12:34,429 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.135', 1025)
+[ 2021-04-09 13:12:34,430 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 13:12:39,075 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 13:12:39,088 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 13:12:39,088 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 13:12:39,088 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 13:12:39,088 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 13:12:39,088 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 13:12:39,088 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] An unexpected error occurred: [WinError 10065] Se ha intentado una operación de socket en un host no accesible
+[ 2021-04-09 13:12:39,088 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 13:12:39,089 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 13:12:39,089 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 13:12:39,090 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 13:12:39,090 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 13:12:39,090 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 13:12:39,090 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 13:12:39,091 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.135', 1025)
+[ 2021-04-09 13:12:39,091 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 13:12:54,092 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] An unexpected error occurred: [WinError 10065] Se ha intentado una operación de socket en un host no accesible
+[ 2021-04-09 13:13:09,105 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] An unexpected error occurred: [WinError 10065] Se ha intentado una operación de socket en un host no accesible
+[ 2021-04-09 13:13:24,117 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] An unexpected error occurred: [WinError 10065] Se ha intentado una operación de socket en un host no accesible
+[ 2021-04-09 13:13:39,129 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] An unexpected error occurred: [WinError 10065] Se ha intentado una operación de socket en un host no accesible
+[ 2021-04-09 13:13:54,141 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] An unexpected error occurred: [WinError 10065] Se ha intentado una operación de socket en un host no accesible
+[ 2021-04-09 13:14:22,999 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-04-09 13:14:56,806 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] Could not connect to remote server (conn. refused)
+[ 2021-04-09 13:15:00,393 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 13:15:00,405 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 13:15:00,406 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 13:15:00,406 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 13:15:00,406 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 13:15:00,406 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 13:15:00,406 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 13:15:00,407 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 13:15:00,408 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 13:15:00,408 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 13:15:00,408 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 13:15:00,408 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 13:15:00,409 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 13:15:00,409 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('172.20.10.5', 1025)
+[ 2021-04-09 13:15:00,409 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 13:15:01,346 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('172.20.10.12', 1025)
+[ 2021-04-09 13:25:00,763 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:25:00,768 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:25:00,768 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:25:00,769 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:34:05,802 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 13:34:05,805 ] [ WARNING ] [ SPFFilter : MainThread ] Sender IP '172.20.10.5' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-09 13:34:06,749 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-09 13:35:31,663 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 13:35:31,677 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 13:35:31,677 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 13:35:31,677 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 13:35:31,677 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 13:35:31,678 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 13:35:31,678 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 13:35:31,679 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 13:35:31,679 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 13:35:31,679 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 13:35:31,679 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 13:35:31,679 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 13:35:31,680 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 13:35:31,680 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('172.20.10.5', 1025)
+[ 2021-04-09 13:35:31,680 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 13:35:32,577 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('172.20.10.12', 1025)
+[ 2021-04-09 13:35:37,481 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 13:35:37,483 ] [ WARNING ] [ SPFFilter : MainThread ] Sender IP '172.20.10.5' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-09 13:35:39,437 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-09 13:36:44,864 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 13:36:44,876 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 13:36:44,876 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 13:36:44,876 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 13:36:44,876 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 13:36:44,876 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 13:36:44,876 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 13:36:44,877 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 13:36:44,877 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 13:36:44,878 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 13:36:44,878 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 13:36:44,878 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 13:36:44,878 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 13:36:44,879 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('172.20.10.5', 1025)
+[ 2021-04-09 13:36:44,879 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 13:36:45,823 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('172.20.10.12', 1025)
+[ 2021-04-09 13:36:50,222 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 13:36:50,224 ] [ WARNING ] [ SPFFilter : MainThread ] Sender IP '172.20.10.5' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-09 13:36:51,190 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-09 13:36:54,884 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:36:54,888 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:36:54,888 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:36:54,889 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:37:04,895 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:37:04,898 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:37:04,899 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:37:04,900 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:37:14,905 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:37:14,908 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:37:14,909 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:37:14,909 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:37:24,915 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:37:24,918 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:37:24,919 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:37:24,919 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:37:34,112 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 13:37:34,113 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP has been black-listed'
+[ 2021-04-09 13:37:34,926 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:37:34,928 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:37:34,929 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:37:34,930 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:37:35,050 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-09 13:37:44,937 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:37:44,940 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:37:44,941 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:37:44,942 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:37:51,803 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 13:37:51,815 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 13:37:51,815 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 13:37:51,815 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 13:37:51,815 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 13:37:51,815 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 13:37:51,815 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 13:37:51,816 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 13:37:51,816 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 13:37:51,817 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 13:37:51,817 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 13:37:51,817 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 13:37:51,817 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 13:37:51,818 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('172.20.10.5', 1025)
+[ 2021-04-09 13:37:51,818 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 13:37:52,715 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('172.20.10.12', 1025)
+[ 2021-04-09 13:38:01,823 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:38:01,827 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:38:01,828 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:38:01,829 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:38:11,835 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:38:11,838 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:38:11,838 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:38:11,839 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:38:13,513 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 13:38:13,516 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP has been black-listed'
+[ 2021-04-09 13:38:14,464 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-09 13:38:21,847 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:38:21,850 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:38:21,850 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:38:21,851 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:38:31,858 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:38:31,862 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:38:31,862 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:38:31,863 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:38:41,872 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:38:41,875 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:38:41,875 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:38:41,875 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:38:45,018 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 13:38:45,019 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP has been black-listed'
+[ 2021-04-09 13:38:45,966 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-09 13:38:51,882 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:38:51,885 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:38:51,886 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:38:51,887 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:39:01,891 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:39:01,894 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:39:01,895 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:39:01,895 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:39:11,902 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:39:11,905 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:39:11,906 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:39:11,907 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:39:21,914 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:39:21,917 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:39:21,918 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:39:21,918 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:39:31,925 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:39:31,928 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:39:31,929 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:39:31,930 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:39:41,935 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:39:41,938 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:39:41,939 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:39:41,940 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:39:51,947 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:39:51,950 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:39:51,951 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:39:51,952 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 13:40:01,958 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 13:40:01,961 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 13:40:01,962 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 13:40:01,963 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:22:53,883 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 14:22:53,896 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 14:22:53,897 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 14:22:53,897 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 14:22:53,897 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 14:22:53,897 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 14:22:53,897 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 14:22:53,898 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 14:22:53,898 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 14:22:53,898 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 14:22:53,898 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 14:22:53,898 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 14:22:53,898 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 14:22:53,899 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('172.20.10.5', 1025)
+[ 2021-04-09 14:22:53,899 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 14:22:54,870 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('172.20.10.12', 1025)
+[ 2021-04-09 14:23:14,820 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 14:23:14,831 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 14:23:14,832 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 14:23:14,832 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 14:23:14,832 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 14:23:14,832 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 14:23:14,832 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 14:23:14,833 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 14:23:14,833 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 14:23:14,833 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 14:23:14,833 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 14:23:14,834 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 14:23:14,834 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 14:23:14,835 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('172.20.10.5', 1025)
+[ 2021-04-09 14:23:14,835 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 14:23:15,755 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('172.20.10.12', 1025)
+[ 2021-04-09 14:23:24,843 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:23:24,843 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:23:24,844 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:23:24,845 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:23:29,735 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 14:23:29,742 ] [ WARNING ] [ SPFFilter : MainThread ] Sender IP '172.20.10.5' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-09 14:23:30,676 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-09 14:23:34,850 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:23:34,852 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:23:34,852 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:23:34,853 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:23:44,859 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:23:44,861 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:23:44,862 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:23:44,862 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:23:54,870 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:23:54,872 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:23:54,872 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:23:54,873 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:24:04,879 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:24:04,880 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:24:04,881 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:24:04,882 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:24:14,890 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:24:14,892 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:24:14,893 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:24:14,893 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:24:24,900 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:24:24,902 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:24:24,902 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:24:24,902 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:24:34,908 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:24:34,910 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:24:34,911 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:24:34,911 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:24:44,918 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:24:44,920 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:24:44,921 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:24:44,921 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:24:54,928 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:24:54,930 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:24:54,931 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:24:54,931 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:25:04,938 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:25:04,940 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:25:04,940 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:25:04,941 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:25:14,949 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:25:14,951 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:25:14,951 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:25:14,951 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:25:24,959 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:25:24,961 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:25:24,961 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:25:24,962 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:25:34,969 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:25:34,970 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:25:34,971 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:25:34,972 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:25:44,978 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:25:44,979 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:25:44,980 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:25:44,981 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:25:54,988 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:25:54,990 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:25:54,990 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:25:54,990 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:26:04,999 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:26:05,000 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:26:05,001 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:26:05,002 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:26:15,007 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:26:15,008 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:26:15,009 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:26:15,010 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:26:25,018 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:26:25,020 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:26:25,020 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:26:25,021 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:26:35,028 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:26:35,028 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:26:35,029 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:26:35,029 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:26:45,037 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:26:45,039 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:26:45,040 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:26:45,041 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:26:55,048 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:26:55,049 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:26:55,050 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:26:55,051 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:27:05,057 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:27:05,059 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:27:05,059 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:27:05,060 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:27:15,067 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:27:15,069 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:27:15,069 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:27:15,070 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:27:25,077 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:27:25,079 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:27:25,080 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:27:25,080 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:27:35,087 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:27:35,089 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:27:35,090 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:27:35,091 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:27:45,097 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:27:45,099 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:27:45,100 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:27:45,101 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:27:55,107 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:27:55,108 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:27:55,109 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:27:55,110 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:28:05,117 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:28:05,119 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:28:05,120 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:28:05,121 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:28:15,128 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:28:15,130 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:28:15,130 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:28:15,131 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:28:25,139 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:28:25,140 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:28:25,141 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:28:25,142 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:28:35,151 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:28:35,153 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:28:35,153 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:28:35,153 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:28:45,160 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:28:45,162 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:28:45,163 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:28:45,163 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:28:55,177 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:28:55,179 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:28:55,180 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:28:55,181 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:29:05,188 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:29:05,190 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:29:05,191 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:29:05,191 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:29:15,197 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:29:15,198 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:29:15,199 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:29:15,200 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:29:25,207 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:29:25,209 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:29:25,210 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:29:25,210 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:29:35,216 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:29:35,218 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:29:35,218 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:29:35,219 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:29:45,226 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:29:45,228 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:29:45,228 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:29:45,229 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:29:55,237 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:29:55,239 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:29:55,239 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:29:55,240 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:30:05,245 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:30:05,247 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:30:05,247 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:30:05,248 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:30:15,256 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:30:15,258 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:30:15,259 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:30:15,259 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:30:25,266 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:30:25,268 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:30:25,269 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:30:25,269 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:30:35,277 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:30:35,278 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:30:35,279 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:30:35,280 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:30:45,286 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:30:45,288 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:30:45,288 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:30:45,289 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:30:55,296 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:30:55,298 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:30:55,299 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:30:55,299 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:31:05,307 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:31:05,309 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:31:05,309 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:31:05,309 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:31:15,318 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:31:15,320 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:31:15,320 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:31:15,321 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:31:19,475 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 14:31:25,328 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:31:25,329 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:31:25,329 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:31:25,330 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:31:35,339 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:31:35,340 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:31:35,341 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:31:35,342 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:31:49,767 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 14:31:49,780 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 14:31:49,780 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 14:31:49,780 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 14:31:49,780 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 14:31:49,780 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 14:31:49,780 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 14:31:49,781 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 14:31:49,781 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 14:31:49,781 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 14:31:49,781 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 14:31:49,782 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 14:31:49,782 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 14:31:49,783 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('172.20.10.5', 1025)
+[ 2021-04-09 14:31:49,783 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 14:31:50,666 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('172.20.10.12', 1025)
+[ 2021-04-09 14:31:59,790 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:31:59,792 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:31:59,793 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:31:59,794 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:32:03,594 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 14:32:03,601 ] [ WARNING ] [ SPFFilter : MainThread ] Sender IP '172.20.10.5' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-09 14:32:04,548 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-09 14:32:09,800 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:32:09,802 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:32:09,803 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:32:09,804 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:32:19,808 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:32:19,809 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:32:19,810 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:32:19,811 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:32:29,817 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:32:29,818 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:32:29,819 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:32:29,820 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:32:39,825 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:32:39,827 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:32:39,828 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:32:39,828 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:32:43,036 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 14:32:49,836 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:32:49,837 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:32:49,838 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:32:49,839 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:32:59,847 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:32:59,849 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:32:59,850 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:32:59,850 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:33:09,857 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:33:09,859 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:33:09,859 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:33:09,860 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:33:19,866 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:33:19,869 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:33:19,869 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:33:19,869 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:33:29,879 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:33:29,881 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:33:29,882 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:33:29,882 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:33:39,887 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:33:39,889 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:33:39,890 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:33:39,890 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:33:49,897 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:33:49,899 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:33:49,900 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:33:49,900 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:33:59,907 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:33:59,909 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:33:59,909 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:33:59,910 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:34:09,917 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:34:09,919 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:34:09,920 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:34:09,921 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:34:19,928 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:34:19,931 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:34:19,932 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:34:19,933 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:34:29,939 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:34:29,941 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:34:29,942 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:34:29,942 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:34:39,951 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:34:39,953 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:34:39,953 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:34:39,954 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:34:49,960 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:34:49,961 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:34:49,962 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:34:49,962 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:34:59,969 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:34:59,970 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:34:59,971 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:34:59,971 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:35:09,978 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:35:09,980 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:35:09,980 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:35:09,980 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:35:19,988 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:35:19,989 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:35:19,990 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:35:19,991 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:35:29,997 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:35:29,999 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:35:29,999 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:35:30,000 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:35:31,495 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 14:35:31,507 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 14:35:31,507 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 14:35:31,507 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 14:35:31,507 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 14:35:31,508 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 14:35:31,508 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 14:35:31,508 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 14:35:31,508 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 14:35:31,508 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 14:35:31,508 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 14:35:31,508 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 14:35:31,509 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 14:35:31,509 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('172.20.10.5', 1025)
+[ 2021-04-09 14:35:31,509 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 14:35:32,397 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('172.20.10.12', 1025)
+[ 2021-04-09 14:35:38,478 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 14:35:41,515 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:35:41,517 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:35:41,517 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:35:41,519 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:35:51,527 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:35:51,530 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:35:51,531 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:35:51,531 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:36:01,538 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:36:01,540 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:36:01,540 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:36:01,541 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:36:11,548 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:36:11,550 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:36:11,551 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:36:11,552 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:36:19,985 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 14:36:19,996 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 14:36:19,996 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 14:36:19,997 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 14:36:19,997 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 14:36:19,997 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 14:36:19,997 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 14:36:19,997 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 14:36:19,998 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 14:36:19,998 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 14:36:19,998 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 14:36:19,998 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 14:36:19,998 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 14:36:19,999 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('172.20.10.5', 1025)
+[ 2021-04-09 14:36:20,000 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 14:36:20,884 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('172.20.10.12', 1025)
+[ 2021-04-09 14:36:25,333 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 14:36:25,335 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 172.20.10.5 has been previously black-listed
+[ 2021-04-09 14:36:26,271 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-09 14:36:30,007 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:36:30,009 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:36:30,010 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:36:30,010 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:36:40,019 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:36:40,021 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:36:40,022 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:36:40,023 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:36:50,029 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:36:50,031 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:36:50,031 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:36:50,032 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:37:00,039 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:37:00,041 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:37:00,041 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:37:00,042 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:37:00,668 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-09 14:37:00,669 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 172.20.10.5 has been previously black-listed
+[ 2021-04-09 14:37:01,623 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-09 14:37:10,049 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:37:10,050 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:37:10,051 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:37:10,052 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:37:20,060 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:37:20,061 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:37:20,062 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:37:20,063 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:37:30,070 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:37:30,072 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:37:30,072 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:37:30,073 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:37:40,080 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:37:40,081 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:37:40,082 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:37:40,083 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:37:50,090 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:37:50,091 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:37:50,092 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:37:50,093 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:38:00,098 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:38:00,100 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:38:00,101 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:38:00,102 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:38:10,109 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:38:10,111 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:38:10,111 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:38:10,112 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:38:20,118 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:38:20,119 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:38:20,120 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:38:20,121 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:38:30,127 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:38:30,129 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:38:30,130 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:38:30,131 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:38:40,137 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:38:40,138 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:38:40,139 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:38:40,140 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:38:50,147 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:38:50,149 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:38:50,150 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:38:50,150 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:39:00,157 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:39:00,159 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:39:00,160 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:39:00,160 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 14:39:10,166 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 14:39:10,167 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 14:39:10,167 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 14:39:10,168 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:30:49,769 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-09 17:30:49,847 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 17:31:06,604 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-09 17:31:06,626 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 17:31:16,693 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:31:16,693 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:31:16,693 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:31:16,693 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:31:26,740 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:31:26,740 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:31:26,740 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:31:26,740 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:31:27,696 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] Timeout while connecting to remote server
+[ 2021-04-09 17:31:36,789 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:31:36,789 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:31:36,789 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:31:36,789 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:36:15,726 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-09 17:36:15,741 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 17:36:25,792 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:36:25,792 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:36:25,792 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:36:25,792 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:36:35,848 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:36:35,848 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:36:35,848 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:36:35,848 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:36:36,782 ] [ ERROR ] [ MailForwarder : Forwarder-0 ] Timeout while connecting to remote server
+[ 2021-04-09 17:36:45,902 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:36:45,902 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:36:45,902 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:36:45,902 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:36:55,951 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:36:55,951 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:36:55,951 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:36:55,951 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:37:00,347 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 17:37:00,370 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 17:37:00,385 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-09 17:37:00,385 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 17:37:01,272 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-09 17:37:10,412 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:37:10,412 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:37:10,412 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:37:10,412 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:37:20,462 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:37:20,462 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:37:20,462 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:37:20,462 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:37:30,512 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:37:30,512 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:37:30,512 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:37:30,512 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:37:40,561 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:37:40,561 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:37:40,561 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:37:40,561 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:37:50,611 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:37:50,611 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:37:50,611 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:37:50,611 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:38:00,667 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:38:00,667 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:38:00,667 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:38:00,667 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:38:10,717 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:38:10,717 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:38:10,717 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:38:10,717 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:38:20,767 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:38:20,767 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:38:20,767 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:38:20,767 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:38:30,816 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:38:30,816 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:38:30,816 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:38:30,816 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:38:40,870 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:38:40,870 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:38:40,870 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:38:40,870 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:38:50,924 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:38:50,924 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:38:50,924 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:38:50,924 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:38:54,749 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-09 17:38:54,771 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 17:38:55,654 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-09 17:39:04,811 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:39:04,813 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:39:04,813 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:39:04,813 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:39:14,889 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:39:14,889 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:39:14,889 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:39:14,889 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:39:24,932 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:39:24,932 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:39:24,932 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:39:24,932 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:39:34,980 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:39:34,980 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:39:34,980 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:39:34,980 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
+[ 2021-04-09 17:39:41,059 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-09 17:39:41,075 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-09 17:39:41,075 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-09 17:39:41,075 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-09 17:39:41,075 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-09 17:39:41,075 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-09 17:39:41,075 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-09 17:39:41,091 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-09 17:39:41,091 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-09 17:39:41,091 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-09 17:39:41,091 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-09 17:39:41,091 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-09 17:39:41,091 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-09 17:39:41,091 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-09 17:39:41,091 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-09 17:39:42,033 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-09 17:39:51,135 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/BlackListFilter.json'
+[ 2021-04-09 17:39:51,135 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/DKIMFilter.json'
+[ 2021-04-09 17:39:51,135 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/SPFFilter.json'
+[ 2021-04-09 17:39:51,135 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing data to 'data/XFilter.json'
