@@ -15,4 +15,4 @@ try:
 except SchemaError as e:
     logging.error(f"There was a syntax error in one of the configuration files:\n{e}")
 except Exception as e:
-    logging.error(f"An unexpected error occured:\n{e}")
+    logging.error(f"An unexpected error occurred:\n{e}")
