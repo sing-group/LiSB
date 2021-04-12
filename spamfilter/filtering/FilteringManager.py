@@ -14,7 +14,7 @@ from spamfilter.filtering.filters.Filter import Filter
 
 class FilteringManager:
     filters: Sequence[Filter]
-    black_list_filter: BlackListFilter
+    black_list_filter: BlackListFilter = None
     enable_threading: int
     storage_mgr: StorageManager
 
@@ -63,11 +63,6 @@ class FilteringManager:
                 data = self.storage_mgr.load_data(filter_class)
                 filter_object.set_initial_data(data)
 
-    def check_if_exception(self, peer_ip, email_address, email_domain):
-        return peer_ip in self.exceptions["ip_addresses"] or \
-               email_address in self.exceptions["email_addresses"] or \
-               email_domain in self.exceptions["email_domains"]
-
     def apply_filters(self, msg: EmailEnvelope):
         """
         When called, this method applies all filters to the email message. Hence, deciding whether it is spam or not.
@@ -100,25 +95,42 @@ class FilteringManager:
             n_finished = 0
             while n_finished < n_filtering_threads:
                 n_finished = 0
-                for check in all_checks:
-                    if check == -1:
-                        logging.debug(f"Found positive answer! {all_checks}")
-                        self.black_list_filter.update_black_list(msg.peer[0])
+                for filter_index in range(len(all_checks)):
+                    if all_checks[filter_index] == -1:
+                        if self.black_list_filter:
+                            self.black_list_filter.update_black_list(msg.peer[0])
                         return True
-                    elif check == 1:
+                    elif all_checks[filter_index] == 1:
                         n_finished += 1
         else:
             for flt in self.filters:
                 is_spam = flt.filter(msg)
                 if is_spam:
-                    self.black_list_filter.update_black_list(msg.peer[0])
+                    if self.black_list_filter:
+                        self.black_list_filter.update_black_list(msg.peer[0])
                     return True
 
         return False
 
+    def check_if_exception(self, peer_ip, email_address, email_domain):
+        """
+        This method checks whether the peer IP, the email address or the email domain from which the email is sent is one of the exceptions described in the 'conf/filterin.json' file.
+        :param peer_ip: the peer IP which sent the email
+        :param email_address: the email sender's email address
+        :param email_domain: the email sender's domain
+        :return: True, if it's an exception; False, if it isn't
+        """
+        return peer_ip in self.exceptions["ip_addresses"] or \
+               email_address in self.exceptions["email_addresses"] or \
+               email_domain in self.exceptions["email_domains"]
+
     def check_if_spam(self, msg, filter_index, all_checks):
-        start_time = time.time()
+        """
+        This method is executed by the filter threads when 'enable_threading' is set to True for the FilteringManager.
+        Each thread applies one of the filters to the email message and determines whether it is spam or not.
+        :param msg: the email message to be filtered
+        :param filter_index: the index of the specific filter
+        :param all_checks: a list of 0s, where the thread will write the result of the filter to the filter_index position. It will write -1 if msg is spam and 1 if it isn't.
+        """
         is_spam = self.filters[filter_index].filter(msg)
         all_checks[filter_index] = -1 if is_spam else 1
-        if is_spam:
-            logging.debug(f"Finished applying filter after {time.time() - start_time}s")

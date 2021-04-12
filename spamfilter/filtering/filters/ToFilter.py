@@ -18,7 +18,7 @@ class ToFilter(Filter):
         msg_tos = envelope.get_parsed_to_list()
 
         if set(envelope.rcpt_tos) != set(msg_tos):
-            logging.warning(f"Recipients differ: {envelope.rcpt_tos} in envelope VS. {msg_tos} in message")
+            logging.info(f"Recipients differ: {envelope.rcpt_tos} in envelope VS. {msg_tos} in message")
             return True
 
         return False

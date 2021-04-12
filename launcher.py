@@ -6,7 +6,7 @@ from schema import SchemaError
 from spamfilter import SpamFilter, configuration
 
 try:
-    # Looad initial configurations
+    # Load initial configurations
     server_conf = configuration.load_server_config()
     configuration.config_logging(server_conf)
     # Launch SpamFilter

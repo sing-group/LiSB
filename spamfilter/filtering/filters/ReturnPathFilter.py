@@ -21,7 +21,7 @@ class ReturnPathFilter(Filter):
             # Check whether it is the sender or one of the recipients. If not, then it is spam
             is_spam = parsed_return_path != envelope.mail_from and parsed_return_path not in envelope.rcpt_tos
             if is_spam:
-                logging.warning(f"Return-Path '{parsed_return_path}' is not sender '{envelope.mail_from}' "
-                      f"nor a recipient '{envelope.rcpt_tos}'")
+                logging.info(f"Return-Path '{parsed_return_path}' is not sender '{envelope.mail_from}' "
+                             f"nor a recipient '{envelope.rcpt_tos}'")
                 return True
         return False
