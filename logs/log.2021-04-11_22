@@ -1,0 +1,795 @@
+[ 2021-04-11 20:39:51,787 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing BlackListFilter data to 'data/BlackListFilter.json'
+[ 2021-04-11 20:39:51,792 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing DKIMFilter data to 'data/DKIMFilter.json'
+[ 2021-04-11 20:39:51,793 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing SPFFilter data to 'data/SPFFilter.json'
+[ 2021-04-11 20:39:51,795 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing XFilter data to 'data/XFilter.json'
+[ 2021-04-11 20:40:22,581 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 20:40:22,603 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 20:40:22,604 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 20:40:22,604 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 20:40:22,604 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 20:40:22,604 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 20:40:22,605 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 20:40:22,605 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 20:40:22,605 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 20:40:22,606 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 20:40:22,606 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 20:40:22,606 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 20:40:22,606 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 20:40:22,607 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 20:40:22,607 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 20:40:23,517 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 20:42:28,131 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 20:42:28,150 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 20:42:28,151 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 20:42:28,151 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 20:42:28,151 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 20:42:28,151 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 20:42:28,151 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 20:42:28,152 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 20:42:28,152 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 20:42:28,152 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 20:42:28,152 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 20:42:28,153 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 20:42:28,153 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 20:42:28,153 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 20:42:28,154 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 20:42:29,023 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 20:42:43,117 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 20:42:43,119 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 20:42:45,127 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 20:43:08,651 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 20:43:08,651 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 20:43:09,611 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 20:44:03,533 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 20:44:03,554 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 20:44:03,555 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 20:44:03,555 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 20:44:03,555 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 20:44:03,555 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 20:44:03,555 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 20:44:03,556 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 20:44:03,556 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 20:44:03,556 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 20:44:03,556 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 20:44:03,557 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 20:44:03,557 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 20:44:03,558 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 20:44:03,558 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 20:44:04,420 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 20:44:09,527 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 20:44:09,532 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Forwarding message
+[ 2021-04-11 20:44:09,604 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Message forwarded
+[ 2021-04-11 20:49:04,522 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing BlackListFilter data to 'data/BlackListFilter.json'
+[ 2021-04-11 20:49:04,524 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing DKIMFilter data to 'data/DKIMFilter.json'
+[ 2021-04-11 20:49:04,525 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing SPFFilter data to 'data/SPFFilter.json'
+[ 2021-04-11 20:49:04,526 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing XFilter data to 'data/XFilter.json'
+[ 2021-04-11 20:54:04,581 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing BlackListFilter data to 'data/BlackListFilter.json'
+[ 2021-04-11 20:54:04,583 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing DKIMFilter data to 'data/DKIMFilter.json'
+[ 2021-04-11 20:54:04,584 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing SPFFilter data to 'data/SPFFilter.json'
+[ 2021-04-11 20:54:04,585 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing XFilter data to 'data/XFilter.json'
+[ 2021-04-11 20:59:04,680 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing BlackListFilter data to 'data/BlackListFilter.json'
+[ 2021-04-11 20:59:04,682 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing DKIMFilter data to 'data/DKIMFilter.json'
+[ 2021-04-11 20:59:04,683 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing SPFFilter data to 'data/SPFFilter.json'
+[ 2021-04-11 20:59:04,684 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing XFilter data to 'data/XFilter.json'
+[ 2021-04-11 21:04:04,847 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing BlackListFilter data to 'data/BlackListFilter.json'
+[ 2021-04-11 21:04:04,849 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing DKIMFilter data to 'data/DKIMFilter.json'
+[ 2021-04-11 21:04:04,850 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing SPFFilter data to 'data/SPFFilter.json'
+[ 2021-04-11 21:04:04,851 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing XFilter data to 'data/XFilter.json'
+[ 2021-04-11 21:09:05,773 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing BlackListFilter data to 'data/BlackListFilter.json'
+[ 2021-04-11 21:09:05,776 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing DKIMFilter data to 'data/DKIMFilter.json'
+[ 2021-04-11 21:09:05,777 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing SPFFilter data to 'data/SPFFilter.json'
+[ 2021-04-11 21:09:05,778 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing XFilter data to 'data/XFilter.json'
+[ 2021-04-11 21:14:06,787 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing BlackListFilter data to 'data/BlackListFilter.json'
+[ 2021-04-11 21:14:06,789 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing DKIMFilter data to 'data/DKIMFilter.json'
+[ 2021-04-11 21:14:06,790 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing SPFFilter data to 'data/SPFFilter.json'
+[ 2021-04-11 21:14:06,791 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing XFilter data to 'data/XFilter.json'
+[ 2021-04-11 21:15:37,929 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 21:15:37,953 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 21:15:37,954 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 21:15:37,954 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 21:15:37,954 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 21:15:37,954 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 21:15:37,954 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 21:15:37,955 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 21:15:37,955 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 21:15:37,955 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 21:15:37,955 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 21:15:37,956 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 21:15:37,956 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 21:15:38,859 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 21:15:58,520 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 21:15:58,540 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 21:15:58,541 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 21:15:58,541 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 21:15:58,541 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 21:15:58,541 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 21:15:58,541 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 21:15:58,541 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 21:15:58,542 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 21:15:58,543 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 21:15:58,543 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 21:16:02,450 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 21:16:15,443 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 21:16:15,465 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 21:16:15,466 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 21:16:15,466 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 21:16:15,466 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 21:16:15,466 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 21:16:15,466 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 21:16:15,467 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 21:16:15,467 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 21:16:15,467 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 21:16:15,468 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 21:16:15,468 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 21:16:15,468 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 21:16:15,470 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 21:16:15,470 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 21:16:16,377 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 21:16:19,930 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 21:16:19,952 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 21:16:19,952 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 21:16:19,953 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 21:16:19,953 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 21:16:19,953 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 21:16:19,953 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 21:16:19,954 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 21:16:19,954 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 21:16:19,954 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 21:16:19,954 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 21:16:19,955 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 21:16:19,955 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 21:16:19,956 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 21:16:19,956 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 21:16:20,812 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 21:26:20,154 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing BlackListFilter data to 'data/BlackListFilter.json'
+[ 2021-04-11 21:26:20,157 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing DKIMFilter data to 'data/DKIMFilter.json'
+[ 2021-04-11 21:26:20,158 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing SPFFilter data to 'data/SPFFilter.json'
+[ 2021-04-11 21:26:20,159 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing XFilter data to 'data/XFilter.json'
+[ 2021-04-11 21:33:43,081 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 21:33:43,101 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 21:33:43,102 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 21:33:43,102 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 21:33:43,102 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 21:33:43,102 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 21:33:43,102 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 21:33:43,103 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 21:33:43,103 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 21:33:43,103 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 21:33:43,103 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 21:33:43,104 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 21:33:43,104 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 21:33:43,104 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 21:33:43,105 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 21:33:43,994 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 21:43:43,860 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing BlackListFilter data to 'data/BlackListFilter.json'
+[ 2021-04-11 21:43:43,864 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing DKIMFilter data to 'data/DKIMFilter.json'
+[ 2021-04-11 21:43:43,867 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing SPFFilter data to 'data/SPFFilter.json'
+[ 2021-04-11 21:43:43,868 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing XFilter data to 'data/XFilter.json'
+[ 2021-04-11 21:51:30,072 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 21:51:30,098 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 21:51:30,098 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 21:51:30,098 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 21:51:30,098 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 21:51:30,099 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 21:51:30,099 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 21:51:30,099 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 21:51:30,099 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 21:51:30,100 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 21:51:30,100 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 21:51:30,100 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 21:51:30,100 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 21:51:30,101 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 21:51:30,101 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 21:51:31,008 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 21:52:07,217 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 21:52:07,242 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 21:52:07,242 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 21:52:07,243 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 21:52:07,243 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 21:52:07,243 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 21:52:07,244 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 21:52:07,245 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 21:52:07,245 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 21:52:07,245 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 21:52:07,245 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 21:52:07,246 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 21:52:07,246 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 21:52:07,248 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 21:52:07,248 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 21:52:08,113 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 21:52:16,277 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 21:52:16,282 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Forwarding message
+[ 2021-04-11 21:52:16,399 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Message forwarded
+[ 2021-04-11 21:52:33,949 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 21:52:33,973 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 21:52:33,974 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 21:52:33,974 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 21:52:33,974 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 21:52:33,975 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 21:52:33,975 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 21:52:33,976 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 21:52:33,976 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 21:52:33,977 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 21:52:33,977 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 21:52:33,978 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 21:52:33,978 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 21:52:33,979 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 21:52:33,979 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 21:52:34,935 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 21:52:41,364 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 21:52:41,368 ] [ INFO ] [ FilteringManager : FilterThread-0 ] Filtering result: 1
+[ 2021-04-11 21:52:41,368 ] [ INFO ] [ FilteringManager : FilterThread-1 ] Filtering result: 1
+[ 2021-04-11 21:52:41,369 ] [ INFO ] [ FilteringManager : FilterThread-2 ] Filtering result: 1
+[ 2021-04-11 21:52:41,370 ] [ WARNING ] [ BlackListFilter : FilterThread-3 ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 21:52:41,371 ] [ INFO ] [ FilteringManager : FilterThread-4 ] Filtering result: 1
+[ 2021-04-11 21:52:41,371 ] [ WARNING ] [ SPFFilter : FilterThread-5 ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 21:52:41,372 ] [ INFO ] [ FilteringManager : FilterThread-6 ] Filtering result: 1
+[ 2021-04-11 21:52:44,295 ] [ INFO ] [ FilteringManager : FilterThread-3 ] Filtering result: -1
+[ 2021-04-11 21:52:47,147 ] [ INFO ] [ FilteringManager : FilterThread-5 ] Filtering result: -1
+[ 2021-04-11 21:53:59,578 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 21:53:59,605 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 21:53:59,606 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 21:53:59,606 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 21:53:59,606 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 21:53:59,606 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 21:53:59,606 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 21:53:59,607 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 21:53:59,607 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 21:53:59,608 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 21:53:59,608 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 21:53:59,608 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 21:53:59,608 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 21:53:59,609 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 21:53:59,609 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 21:54:00,640 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 21:54:05,561 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 21:54:05,564 ] [ INFO ] [ FilteringManager : FilterThread-FromFilter ] Filtering result: 1
+[ 2021-04-11 21:54:05,566 ] [ INFO ] [ FilteringManager : FilterThread-ReturnPathFilter ] Filtering result: 1
+[ 2021-04-11 21:54:05,566 ] [ INFO ] [ FilteringManager : FilterThread-ToFilter ] Filtering result: 1
+[ 2021-04-11 21:54:05,567 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 21:54:05,567 ] [ INFO ] [ FilteringManager : FilterThread-DKIMFilter ] Filtering result: 1
+[ 2021-04-11 21:54:05,568 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 21:54:05,568 ] [ INFO ] [ FilteringManager : FilterThread-XFilter ] Filtering result: 1
+[ 2021-04-11 21:54:08,060 ] [ INFO ] [ FilteringManager : FilterThread-BlackListFilter ] Filtering result: -1
+[ 2021-04-11 21:54:10,204 ] [ INFO ] [ FilteringManager : FilterThread-SPFFilter ] Filtering result: -1
+[ 2021-04-11 22:03:59,961 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing BlackListFilter data to 'data/BlackListFilter.json'
+[ 2021-04-11 22:04:00,054 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing DKIMFilter data to 'data/DKIMFilter.json'
+[ 2021-04-11 22:04:00,099 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing SPFFilter data to 'data/SPFFilter.json'
+[ 2021-04-11 22:04:00,176 ] [ INFO ] [ StorageManager : StorageDaemon ] Storing XFilter data to 'data/XFilter.json'
+[ 2021-04-11 22:10:38,613 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:10:38,634 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:10:38,635 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:10:38,635 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:10:38,636 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:10:38,636 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:10:38,636 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:10:38,637 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:10:38,638 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:10:38,639 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:10:38,639 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:10:38,639 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:10:38,640 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:10:38,641 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:10:38,641 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:10:42,578 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:10:43,495 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:10:43,498 ] [ INFO ] [ FilteringManager : FilterThread-FromFilter ] Filtering result: 1
+[ 2021-04-11 22:10:43,498 ] [ INFO ] [ FilteringManager : FilterThread-ReturnPathFilter ] Filtering result: 1
+[ 2021-04-11 22:10:43,498 ] [ INFO ] [ FilteringManager : FilterThread-ToFilter ] Filtering result: 1
+[ 2021-04-11 22:10:43,499 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:10:43,499 ] [ INFO ] [ FilteringManager : FilterThread-DKIMFilter ] Filtering result: 1
+[ 2021-04-11 22:10:43,500 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:10:43,500 ] [ INFO ] [ FilteringManager : FilterThread-XFilter ] Filtering result: 1
+[ 2021-04-11 22:10:44,484 ] [ INFO ] [ FilteringManager : FilterThread-BlackListFilter ] Filtering result: -1
+[ 2021-04-11 22:10:45,447 ] [ INFO ] [ FilteringManager : FilterThread-SPFFilter ] Filtering result: -1
+[ 2021-04-11 22:11:05,619 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:11:05,640 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:11:05,640 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:11:05,641 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:11:05,641 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:11:05,641 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:11:05,642 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:11:05,642 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:11:05,643 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:11:05,644 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:11:05,644 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:11:05,645 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:11:05,645 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:11:05,646 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:11:05,647 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:11:06,496 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:11:19,860 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:11:19,863 ] [ INFO ] [ FilteringManager : FilterThread-FromFilter ] Filtering result: 1
+[ 2021-04-11 22:11:19,863 ] [ INFO ] [ FilteringManager : FilterThread-ReturnPathFilter ] Filtering result: 1
+[ 2021-04-11 22:11:19,864 ] [ INFO ] [ FilteringManager : FilterThread-ToFilter ] Filtering result: 1
+[ 2021-04-11 22:11:19,864 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:11:19,865 ] [ INFO ] [ FilteringManager : FilterThread-DKIMFilter ] Filtering result: 1
+[ 2021-04-11 22:11:19,866 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:11:19,866 ] [ INFO ] [ FilteringManager : FilterThread-XFilter ] Filtering result: 1
+[ 2021-04-11 22:11:21,485 ] [ INFO ] [ FilteringManager : FilterThread-BlackListFilter ] Filtering result: -1
+[ 2021-04-11 22:11:21,485 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:11:23,031 ] [ INFO ] [ FilteringManager : FilterThread-SPFFilter ] Filtering result: -1
+[ 2021-04-11 22:12:40,363 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:12:40,384 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:12:40,385 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:12:40,385 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:12:40,385 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:12:40,386 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:12:40,386 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:12:40,387 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:12:40,388 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:12:40,388 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:12:40,389 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:12:40,389 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:12:40,390 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:12:40,391 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:12:40,391 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:12:41,354 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:12:47,018 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:12:47,022 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:12:47,023 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:12:49,089 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:13:44,503 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:13:44,524 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:13:44,525 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:13:44,525 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:13:44,526 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:13:44,526 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:13:44,526 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:13:44,528 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:13:44,528 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:13:44,529 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:13:44,529 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:13:44,530 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:13:44,531 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:13:44,531 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:13:44,532 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:13:45,387 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:13:49,306 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:13:49,308 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:13:50,486 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:17:45,266 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:17:45,287 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:17:45,288 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:17:45,288 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:17:45,288 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:17:45,289 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:17:45,289 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:17:45,290 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:17:45,291 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:17:45,291 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:17:45,292 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:17:45,292 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:17:45,293 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:17:45,294 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:17:45,294 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:17:46,155 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:17:50,802 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:17:50,805 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:17:51,778 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:18:27,634 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:18:27,656 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:18:27,657 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:18:27,657 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:18:27,658 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:18:27,658 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:18:27,658 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:18:27,659 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:18:27,659 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:18:27,660 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:18:27,661 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:18:27,661 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:18:27,662 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:18:27,663 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:18:27,663 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:18:28,553 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:18:32,944 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:18:32,947 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:18:33,923 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:18:52,730 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:18:52,751 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:18:52,752 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:18:52,752 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:18:52,752 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:18:52,753 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:18:52,753 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:18:52,754 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:18:52,754 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:18:52,755 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:18:52,755 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:18:52,756 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:18:52,756 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:18:52,757 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:18:52,757 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:18:53,664 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:19:07,111 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:19:07,115 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:19:07,116 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:19:09,337 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:22:59,670 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:22:59,690 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:22:59,692 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:22:59,692 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:22:59,692 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:22:59,693 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:22:59,693 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:22:59,694 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:22:59,694 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:22:59,695 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:22:59,695 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:22:59,696 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:22:59,696 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:22:59,697 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:22:59,697 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:23:00,568 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:23:08,317 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:23:08,320 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:23:08,322 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:23:10,281 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:27:11,743 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:27:11,764 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:27:11,765 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:27:11,765 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:27:11,765 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:27:11,766 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:27:11,766 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:27:11,767 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:27:11,767 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:27:11,768 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:27:11,768 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:27:11,769 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:27:11,769 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:27:11,770 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:27:11,771 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:27:12,669 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:27:19,552 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:27:19,556 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Forwarding message
+[ 2021-04-11 22:27:19,639 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Message forwarded
+[ 2021-04-11 22:29:07,843 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:29:07,863 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:29:07,863 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:29:07,864 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:29:07,864 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:29:07,864 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:29:07,865 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:29:07,865 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:29:07,866 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:29:07,866 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:29:07,867 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:29:07,867 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:29:07,868 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:29:07,868 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:29:07,868 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:29:08,735 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:31:08,569 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:31:08,589 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:31:08,590 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:31:08,590 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:31:08,591 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:31:08,591 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:31:08,592 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:31:08,593 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:31:08,593 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:31:08,594 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:31:08,594 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:31:08,595 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:31:08,595 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:31:08,596 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:31:08,596 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:31:09,483 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:31:12,176 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:31:12,180 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Forwarding message
+[ 2021-04-11 22:31:12,426 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Message forwarded
+[ 2021-04-11 22:31:26,707 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:31:26,727 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:31:26,728 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:31:26,728 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:31:26,729 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:31:26,729 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:31:26,729 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:31:26,730 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:31:26,730 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:31:26,731 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:31:26,732 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:31:26,732 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:31:26,732 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:31:26,734 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:31:26,734 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:31:27,630 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:31:31,434 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:31:31,438 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:31:31,439 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:31:33,118 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:35:00,363 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:35:00,384 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:35:00,385 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:35:00,385 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:35:00,386 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:35:00,386 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:35:00,386 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:35:00,387 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:35:00,388 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:35:00,388 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:35:00,389 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:35:00,390 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:35:00,390 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:35:00,391 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:35:00,391 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:35:01,266 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:35:20,900 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:35:20,904 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:35:20,905 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:35:22,667 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:37:37,877 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:37:37,896 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:37:37,897 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:37:37,897 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:37:37,898 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:37:37,898 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:37:37,898 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:37:37,899 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:37:37,899 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:37:37,900 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:37:37,900 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:37:37,901 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:37:37,901 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:37:37,902 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:37:37,902 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:37:38,776 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:37:42,795 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:37:42,797 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:37:44,818 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:37:59,582 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:37:59,583 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:38:02,554 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:38:22,531 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:38:22,551 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:38:22,552 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:38:22,552 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:38:22,553 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:38:22,553 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:38:22,553 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:38:22,554 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:38:22,554 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:38:22,555 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:38:22,555 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:38:22,556 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:38:22,556 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:38:22,557 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:38:22,557 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:38:23,428 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:38:32,416 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:38:32,419 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:38:33,372 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:40:27,971 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:40:27,990 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:40:27,991 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:40:27,991 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:40:27,992 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:40:27,992 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:40:27,992 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:40:27,993 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:40:27,993 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:40:27,994 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:40:27,994 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:40:27,995 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:40:27,995 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:40:27,996 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:40:27,996 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:40:28,872 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:40:32,236 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:40:32,239 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:40:33,177 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:40:35,839 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:40:35,858 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:40:35,859 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:40:35,859 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:40:35,859 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:40:35,860 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:40:35,860 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:40:35,861 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:40:35,861 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:40:35,862 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:40:35,862 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:40:35,863 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:40:35,863 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:40:35,864 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:40:35,864 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:40:36,724 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:44:08,033 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:44:08,036 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:44:09,267 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:44:09,288 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:44:09,289 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:44:09,289 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:44:09,290 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:44:09,290 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:44:09,290 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:44:09,291 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:44:09,291 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:44:09,292 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:44:09,292 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:44:09,293 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:44:09,294 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:44:09,295 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:44:09,295 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:44:10,183 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:44:13,886 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:44:13,888 ] [ WARNING ] [ BlackListFilter : MainThread ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:44:14,898 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:44:22,341 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:44:22,364 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:44:22,364 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:44:22,365 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:44:22,365 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:44:22,365 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:44:22,366 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:44:22,367 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:44:22,367 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:44:22,368 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:44:22,368 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:44:22,369 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:44:22,370 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:44:22,371 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:44:22,371 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:44:23,275 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:44:41,236 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:44:41,240 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:44:41,241 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:44:42,416 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:45:47,975 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:45:47,997 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:45:47,997 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:45:47,998 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:45:47,998 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:45:47,998 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:45:47,999 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:45:48,000 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:45:48,000 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:45:48,001 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:45:48,001 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:45:48,002 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:45:48,002 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:45:48,003 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:45:48,003 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:45:48,869 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:45:52,763 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:45:52,766 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:45:52,768 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:45:53,773 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:46:10,098 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:46:10,118 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:46:10,119 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:46:10,119 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:46:10,120 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:46:10,120 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:46:10,120 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:46:10,121 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:46:10,122 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:46:10,122 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:46:10,123 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:46:10,123 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:46:10,124 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:46:10,125 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:46:10,125 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:46:10,986 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:46:13,591 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:46:13,595 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:46:13,596 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:46:14,980 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:48:44,667 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:48:44,690 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:48:44,691 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:48:44,691 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:48:44,692 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:48:44,692 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:48:44,693 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:48:44,694 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:48:44,694 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:48:44,695 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:48:44,696 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:48:44,696 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:48:44,696 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:48:44,701 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:48:44,701 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:48:45,585 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:48:49,260 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:48:49,264 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:48:49,265 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:48:50,224 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:49:43,472 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:49:43,494 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:49:43,495 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:49:43,495 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:49:43,496 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:49:43,496 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:49:43,496 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:49:43,497 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:49:43,497 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:49:43,498 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:49:43,498 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:49:43,499 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:49:43,499 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:49:43,500 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:49:43,501 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:49:44,357 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:49:50,921 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:49:50,925 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:49:50,926 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:49:51,900 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:52:11,521 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:52:11,542 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:52:11,542 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:52:11,542 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:52:11,543 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:52:11,543 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:52:11,544 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:52:11,544 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:52:11,545 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:52:11,545 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:52:11,545 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:52:11,545 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:52:11,546 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:52:11,546 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:52:11,546 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:52:12,423 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:52:16,602 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:52:16,606 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:52:16,607 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:52:17,566 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:54:57,107 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:54:57,129 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:54:57,129 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:54:57,130 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:54:57,130 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:54:57,130 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:54:57,131 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:54:57,131 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:54:57,132 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:54:57,132 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:54:57,133 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:54:57,133 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:54:57,134 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:54:57,135 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:54:57,135 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:54:57,990 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:55:02,658 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:55:02,662 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:55:02,663 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:55:03,651 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
+[ 2021-04-11 22:55:39,974 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:55:39,994 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:55:39,995 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:55:39,996 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:55:39,996 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:55:39,996 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:55:39,996 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:55:39,997 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:55:39,997 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:55:39,997 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:55:39,997 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:55:39,998 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:55:39,998 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:55:39,999 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:55:39,999 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:55:40,880 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:55:50,832 ] [ INFO ] [ SpamFilter : MainThread ] Setting up SpamFilter server
+[ 2021-04-11 22:55:50,854 ] [ INFO ] [ FilteringManager : MainThread ] Setting up filters
+[ 2021-04-11 22:55:50,854 ] [ INFO ] [ FilteringManager : MainThread ] FromFilter has been set up
+[ 2021-04-11 22:55:50,854 ] [ INFO ] [ FilteringManager : MainThread ] ReturnPathFilter has been set up
+[ 2021-04-11 22:55:50,855 ] [ INFO ] [ FilteringManager : MainThread ] ToFilter has been set up
+[ 2021-04-11 22:55:50,855 ] [ INFO ] [ FilteringManager : MainThread ] BlackListFilter has been set up
+[ 2021-04-11 22:55:50,855 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/BlackListFilter.json'
+[ 2021-04-11 22:55:50,855 ] [ INFO ] [ FilteringManager : MainThread ] DKIMFilter has been set up
+[ 2021-04-11 22:55:50,855 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/DKIMFilter.json'
+[ 2021-04-11 22:55:50,856 ] [ INFO ] [ FilteringManager : MainThread ] SPFFilter has been set up
+[ 2021-04-11 22:55:50,856 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/SPFFilter.json'
+[ 2021-04-11 22:55:50,856 ] [ INFO ] [ FilteringManager : MainThread ] XFilter has been set up
+[ 2021-04-11 22:55:50,857 ] [ INFO ] [ StorageManager : MainThread ] Retrieving data from 'data/XFilter.json'
+[ 2021-04-11 22:55:50,857 ] [ INFO ] [ SpamFilter : MainThread ] Running SpamFilter server on ('192.168.1.156', 1025)
+[ 2021-04-11 22:55:50,857 ] [ INFO ] [ SpamFilter : MainThread ] Waiting for mails to filter...
+[ 2021-04-11 22:55:51,730 ] [ INFO ] [ MailForwarder : Forwarder-0 ] Ready to forward to ('192.168.1.188', 1025)
+[ 2021-04-11 22:55:55,537 ] [ INFO ] [ SpamFilter : MainThread ] A new message has been received
+[ 2021-04-11 22:55:55,540 ] [ WARNING ] [ BlackListFilter : FilterThread-BlackListFilter ] Sender IP 192.168.1.156 has been previously black-listed
+[ 2021-04-11 22:55:55,542 ] [ WARNING ] [ SPFFilter : FilterThread-SPFFilter ] Sender IP '192.168.1.156' does not belong to the sender domain 'mondragon.edu'
+[ 2021-04-11 22:55:58,727 ] [ WARNING ] [ SpamFilter : MainThread ] Spam detected: rejecting message (450)...
