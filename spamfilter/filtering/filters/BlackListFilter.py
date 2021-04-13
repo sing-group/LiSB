@@ -7,14 +7,14 @@ from spamfilter.filtering.filters.DBFilter import DBFilter
 
 
 class BlackListFilter(DBFilter):
-    limit: int
+    black_listing_threshold: int
 
-    def __init__(self, limit: int):
+    def __init__(self, black_listing_threshold: int):
         """
         This method creates a filter which uses a BlackList based on SpamHaus DROP list
-        :param limit: The number of times that a sender can be detected as spam before being always treated as spam
+        :param black_listing_threshold: The number of times that a sender can be detected as spam before being always treated as spam
         """
-        self.limit = limit
+        self.black_listing_threshold = black_listing_threshold
 
     def filter(self, envelope: EmailEnvelope) -> bool:
         """
@@ -27,7 +27,7 @@ class BlackListFilter(DBFilter):
         peer_ip: ipaddress.IPv4Address = ipaddress.ip_address(envelope.peer[0])
         if peer_ip.compressed in self.data["ip_addresses"]:
             n_times_detected_as_spam = self.data["ip_addresses"][peer_ip.compressed]
-            if n_times_detected_as_spam > self.limit:
+            if n_times_detected_as_spam > self.black_listing_threshold:
                 logging.info(f"Sender IP {peer_ip} has been previously black-listed")
                 return True
         else:

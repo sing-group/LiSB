@@ -1,4 +1,3 @@
-import ast
 import ipaddress
 import json
 import logging
@@ -7,7 +6,7 @@ import re
 import socket
 from os import listdir
 
-from schema import Schema, And, Use, Optional, SchemaError, Or
+from schema import Schema, And, Or
 
 from spamfilter.filtering import Filter, DBFilter
 
@@ -133,7 +132,7 @@ def config_logging(server_conf: dict):
 
             # Set up email handler
             email_handler = logging.handlers.SMTPHandler(
-                mailhost=(server_conf['forwarding']['remote_ip'],server_conf['forwarding']['remote_port']),
+                mailhost=(server_conf['forwarding']['remote_ip'], server_conf['forwarding']['remote_port']),
                 fromaddr=server_email,
                 toaddrs=admin_emails,
                 subject=f"SpamFilter server alert",

@@ -2,7 +2,6 @@ import importlib
 import pkgutil
 import logging
 import threading
-import time
 from typing import Sequence
 
 from spamfilter.EmailEnvelope import EmailEnvelope
@@ -18,9 +17,10 @@ class FilteringManager:
     enable_threading: int
     storage_mgr: StorageManager
 
-    def __init__(self, enable_threading: int = 1, storing_frequency: int = 300, disabled_filters: list = [],
-                 exceptions=None):
+    def __init__(self, enable_threading: int = 1, black_listing_threshold: int = 10, storing_frequency: int = 300,
+                 disabled_filters: list = [], exceptions=None):
         self.enable_threading = enable_threading
+        self.black_listing_threshold = black_listing_threshold
         self.disabled_filters = disabled_filters
         self.exceptions = exceptions
         self.storage_mgr = StorageManager("data/", storing_frequency)
@@ -54,7 +54,9 @@ class FilteringManager:
 
             # Store BlackListFilter independently
             if filter_classes[filter_class] is BlackListFilter:
-                self.black_list_filter = filter_object = filter_classes[filter_class](limit=0)
+                self.black_list_filter = filter_object = filter_classes[filter_class](
+                    black_listing_threshold=self.black_listing_threshold
+                )
             else:
                 filter_object = filter_classes[filter_class]()
             self.filters.append(filter_object)
