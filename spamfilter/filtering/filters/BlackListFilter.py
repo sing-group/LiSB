@@ -28,12 +28,12 @@ class BlackListFilter(DBFilter):
         if peer_ip.compressed in self.data["ip_addresses"]:
             n_times_detected_as_spam = self.data["ip_addresses"][peer_ip.compressed]
             if n_times_detected_as_spam > self.limit:
-                logging.warning(f"Sender IP {peer_ip} has been previously black-listed")
+                logging.info(f"Sender IP {peer_ip} has been previously black-listed")
                 return True
         else:
             for ip_range in self.data["ip_ranges"]:
                 if peer_ip in ipaddress.ip_network(ip_range):
-                    logging.warning(f"Sender IP {peer_ip} belongs to a black-listed IP network {ip_range}")
+                    logging.info(f"Sender IP {peer_ip} belongs to a black-listed IP network {ip_range}")
                     return True
 
         return False

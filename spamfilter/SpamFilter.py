@@ -79,7 +79,8 @@ class SpamFilter(smtpd.SMTPServer):
         filtering_time = time.time() - start_time
         logging.debug(f"Filtering process lasted for {filtering_time} s")
         if is_spam:
-            logging.warning("Spam detected: rejecting message (450)...")
+            logging.warning(f"Email from '{mailfrom}' sent from peer {peer} was detected as spam. "
+                            f"Rejecting message with RFC 5321 code 450...")
             return self._REJECTION_MSG_RFC_5321
         else:
             self.forwarder.forward(msg)

@@ -28,8 +28,8 @@ class XFilter(DBFilter):
 
             # If the x-headers are different from the previous data, then return True
             elif set(x_headers) != set(self.data[domain]):
-                logging.warning(
-                    f"The email X-Headers {x_headers} have varied from {domain}'s previous data {self.data[domain]}")
+                logging.info(f"The email X-Headers {x_headers} have varied from {domain}'s "
+                             f"previous data {self.data[domain]}")
                 return True
 
         return False
