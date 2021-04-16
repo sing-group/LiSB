@@ -49,6 +49,8 @@ class SpamFilter(smtpd.SMTPServer):
         self.filtering_mgr = FilteringManager(
             enable_threading=conf["filtering"]["enable_threading"],
             storing_frequency=conf["filtering"]["storing_frequency"],
+            black_listing_threshold=conf["filtering"]["black_listing_threshold"],
+            black_listed_days=conf["filtering"]["black_listed_days"],
             disabled_filters=conf["filtering"]["disabled_filters"],
             exceptions=conf["filtering"]["exceptions"]
         )

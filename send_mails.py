@@ -51,7 +51,7 @@ s.close()
 server_port = 1025
 
 # Launch threads
-n_sending_threads = 10
+n_sending_threads = 1
 for thread_index in range(n_sending_threads):
     worker = threading.Thread(
         target=send_mail,

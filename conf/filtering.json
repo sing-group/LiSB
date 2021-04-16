@@ -1,7 +1,8 @@
 {
-  "enable_threading": true,
-  "storing_frequency": 600,
+  "enable_threading": false,
+  "storing_frequency": 20,
   "black_listing_threshold" : 10,
+  "black_listed_days" : 10,
   "disabled_filters": [],
   "exceptions": {
     "ip_addresses": [],

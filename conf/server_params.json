@@ -1,5 +1,5 @@
 {
-  "local_ip" : "192.168.1.156",
+  "local_ip" : "172.20.10.5",
   "local_port" : 1025,
   "data_size_limit": 33554432,
   "map": null,
