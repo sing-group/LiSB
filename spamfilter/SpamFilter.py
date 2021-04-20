@@ -51,6 +51,7 @@ class SpamFilter(smtpd.SMTPServer):
             storing_frequency=conf["filtering"]["storing_frequency"],
             black_listing_threshold=conf["filtering"]["black_listing_threshold"],
             black_listed_days=conf["filtering"]["black_listed_days"],
+            time_limit=conf["filtering"]["time_limit"],
             disabled_filters=conf["filtering"]["disabled_filters"],
             exceptions=conf["filtering"]["exceptions"]
         )

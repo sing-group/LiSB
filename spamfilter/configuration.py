@@ -24,6 +24,7 @@ filtering_schema = Schema(
         "storing_frequency": And(int, lambda n: n > 0),
         "black_listing_threshold": And(int, lambda n: n > 0),
         "black_listed_days": And(int, lambda n: n > 0),
+        "time_limit": And(float, lambda n: n > 0),
         "disabled_filters": [And(str, lambda cls: cls in filter_classes)],
         "exceptions": {
             "ip_addresses": [

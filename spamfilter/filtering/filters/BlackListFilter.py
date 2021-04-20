@@ -42,12 +42,16 @@ class BlackListFilter(DBFilter):
         return False
 
     def set_initial_data(self, data):
+        """
+        This method overwrites the default set_initial_data method by loading in the initial filter data only the info whose info is not expired
+        :param data: the data to be filtered by expiry date and then loaded
+        """
         filtered_data = {}
         current_date = datetime.datetime.now()
         for peer in data["ip_addresses"]:
             peer_expiry_date = datetime.datetime.fromisoformat(data["ip_addresses"][peer]["expiry_date"])
             if peer_expiry_date > current_date:
-                filtered_data[peer] = data[peer]
+                filtered_data[peer] = data["ip_addresses"][peer]
         self.data["ip_addresses"] = filtered_data
         self.data["ip_ranges"] = data["ip_ranges"]
 

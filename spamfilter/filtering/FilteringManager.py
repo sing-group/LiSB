@@ -2,6 +2,7 @@ import importlib
 import pkgutil
 import logging
 import threading
+import time
 from typing import Sequence
 
 from spamfilter.EmailEnvelope import EmailEnvelope
@@ -18,10 +19,11 @@ class FilteringManager:
     storage_mgr: StorageManager
 
     def __init__(self, enable_threading: int = 1, black_listing_threshold: int = 10, black_listed_days: int = 10,
-                 storing_frequency: int = 300, disabled_filters: list = [], exceptions=None):
+                 time_limit: float = 1.5, storing_frequency: int = 300, disabled_filters: list = [], exceptions=None):
         self.enable_threading = enable_threading
         self.black_listing_threshold = black_listing_threshold
         self.black_listed_days = black_listed_days
+        self.time_limit = time_limit
         self.disabled_filters = disabled_filters
         self.exceptions = exceptions
         self.storage_mgr = StorageManager("data/", storing_frequency)
@@ -85,7 +87,13 @@ class FilteringManager:
         if is_exception:
             return False
 
+        # Apply filters to the message.
+        # If threading is enabled, launch a thread for each filter.
+        # If not, then apply filters sequentially.
+        is_spam = False
         if self.enable_threading:
+
+            # Launch a thread for each filter
             n_filtering_threads = len(self.filters)
             all_checks = [0] * n_filtering_threads
             for filter_index in range(n_filtering_threads):
@@ -96,23 +104,45 @@ class FilteringManager:
                 )
                 worker.start()
 
+            # Check the results of each thread while:
+            #   - All of them haven't finished
+            #   - One detects spam
+            #   - The time limit isn't exceeded
             n_finished = 0
-            while n_finished < n_filtering_threads:
+            start_time = time.time()
+            current_time = 0.0
+            while not is_spam and n_finished < n_filtering_threads and current_time < self.time_limit:
                 n_finished = 0
-                for filter_index in range(len(all_checks)):
-                    if all_checks[filter_index] == -1:
-                        if self.black_list_filter:
-                            self.black_list_filter.update_black_list(msg.peer[0])
-                        return True
-                    elif all_checks[filter_index] == 1:
+                filter_index = 0
+                n_filters = len(self.filters)
+                while not is_spam and filter_index < n_filters and current_time < self.time_limit:
+                    is_spam = all_checks[filter_index] == -1
+                    if all_checks[filter_index] == 1:
                         n_finished += 1
+                    filter_index += 1
+                    current_time = time.time() - start_time
         else:
-            for flt in self.filters:
-                is_spam = flt.filter(msg)
-                if is_spam:
-                    if self.black_list_filter:
-                        self.black_list_filter.update_black_list(msg.peer[0])
-                    return True
+
+            # Apply all filters while spam isn't detected and there are filters to apply
+            n_filters = len(self.filters)
+            current_filter = 0
+            start_time = time.time()
+            current_time = 0.0
+            while not is_spam and current_filter < n_filters and current_time < self.time_limit:
+                is_spam = self.filters[current_filter].filter(msg)
+                current_time = time.time() - start_time
+                current_filter += 1
+
+        # If spam is detected, update the black list (if needed) and return True
+        if is_spam:
+            if self.black_list_filter:
+                self.black_list_filter.update_black_list(msg.peer[0])
+            return True
+
+        # If the time limit was exceeded, log debug message
+        if current_time >= self.time_limit:
+            logging.debug(f"Time limit ({self.time_limit}) exceeded in filtering process ({current_time}). "
+                          f"Hence, returning False.")
 
         return False
 
