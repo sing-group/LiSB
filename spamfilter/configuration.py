@@ -114,7 +114,7 @@ def config_logging(server_conf: dict):
     If any problem is encountered while setting up logging, then it defines a basic logging configuration.
     """
     # Create logging directory if it doesn't exist
-    path = '../logs/'
+    path = 'logs/'
     if not os.path.exists(path):
         os.makedirs(path)
 
@@ -149,7 +149,7 @@ def config_logging(server_conf: dict):
 
     except Exception as e:
         logging.basicConfig(
-            filename='../logs/log',
+            filename='logs/log',
             format="[ %(asctime)s ] [ %(levelname)s ] [ %(module)s : %(threadName)s ] %(message)s",
             level=logging.WARNING
         )
