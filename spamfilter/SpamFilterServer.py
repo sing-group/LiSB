@@ -13,7 +13,7 @@ from spamfilter.MailForwarder import MailForwarder
 from spamfilter.filtering.FilteringManager import FilteringManager
 
 
-class SpamFilter(smtpd.SMTPServer):
+class SpamFilterServer(smtpd.SMTPServer):
     conf: dict
     filtering_mgr: FilteringManager
     forwarder: MailForwarder
@@ -22,7 +22,7 @@ class SpamFilter(smtpd.SMTPServer):
 
     def __init__(self, conf: dict):
 
-        logging.info("Setting up SpamFilter server")
+        logging.info("Setting up SpamFilterServer server")
         self.conf = conf
 
         # Call parent constructor
@@ -55,7 +55,7 @@ class SpamFilter(smtpd.SMTPServer):
             disabled_filters=conf["filtering"]["disabled_filters"],
             exceptions=conf["filtering"]["exceptions"]
         )
-        logging.info(f"Running SpamFilter server on {self._localaddr}")
+        logging.info(f"Running SpamFilterServer server on {self._localaddr}")
         logging.info("Waiting for mails to filter...")
 
     def process_message(self, peer, mailfrom, rcpttos, data, **kwargs):
