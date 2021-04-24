@@ -76,7 +76,7 @@ server_params_schema = Schema(
 )
 
 # FORWARDING SCHEMA
-server_params_schema = Schema(
+forwarding_schema = Schema(
     {
         "remote_ip": And(str, lambda ip: ipaddress.IPv4Address(ip)),
         "remote_port": And(int, lambda port: 0 <= port <= 65353),
