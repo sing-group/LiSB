@@ -75,6 +75,15 @@ server_params_schema = Schema(
     }
 )
 
+# FORWARDING SCHEMA
+server_params_schema = Schema(
+    {
+        "remote_ip": And(str, lambda ip: ipaddress.IPv4Address(ip)),
+        "remote_port": And(int, lambda port: 0 <= port <= 65353),
+        "n_forwarder_threads": And(int, lambda n: n > 0)
+    }
+)
+
 
 def get_local_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
