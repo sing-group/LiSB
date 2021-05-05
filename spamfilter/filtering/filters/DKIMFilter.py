@@ -1,10 +1,10 @@
 import logging
 
 from spamfilter.EmailEnvelope import EmailEnvelope
-from spamfilter.filtering.filters.DBFilter import DBFilter
+from spamfilter.filtering.filters.PastFilter import PastFilter
 
 
-class DKIMFilter(DBFilter):
+class DKIMFilter(PastFilter):
 
     def filter(self, envelope: EmailEnvelope) -> bool:
         """

@@ -4,10 +4,10 @@ import logging
 import datetime
 
 from spamfilter.EmailEnvelope import EmailEnvelope
-from spamfilter.filtering.filters.DBFilter import DBFilter
+from spamfilter.filtering.filters.PastFilter import PastFilter
 
 
-class BlackListFilter(DBFilter):
+class BlackListFilter(PastFilter):
     black_listed_days: int
     black_listing_threshold: int
 

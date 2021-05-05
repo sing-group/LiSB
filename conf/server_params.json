@@ -1,8 +1,9 @@
 {
-  "local_ip" : "",
-  "local_port" : 1025,
-  "data_size_limit": 33554432,
-  "map": null,
-  "enable_SMTPUTF8": false,
-  "decode_data": false
+  "local_ip": "",
+  "local_port": 1025,
+  "SMTP_parameters": {
+    "data_size_limit": 33554432,
+    "enable_SMTPUTF8": false,
+    "decode_data": false
+  }
 }

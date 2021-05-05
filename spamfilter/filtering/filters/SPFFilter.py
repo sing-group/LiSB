@@ -3,10 +3,10 @@ import ipaddress
 import logging
 
 from spamfilter.EmailEnvelope import EmailEnvelope
-from spamfilter.filtering.filters.DBFilter import DBFilter
+from spamfilter.filtering.filters.PastFilter import PastFilter
 
 
-class SPFFilter(DBFilter):
+class SPFFilter(PastFilter):
 
     def filter(self, envelope: EmailEnvelope) -> bool:
         """

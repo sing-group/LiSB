@@ -6,7 +6,7 @@ import schedule
 import threading as th
 from os.path import join
 
-from spamfilter.filtering.filters.DBFilter import DBFilter
+from spamfilter.filtering.filters.PastFilter import PastFilter
 
 
 class StorageManager:
@@ -74,7 +74,7 @@ class StorageManager:
         """
         for current_filter in filters:
             cls = type(current_filter)
-            if issubclass(cls, DBFilter):
+            if issubclass(cls, PastFilter):
                 to_store = current_filter.get_data()
                 file_name = cls.__name__
                 storage_mgr.store_data(file_name, to_store)

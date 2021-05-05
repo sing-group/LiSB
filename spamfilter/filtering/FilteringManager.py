@@ -8,7 +8,7 @@ from typing import Sequence
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.filtering.StorageManager import StorageManager
 from spamfilter.filtering.filters.BlackListFilter import BlackListFilter
-from spamfilter.filtering.filters.DBFilter import DBFilter
+from spamfilter.filtering.filters.PastFilter import PastFilter
 from spamfilter.filtering.filters.Filter import Filter
 
 
@@ -45,8 +45,8 @@ class FilteringManager:
         # Load all Filter classes
         filter_classes = {cls.__name__: cls for cls in Filter.__subclasses__() if
                           cls.__name__ not in self.disabled_filters}
-        filter_classes.pop('DBFilter')
-        filter_classes.update({cls.__name__: cls for cls in DBFilter.__subclasses__() if
+        filter_classes.pop('PastFilter')
+        filter_classes.update({cls.__name__: cls for cls in PastFilter.__subclasses__() if
                                cls.__name__ not in self.disabled_filters})
 
         # Instantiate all Filters from filter class names and append to filters list
@@ -65,7 +65,7 @@ class FilteringManager:
                 filter_object = filter_classes[filter_class]()
             self.filters.append(filter_object)
 
-            if issubclass(filter_classes[filter_class], DBFilter):
+            if issubclass(filter_classes[filter_class], PastFilter):
                 data = self.storage_mgr.load_data(filter_class)
                 filter_object.set_initial_data(data)
 

@@ -12,7 +12,7 @@ class EmailEnvelope:
     kwargs = None
     _sender_domain = None
 
-    def __init__(self, peer, mail_from, rcpt_tos, email_msg, **kwargs):
+    def __init__(self, peer, mail_from, rcpt_tos, email_msg):
         """
         This method creates a container for the email and envelope data
 
@@ -26,7 +26,6 @@ class EmailEnvelope:
         self.mail_from = mail_from
         self.rcpt_tos = rcpt_tos
         self.email_msg = email_msg
-        self.kwargs = kwargs
         self._sender_domain = mail_from.split("@")[1]
 
     def __str__(self):

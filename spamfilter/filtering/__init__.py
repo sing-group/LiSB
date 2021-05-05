@@ -1,6 +1,6 @@
 from spamfilter.filtering.FilteringManager import FilteringManager
 from spamfilter.filtering.filters.Filter import Filter
-from spamfilter.filtering.filters.DBFilter import DBFilter
+from spamfilter.filtering.filters.PastFilter import PastFilter
 from spamfilter.filtering.filters import DKIMFilter
 from spamfilter.filtering.filters import FromFilter
 from spamfilter.filtering.filters import ReturnPathFilter

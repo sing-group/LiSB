@@ -3,7 +3,7 @@
   "storing_frequency": 600,
   "black_listing_threshold" : 10,
   "black_listed_days" : 10,
-  "time_limit" : 1.5,
+  "time_limit" : 3.0,
   "disabled_filters": [],
   "exceptions": {
     "ip_addresses": [],

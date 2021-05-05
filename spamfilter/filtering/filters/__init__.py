@@ -1,5 +1,5 @@
 from spamfilter.filtering.filters import Filter
-from spamfilter.filtering.filters import DBFilter
+from spamfilter.filtering.filters import PastFilter
 from spamfilter.filtering.filters import BlackListFilter
 from spamfilter.filtering.filters import DKIMFilter
 from spamfilter.filtering.filters import FromFilter

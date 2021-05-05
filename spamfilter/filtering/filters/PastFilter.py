@@ -1,8 +1,7 @@
-import logging
 from spamfilter.filtering.filters.Filter import Filter
 
 
-class DBFilter(Filter):
+class PastFilter(Filter):
     data: dict = {}
 
     def set_initial_data(self, data):

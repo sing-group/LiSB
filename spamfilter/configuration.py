@@ -1,6 +1,8 @@
 import ipaddress
 import json
 import logging
+import logging.config
+import logging.handlers
 import os
 import re
 import socket
@@ -8,11 +10,11 @@ from os import listdir
 
 from schema import Schema, And, Or
 
-from spamfilter.filtering import Filter, DBFilter
+from spamfilter.filtering import Filter, PastFilter
 
 # ALL FILTER CLASSES
-filter_classes = [cls.__name__ for cls in Filter.__subclasses__() if cls.__name__ != 'DBFilter']
-filter_classes.extend(cls.__name__ for cls in DBFilter.__subclasses__())
+filter_classes = [cls.__name__ for cls in Filter.__subclasses__() if cls.__name__ != 'PastFilter']
+filter_classes.extend(cls.__name__ for cls in PastFilter.__subclasses__())
 
 # EMAIL REGEX
 email_regex = re.compile('^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$')
@@ -68,10 +70,7 @@ server_params_schema = Schema(
     {
         "local_ip": And(str, lambda ip: ipaddress.IPv4Address(ip)),
         "local_port": And(int, lambda port: 0 <= port <= 65353),
-        "data_size_limit": And(int, lambda n: n > 0),
-        "map": And(lambda obj: obj is None or isinstance(obj, dict)),
-        "enable_SMTPUTF8": bool,
-        "decode_data": bool
+        "SMTP_parameters": dict
     }
 )
 
