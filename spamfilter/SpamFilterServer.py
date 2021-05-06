@@ -10,7 +10,6 @@ from aiosmtpd.controller import Controller
 
 from spamfilter.EmailEnvelope import EmailEnvelope
 from spamfilter.MailForwarder import MailForwarder
-
 from spamfilter.filtering.FilteringManager import FilteringManager
 
 

@@ -1,8 +1,6 @@
 import email
 import importlib
 from email.mime.text import MIMEText
-from os import listdir
-from os.path import isfile, join
 import socket
 from typing import Sequence
 from unittest import TestCase
