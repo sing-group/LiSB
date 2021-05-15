@@ -1,0 +1,11 @@
+{
+  "--to-backup": [
+    "conf",
+    "data",
+    "logs"
+  ],
+  "--s3": [
+    "spamfilter-bucket/backups/"
+  ],
+  "--encryption": []
+}
