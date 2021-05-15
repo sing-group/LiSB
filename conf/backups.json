@@ -5,7 +5,7 @@
     "logs"
   ],
   "--s3": [
-    "spamfilter-bucket/backups/"
+    "s3-bucket-name/path/"
   ],
   "--encryption": []
 }
