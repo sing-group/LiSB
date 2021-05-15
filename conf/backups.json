@@ -5,7 +5,7 @@
     "logs"
   ],
   "--s3": [
-    "s3-bucket-name/path/"
+    "spamfilter-buckets/backups/"
   ],
   "--encryption": "/home/admin/.ssh/authorized_keys"
 }

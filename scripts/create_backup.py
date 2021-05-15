@@ -62,8 +62,7 @@ def create_backup(options):
 
 if __name__ == '__main__':
 
-    # try:
-
+    try:
         # Parse command options
         n_args = len(sys.argv)
         if n_args == 1:
@@ -81,23 +80,22 @@ if __name__ == '__main__':
                 else:
                     options[arg[0]] = [] if len(arg) == 1 else arg[1].split(",")
 
-        print(options)
         # Validate
         validated = command_schema.validate(options)
 
         # Do backup if everything is correct
         create_backup(validated)
-    # except Exception as e:
-    #     print(f"An error occurred: {e.__class__.__name__} - {e}\n")
-    #     print("Usage: create_backup.py [ --option1=val1,val2 ... ]")
-    #     print("If options are not passed as parameters they are read from the 'conf/backups.json' file.\n")
-    #     print("Options:\n")
-    #     print("\t--to-backup\tThis indicates which information is going to be backed up. The possible values can be: "
-    #           "conf, data, and/or logs, hence backup up the respective information."
-    #           "If not specified, everything is backed up.\n")
-    #     print("\t--s3=BUCKET_NAME/PATH\tThe script will upload backup to the the specified S3 bucket. "
-    #           "If not specified, the backup will only be stored locally. "
-    #           "Remember that, for this options to work correctly, S3 Full access needs to be enabled.\n")
-    #     print("\t--encryption=PUBLIC_KEY_FILE\tThe backup will be encrypted by using the specified public key. "
-    #           "If not specified, the backup won't be encrypted.\n")
-    #     print("\t--help\tThis option shows all of the command options.")
+    except Exception as e:
+        print(f"An error occurred: {e.__class__.__name__} - {e}\n")
+        print("Usage: create_backup.py [ --option1=val1,val2 ... ]")
+        print("If options are not passed as parameters they are read from the 'conf/backups.json' file.\n")
+        print("Options:\n")
+        print("\t--to-backup\tThis indicates which information is going to be backed up. The possible values can be: "
+              "conf, data, and/or logs, hence backup up the respective information."
+              "If not specified, everything is backed up.\n")
+        print("\t--s3=BUCKET_NAME/PATH\tThe script will upload backup to the the specified S3 bucket. "
+              "If not specified, the backup will only be stored locally. "
+              "Remember that, for this options to work correctly, S3 Full access needs to be enabled.\n")
+        print("\t--encryption=PUBLIC_KEY_FILE\tThe backup will be encrypted by using the specified public key. "
+              "If not specified, the backup won't be encrypted.\n")
+        print("\t--help\tThis option shows all of the command options.")
