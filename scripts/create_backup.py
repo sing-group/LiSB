@@ -1,57 +1,50 @@
 #!/etc/spamfilter/venv/bin/python3.7
-import json
 import os
-import sys
 import boto3
 import tarfile
 from datetime import datetime
-from schema import Schema, Or, Optional, And, SchemaError
+from schema import Schema, Or, Optional, And
+
+from common_functions import parse_args, encrypt_file
 
 command_schema = Schema({
     Optional("--to-backup"): And([Or("conf", "data", "logs")], lambda l: 0 < len(l) <= 3),
     Optional("--s3"): And([str, lambda bucket_str: len(bucket_str.split("/", maxsplit=1))]),
-    Optional("--encryption"): []
+    Optional("--encryption"): And(
+        [str, lambda public_key_file: os.path.isfile(public_key_file)],
+        lambda key_list: len(key_list) == 1
+    )
 })
 
 
-def parse_args():
-    """
-    This function parses the arguments passed to the scripts. In case no arguments are passed, they are loaded from the 'conf/backups.json' file
-    :return: the parsed arguments in dictionary format
-    """
-    n_args = len(sys.argv)
-    if n_args == 1:
-        # If not passed as parameters, they are read from the conf/backups.json file
-        with open("conf/backups.json") as backups_conf_file:
-            options = json.load(backups_conf_file)
-        if not options:
-            raise Exception("The options file needs to be configured")
-    else:
-        options = {}
-        for i in range(1, n_args):
-            arg = sys.argv[i].split("=")
-            options[arg[0]] = [] if len(arg) == 1 else arg[1].split(",")
-    return options
-
-
-def do_backup(options):
+def create_backup(options):
     # Crate backups directory if necessary
     base_path = "/etc/spamfilter/"
     backups_path = "/etc/spamfilter/backups/"
     if not os.path.exists(backups_path):
         os.makedirs(backups_path)
 
-    # Create local backup file of information specified by '--to-backup'
+    # Create GZ-compressed local TAR backup file of information specified by '--to-backup'
     to_backup = ['conf', 'data', 'logs'] if '--to-backup' not in options else options['--to-backup']
     backup_name = "backup" + datetime.now().strftime("%Y%m%d%H%M%S") + ".tar.gz"
     backup_file_path = backups_path + backup_name
+    print("Creating backup...")
     with tarfile.open(backup_file_path, "w:gz") as tar:
-        print(f"Creating backup file '{backup_name}' at '{backups_path}'")
         for info in to_backup:
             path_and_info = os.path.join(base_path, info)
             if os.path.exists(path_and_info):
-                print(f"Adding '{path_and_info}' to backup file")
+                print(f"Adding '{path_and_info}' to backup file...")
                 tar.add(path_and_info)
+
+    if '--encryption' in options:
+        # Encrypt file and remove unencrypted file
+        print("Encrypting backup file with your public SSH key")
+        encrypt_file(backup_file_path, backup_file_path + ".enc", options['--encryption'][0])
+        os.remove(backup_file_path)
+        backup_name += ".enc"
+        backup_file_path += ".enc"
+
+    print(f"Storing the backup file '{backup_name}' at '{backups_path}'")
 
     # Upload to s3 bucket if needed
     if '--s3' in options:
@@ -71,11 +64,11 @@ if __name__ == '__main__':
 
     try:
         # Parse command options
-        options = parse_args()
+        options = parse_args("conf/backups.json")
         # Validate
         validated = command_schema.validate(options)
         # Do backup if everything is correct
-        do_backup(validated)
+        create_backup(validated)
     except Exception as e:
         print("Usage: create_backup.py [ --option1=val1,val2 ... ]")
         print("If options are not passed as parameters they are read from the 'conf/backups.json' file.\n")
