@@ -7,7 +7,5 @@
   "--s3": [
     "s3-bucket-name/path/"
   ],
-  "--encryption": [
-    "/home/admin/.ssh/authorized_keys"
-  ]
+  "--encryption": "/home/admin/.ssh/authorized_keys"
 }

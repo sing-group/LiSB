@@ -1,19 +1,19 @@
 #!/etc/spamfilter/venv/bin/python3.7
+import json
 import os
+import sys
+
 import boto3
 import tarfile
 from datetime import datetime
 from schema import Schema, Or, Optional, And
 
-from common_functions import parse_args, encrypt_file
+from common_functions import encrypt_file
 
 command_schema = Schema({
     Optional("--to-backup"): And([Or("conf", "data", "logs")], lambda l: 0 < len(l) <= 3),
-    Optional("--s3"): And([str, lambda bucket_str: len(bucket_str.split("/", maxsplit=1))]),
-    Optional("--encryption"): And(
-        [str, lambda public_key_file: os.path.isfile(public_key_file)],
-        lambda key_list: len(key_list) == 1
-    )
+    Optional("--s3"): And([str, lambda bucket_str: len(bucket_str.split("/", maxsplit=1)) == 2]),
+    Optional("--encryption"): And(str, lambda public_key_file: os.path.isfile(public_key_file))
 })
 
 
@@ -39,7 +39,7 @@ def create_backup(options):
     if '--encryption' in options:
         # Encrypt file and remove unencrypted file
         print("Encrypting backup file with your public SSH key")
-        encrypt_file(backup_file_path, backup_file_path + ".enc", options['--encryption'][0])
+        encrypt_file(backup_file_path, backup_file_path + ".enc", options['--encryption'])
         os.remove(backup_file_path)
         backup_name += ".enc"
         backup_file_path += ".enc"
@@ -62,24 +62,42 @@ def create_backup(options):
 
 if __name__ == '__main__':
 
-    try:
+    # try:
+
         # Parse command options
-        options = parse_args("conf/backups.json")
+        n_args = len(sys.argv)
+        if n_args == 1:
+            # If not passed as parameters, they are read from the conf/backups.json file
+            with open("/etc/spamfilter/conf/backups.json") as backups_conf_file:
+                options = json.load(backups_conf_file)
+            if not options:
+                raise Exception("The options file needs to be configured")
+        else:
+            options = {}
+            for i in range(1, n_args):
+                arg = sys.argv[i].split("=")
+                if "--encryption" == arg[0]:
+                    options[arg[0]] = None if len(arg) == 1 else arg[1]
+                else:
+                    options[arg[0]] = [] if len(arg) == 1 else arg[1].split(",")
+
+        print(options)
         # Validate
         validated = command_schema.validate(options)
+
         # Do backup if everything is correct
         create_backup(validated)
-    except Exception as e:
-        print("Usage: create_backup.py [ --option1=val1,val2 ... ]")
-        print("If options are not passed as parameters they are read from the 'conf/backups.json' file.\n")
-        print("Options:\n")
-        print("\t--to-backup\tThis indicates which information is going to be backed up. The possible values can be: "
-              "conf, data, and/or logs, hence backup up the respective information."
-              "If not specified, everything is backed up.\n")
-        print(
-            "\t--s3=bucket_name/path\tThe script will upload backup to the the specified S3 bucket. "
-            "If not specified, the backup will only be stored locally. "
-            "Remember that, for this options to work correctly, S3 Full access needs to be enabled.\n")
-        print("\t--encryption=public_key_file\tThe backup will be encrypted by using the specified public key. "
-              "If not specified, the backup won't be encrypted.\n")
-        print("\t--help\tThis option shows all of the command options.")
+    # except Exception as e:
+    #     print(f"An error occurred: {e.__class__.__name__} - {e}\n")
+    #     print("Usage: create_backup.py [ --option1=val1,val2 ... ]")
+    #     print("If options are not passed as parameters they are read from the 'conf/backups.json' file.\n")
+    #     print("Options:\n")
+    #     print("\t--to-backup\tThis indicates which information is going to be backed up. The possible values can be: "
+    #           "conf, data, and/or logs, hence backup up the respective information."
+    #           "If not specified, everything is backed up.\n")
+    #     print("\t--s3=BUCKET_NAME/PATH\tThe script will upload backup to the the specified S3 bucket. "
+    #           "If not specified, the backup will only be stored locally. "
+    #           "Remember that, for this options to work correctly, S3 Full access needs to be enabled.\n")
+    #     print("\t--encryption=PUBLIC_KEY_FILE\tThe backup will be encrypted by using the specified public key. "
+    #           "If not specified, the backup won't be encrypted.\n")
+    #     print("\t--help\tThis option shows all of the command options.")

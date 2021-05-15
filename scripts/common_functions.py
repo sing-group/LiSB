@@ -1,29 +1,6 @@
-import json
-import sys
-
 from Cryptodome.Cipher import PKCS1_OAEP, AES
 from Cryptodome.PublicKey import RSA
 from Cryptodome.Random import get_random_bytes
-
-
-def parse_args(conf_file):
-    """
-    This function parses the arguments passed to the scripts. In case no arguments are passed, they are loaded from the 'conf/backups.json' file
-    :return: the parsed arguments in dictionary format
-    """
-    n_args = len(sys.argv)
-    if n_args == 1:
-        # If not passed as parameters, they are read from the conf/backups.json file
-        with open(conf_file) as backups_conf_file:
-            options = json.load(backups_conf_file)
-        if not options:
-            raise Exception("The options file needs to be configured")
-    else:
-        options = {}
-        for i in range(1, n_args):
-            arg = sys.argv[i].split("=")
-            options[arg[0]] = [] if len(arg) == 1 else arg[1].split(",")
-    return options
 
 
 def encrypt_file(unencrypted_path, encrypted_path, public_key_path):
@@ -52,7 +29,11 @@ def encrypt_file(unencrypted_path, encrypted_path, public_key_path):
             encrypted_file.write(x)
 
 
-def decrypt_file(encrypted_path, decrypted_path, private_key_str):
+def decrypt_file(encrypted_path, decrypted_path, private_key_path):
+    # Load private SSH key to string
+    with open(private_key_path) as private_key_file:
+        private_key_str = private_key_file.read()
+
     # Create private key from string
     private_key = RSA.importKey(private_key_str)
 
