@@ -77,8 +77,9 @@ if __name__ == '__main__':
               "conf, data, and/or logs, hence backup up the respective information."
               "If not specified, everything is backed up.\n")
         print(
-            "\t--s3=bucket_name/path\tThe script will upload the backup to the S3 bucket specified in 'conf/backups.json'. "
-            "If not specified, the backup will only be stored locally. AWS S3 Full access needs to be enabled.\n")
-        print("\t--encryption\tThis determines how the backup will be encrypted. "
+            "\t--s3=bucket_name/path\tThe script will upload backup to the the specified S3 bucket. "
+            "If not specified, the backup will only be stored locally. "
+            "Remember that, for this options to work correctly, S3 Full access needs to be enabled.\n")
+        print("\t--encryption=public_key_file\tThe backup will be encrypted by using the specified public key. "
               "If not specified, the backup won't be encrypted.\n")
         print("\t--help\tThis option shows all of the command options.")
