@@ -1,3 +1,0 @@
-from spamfilter.SpamFilterServer import SpamFilterServer
-from spamfilter.MailForwarder import MailForwarder
-from spamfilter import configuration

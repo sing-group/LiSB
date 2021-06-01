@@ -1,0 +1,13 @@
+
+h1 {
+    text-align: center;
+}
+
+#control-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.control-panel-section {
+    margin: 5vw;
+}

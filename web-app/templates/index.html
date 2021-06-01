@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Main Page</title>
+    <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+    <h1>Control panel</h1>
+    <div id="control-panel">
+        <div class="control-panel-section">
+            <h2>Configuration</h2>
+            <ul>
+                <p>Choose a configuration file to edit</p>
+            {% for conf_file in config_files %}
+                <a href="/conf/{{ conf_file }}">
+                    <li>{{ conf_file }}</li>
+                </a>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="control-panel-section">
+            <h2>Monitoring</h2>
+        </div>
+
+        <div class="control-panel-section">
+            <h2>Backups</h2>
+        </div>
+    </div>
+
+{% endblock %}

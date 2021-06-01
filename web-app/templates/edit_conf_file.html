@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Conf file editor</title>
+    <link href="{{ url_for('static', filename='jsoneditor/jsoneditor.min.css' ) }}" rel="stylesheet" type="text/css">
+    <script src="{{ url_for('static', filename='jsoneditor/jsoneditor.min.js' ) }}"></script>
+{% endblock %}
+
+{% block body %}
+
+    <p>{{ filename }}</p>
+
+    <div id="jsoneditor"></div>
+    <form action="/conf/{{ filename }}" method="post">
+        <input name="updated-file-contents" id="updated-file-contents" type="hidden" value='{{ conf_file_contents|safe }}'>
+        <input type="submit">
+    </form>
+
+    <script>
+        // create the editor
+        const container = document.getElementById("jsoneditor")
+        const options = {
+            onChange: function (){
+                document.getElementById('updated-file-contents').value = editor.getText()
+            }
+        }
+        const editor = new JSONEditor(container, options)
+
+        // set json
+        const initialJson = {{ conf_file_contents|safe }}
+        editor.set(initialJson)
+    </script>
+{% endblock %}
