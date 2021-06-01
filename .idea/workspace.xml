@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="App web: configuración y monitorización en tiempo real">
       <change afterPath="$PROJECT_DIR$/.idea/spamfilter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/MailForwarder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/SpamFilterServer.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/configuration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/FilteringManager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/StorageManager.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/core/filtering/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/BlackListFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/DKIMFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/Filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/FromFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/PastFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/ReturnPathFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/SPFFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/ToFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/XFilter.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/core/filtering/filters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/tests/EmailWithFile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/tests/test_AnyFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/tests/test_BlackListFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/tests/test_DKIMFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/tests/test_FromFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/tests/test_ReturnPathFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/tests/test_SPFFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/tests/test_ToFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/tests/test_XFilter.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/core/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/scripts/create_backup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/scripts/restore_backup.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web-app/config.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web-app/static/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/static/jquery-3.6.0.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web-app/static/jsoneditor/img/jsoneditor-icons.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web-app/static/jsoneditor/jsoneditor.map" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web-app/static/jsoneditor/jsoneditor.min.css" afterDir="false" />
@@ -36,27 +63,27 @@
       <change beforePath="$PROJECT_DIR$/launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/launcher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/common_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/common_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/create_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/create_backup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/restore_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/restore_backup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/create_backup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/restore_backup.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spamfilter/EmailEnvelope.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/EmailEnvelope.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/MailForwarder.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/MailForwarder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/SpamFilterServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/SpamFilterServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/MailForwarder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/SpamFilterServer.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spamfilter/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/FilteringManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/FilteringManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/StorageManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/StorageManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/configuration.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/FilteringManager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/StorageManager.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spamfilter/filtering/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/BlackListFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/BlackListFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/DKIMFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/DKIMFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/Filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/Filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/FromFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/FromFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/PastFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/PastFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/ReturnPathFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/ReturnPathFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/SPFFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/SPFFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/ToFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/ToFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/XFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/XFilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/BlackListFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/DKIMFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/Filter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/FromFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/PastFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/ReturnPathFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/SPFFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/ToFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/XFilter.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spamfilter/filtering/filters/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/EmailWithFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/EmailWithFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/EmailWithFile.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/msgs/invalid_msgs/0001.bfc8d64d12b325ff385cca8d07b84288" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/msgs/invalid_msgs/0001.bfc8d64d12b325ff385cca8d07b84288" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/msgs/invalid_msgs/0002.24b47bb3ce90708ae29d0aec1da08610" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/msgs/invalid_msgs/0002.24b47bb3ce90708ae29d0aec1da08610" afterDir="false" />
@@ -3351,14 +3378,14 @@
       <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/msgs/valid_msgs/997" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/msgs/valid_msgs/997" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/msgs/valid_msgs/998" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/msgs/valid_msgs/998" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/msgs/valid_msgs/999" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/msgs/valid_msgs/999" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_AnyFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/test_AnyFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_BlackListFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/test_BlackListFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_DKIMFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/test_DKIMFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_FromFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/test_FromFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_ReturnPathFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/test_ReturnPathFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_SPFFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/test_SPFFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_ToFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/test_ToFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_XFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/tests/test_XFilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_AnyFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_BlackListFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_DKIMFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_FromFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_ReturnPathFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_SPFFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_ToFilter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spamfilter/filtering/tests/test_XFilter.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3411,11 +3438,15 @@
       <workItem from="1622559022504" duration="30000" />
       <workItem from="1622559057321" duration="1484000" />
       <workItem from="1622560581719" duration="12000" />
-      <workItem from="1622560598810" duration="15773000" />
+      <workItem from="1622560598810" duration="16124000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="App web: configuración y monitorización en tiempo real" />
+    <option name="LAST_COMMIT_MESSAGE" value="App web: configuración y monitorización en tiempo real" />
   </component>
 </project>

@@ -16,7 +16,7 @@
       "class": "logging.handlers.TimedRotatingFileHandler",
       "formatter": "default",
       "filename": "logs/log",
-      "when": "h",
+      "when": "H",
       "interval": 1,
       "level": "INFO"
     }

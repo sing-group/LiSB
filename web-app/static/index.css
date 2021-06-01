@@ -1,13 +1,18 @@
 
-h1 {
+h1,h2,h3 {
     text-align: center;
 }
 
 #control-panel {
     display: flex;
+    flex-direction: column;
+}
+
+#configuration-and-backup-sections {
+    display: flex;
     justify-content: center;
 }
 
 .control-panel-section {
-    margin: 5vw;
+    margin: 0 5vw;
 }

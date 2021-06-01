@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block head %}
-    <title>Conf file editor</title>
+    <title>Settings editor</title>
     <link href="{{ url_for('static', filename='jsoneditor/jsoneditor.min.css' ) }}" rel="stylesheet" type="text/css">
     <script src="{{ url_for('static', filename='jsoneditor/jsoneditor.min.js' ) }}"></script>
 {% endblock %}
 
 {% block body %}
 
-    <p>{{ filename }}</p>
+    <h1>Editing '{{ filename }}' settings</h1>
 
     <div id="jsoneditor"></div>
     <form action="/conf/{{ filename }}" method="post">

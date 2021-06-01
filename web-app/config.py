@@ -1,5 +1,5 @@
 routes = {
-    "code" : "/etc/spamfilter/spamfilter",
-    "conf": "/etc/spamfilter/conf"
+    "core" : "/etc/spamfilter/",
+    "conf": "/etc/spamfilter/conf",
+    "logs": "/etc/spamfilter/logs"
 }
-

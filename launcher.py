@@ -1,10 +1,10 @@
-#!/etc/spamfilter/venv/bin/python3.7
+#!/etc/spamfilter/venv/bin/python3.8
 
 import logging
 from schema import SchemaError
 
-from spamfilter import configuration
-from spamfilter.SpamFilterServer import SpamFilterServer
+from core import configuration
+from core.SpamFilterServer import SpamFilterServer
 
 if __name__ == '__main__':
 

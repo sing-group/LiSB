@@ -4,3 +4,4 @@ dnspython~=1.16.0
 aiosmtpd~=1.4.2
 boto3~=1.17.46
 pycryptodomex~=3.10.1
+Flask~=2.0.1
