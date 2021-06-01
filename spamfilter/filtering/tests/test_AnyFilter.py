@@ -148,6 +148,12 @@ class TestAnyFilter(TestCase):
             not_spam = self.tested_filter.filter(valid)
             self.assertFalse(not_spam, "Filter detected spam incorrectly")
 
+    def test_spam_1(self):
+        self.assertTrue(True,True)
+
+    def test_spam_2(self):
+        self.assertTrue(True, True)
+
     @staticmethod
     def create_email(peer, mail_from, rcpt_tos, email_from, email_tos, email_subject, email_contents,
                      other_headers={}) -> EmailEnvelope:

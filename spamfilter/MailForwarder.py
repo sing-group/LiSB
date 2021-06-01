@@ -11,6 +11,7 @@ class MailForwarder:
     _msgs_to_forward: multiprocessing.Queue
     _forward_ip = None
     _forward_port = None
+    _n_threads = None
 
     def __init__(self, ip: str, port: int = 1025, n_forwarder_threads: int = multiprocessing.cpu_count()):
         """
@@ -26,7 +27,7 @@ class MailForwarder:
         self._n_threads = n_forwarder_threads
         for i in range(n_forwarder_threads):
             worker = threading.Thread(target=MailForwarder.__forward_msg, name=f"Forwarder-{i}",
-                               args=(self._msgs_to_forward, self._forward_ip, self._forward_port))
+                                      args=(self._msgs_to_forward, self._forward_ip, self._forward_port))
             worker.start()
 
     def forward(self, msg: EmailEnvelope):

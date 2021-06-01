@@ -23,7 +23,7 @@ class StorageManager:
         if not os.path.exists(path):
             os.makedirs(path)
         self.path = path
-        self.load_frequency = storing_frequency
+        self.storing_frequency = storing_frequency
 
     def store_data(self, filename, data):
         """
@@ -60,7 +60,7 @@ class StorageManager:
         The storing frequency is defined by 'storing_frequency'
         :param filters: The filters to get the data from
         """
-        schedule.every(self.load_frequency).seconds.do(StorageManager.store_all_data, self, filters)
+        schedule.every(self.storing_frequency).seconds.do(StorageManager.store_all_data, self, filters)
         storage_daemon = th.Thread(target=StorageManager.__daemon_job, name="StorageDaemon")
         storage_daemon.start()
 

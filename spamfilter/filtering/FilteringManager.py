@@ -14,9 +14,15 @@ from spamfilter.filtering.filters.Filter import Filter
 
 class FilteringManager:
     filters: Sequence[Filter]
+    storage_mgr: StorageManager
     black_list_filter: BlackListFilter = None
     enable_threading: int
-    storage_mgr: StorageManager
+    black_listing_threshold: int
+    black_listed_days: int
+    time_limit: float
+    storing_frequency: int
+    disabled_filters: list
+    exceptions: dict
 
     def __init__(self, enable_threading: int = 1, black_listing_threshold: int = 10, black_listed_days: int = 10,
                  time_limit: float = 1.5, storing_frequency: int = 300, disabled_filters: list = [], exceptions=None):
