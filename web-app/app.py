@@ -2,8 +2,9 @@ import datetime
 import os
 import json
 import sys
+from collections import OrderedDict
 
-from schema import SchemaError
+from schema import SchemaError, Schema
 from config import routes
 from flask import Flask, render_template, request, redirect, flash, session, jsonify
 
@@ -34,6 +35,8 @@ def edit_conf_file(filename):
             updated_file_contents = json.loads(request.form.get('updated-file-contents'))
             validation_schema = core.configuration.get_config_schema(filename)
             validated = validation_schema.validate(updated_file_contents)
+            if validation_schema.ignore_extra_keys:
+                validated = updated_file_contents
             with open(file_path, 'w') as conf_file:
                 to_write = json.dumps(validated)
                 conf_file.write(to_write)
@@ -58,6 +61,43 @@ def real_time_monitor(timestamp):
             if last_log_timestamp < log_timestamp:
                 response.append(log)
     return jsonify(response)
+
+
+@app.route('/monitor/past-logs', methods=["GET", "POST"])
+def past_logs_monitor():
+    # Get all logs filenames and order them by timestamp
+    log_files = []
+    for log_file in os.listdir(routes['logs']):
+        timestamp = datetime.datetime.strptime(log_file[4:], "%Y-%m-%d_%H-%M-%S").timestamp() \
+            if log_file != "log" else datetime.datetime.now().timestamp()
+        log_files.append((timestamp, log_file))
+    sorted_log_files = sorted(log_files)
+
+    # Load log contents
+    past_logs = []
+    for timestamp, log_file in sorted_log_files:
+
+        # Read by lines
+        file_path = os.path.join(routes['logs'], log_file)
+        with open(file_path, 'r') as file:
+            log_file_lines = file.readlines()
+
+        # Parse each line
+        for log in log_file_lines:
+            log_elements = [e.replace('[', '').strip() for e in log.split("]")]
+            log_datetime = log_elements[0].split(' ')
+            past_logs.append({
+                "date": log_datetime[0],
+                "time": log_datetime[1],
+                "severity": log_elements[1],
+                "module_and_thread": log_elements[2],
+                "msg": log_elements[3]
+            })
+
+    if request.method == "GET":
+        return render_template("past_logs_monitor.html", past_logs=past_logs)
+    else:
+        pass
 
 
 if __name__ == '__main__':

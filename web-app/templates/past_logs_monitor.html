@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Past logs</title>
+    <script src="{{ url_for('static', filename='search-bar.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Past logs</h1>
+
+        <div class="search-bar">
+            <form name="search-form" method="post" action="/monitor/past-logs">
+                <input id="search-input" type="text" name="date"/>
+                <span class="fas fa-search" onclick="send_form('search-form')"></span>
+            </form>
+            <div id="filters">
+                <p>Do search by:</p>
+                <input type='radio' name='filter' value='date' checked/>
+                <label for='date'>Date</label>
+                <input type='radio' name='filter' value='time'/>
+                <label for='time'>Time</label>
+                <input type='radio' name='filter' value='severity'/>
+                <label for='module_and_thread'>Severity</label>
+                <input type='radio' name='filter' value='module_and_thread'/>
+                <label for='module_and_thread'>Module & Thread</label>
+                <input type='radio' name='filter' value='msg'/>
+                <label for='msg'>Message</label>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Severity</th>
+                <th>Module & Thread</th>
+                <th>Message</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for log in past_logs %}
+                <tr>
+                    <td>{{ log['date'] }}</td>
+                    <td>{{ log['time'] }}</td>
+                    <td>{{ log['severity'] }}</td>
+                    <td>{{ log['module_and_thread'] }}</td>
+                    <td>{{ log['msg'] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
