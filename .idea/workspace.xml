@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="App web: configuración y monitorización en tiempo real">
-      <change afterPath="$PROJECT_DIR$/web-app/static/search-bar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-app/templates/past_logs_monitor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spamfilter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spamfilter.iml" afterDir="false" />
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Monitorización de eventos pasados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/logging.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/logging.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/past_logs_monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/past_logs_monitor.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +68,16 @@
       <workItem from="1622560598810" duration="16124000" />
       <workItem from="1622580307368" duration="342000" />
       <workItem from="1622645027452" duration="1208000" />
-      <workItem from="1622647830505" duration="8995000" />
+      <workItem from="1622647830505" duration="13083000" />
     </task>
+    <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
+      <created>1622656995185</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622656995186</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +96,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="App web: configuración y monitorización en tiempo real" />
-    <option name="LAST_COMMIT_MESSAGE" value="App web: configuración y monitorización en tiempo real" />
+    <MESSAGE value="Monitorización de eventos pasados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Monitorización de eventos pasados" />
   </component>
 </project>

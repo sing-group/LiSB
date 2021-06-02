@@ -63,8 +63,15 @@ def real_time_monitor(timestamp):
     return jsonify(response)
 
 
-@app.route('/monitor/past-logs', methods=["GET", "POST"])
+@app.route('/monitor/past-logs', methods=["GET"])
 def past_logs_monitor():
+    # Get URL params
+    date = request.args.get('date')
+    time = request.args.get('time')
+    severity = request.args.get('severity')
+    module_and_thread = request.args.get('module_and_thread')
+    msg = request.args.get('msg')
+
     # Get all logs filenames and order them by timestamp
     log_files = []
     for log_file in os.listdir(routes['logs']):
@@ -86,18 +93,45 @@ def past_logs_monitor():
         for log in log_file_lines:
             log_elements = [e.replace('[', '').strip() for e in log.split("]")]
             log_datetime = log_elements[0].split(' ')
-            past_logs.append({
-                "date": log_datetime[0],
-                "time": log_datetime[1],
+            log_date = log_datetime[0].split('-')
+            log_time = log_datetime[1].split(":")
+            parsed_log = {
+                "year": log_date[0],
+                "month": log_date[1],
+                "day": log_date[2],
+                "hour": log_time[0],
+                "minute": log_time[1],
                 "severity": log_elements[1],
                 "module_and_thread": log_elements[2],
                 "msg": log_elements[3]
-            })
+            }
 
-    if request.method == "GET":
-        return render_template("past_logs_monitor.html", past_logs=past_logs)
-    else:
-        pass
+            # Check if needs to be shown and append if so
+            is_appended = True
+            for k, v in parsed_log.items():
+                # Get value from URL
+                request_arg_value = request.args.get(k)
+                is_appended = is_appended and (
+                        request_arg_value == v or request_arg_value == "" or request_arg_value is None
+                )
+
+            if is_appended:
+                past_logs.append(parsed_log)
+
+    return render_template(
+        "past_logs_monitor.html",
+        past_logs=past_logs,
+        attributes={
+            "year": "Year",
+            "month": "Month",
+            "day": "Day",
+            "hour": "Hour",
+            "minute": "Minute",
+            "severity": "Severity",
+            "module_and_thread": "Module & Thread",
+            "msg": "Message"
+        }
+    )
 
 
 if __name__ == '__main__':
