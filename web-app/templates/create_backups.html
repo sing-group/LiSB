@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Backups Creation</title>
+    <script src="{{ url_for('static', filename='create-backups-form.js' ) }}"></script>
+{% endblock %}
+
+{% block body %}
+
+    <h1>Create a new backup</h1>
+    <form action="/backups/create" method="post">
+        <div id="to-backup" class="form-group">
+            <p>Select files to backup</p>
+            <div>
+                <input type="checkbox" name="logs" checked>
+                <label for="logs">Log files</label>
+            </div>
+            <div>
+                <input type="checkbox" name="data" checked>
+                <label for="data">Data files</label>
+            </div>
+            <div>
+                <input type="checkbox" name="conf" checked>
+                <label for="conf">Configuration files</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="encrypted">Do you want to encrypt the backup file?</label>
+            <select name="encrypted">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div>
+            <label for="encrypted">Do you want to upload the backup file to a S3 bucket?</label>
+            <select id="s3-upload" name="s3-upload">
+                <option value="no" selected>No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+        <div id="s3-params"></div>
+        <button type="submit">Create backup</button>
+    </form>
+
+
+{% endblock %}
