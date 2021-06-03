@@ -38,7 +38,7 @@ def edit_conf_file(filename):
             if validation_schema.ignore_extra_keys:
                 validated = updated_file_contents
             with open(file_path, 'w') as conf_file:
-                to_write = json.dumps(validated)
+                to_write = json.dumps(validated, indent=4)
                 conf_file.write(to_write)
             flash(f"The '{filename}' settings file was correctly updated.")
         except SchemaError as e:
@@ -49,17 +49,24 @@ def edit_conf_file(filename):
 
 @app.route('/monitor/real-time/<int:timestamp>')
 def real_time_monitor(timestamp):
+    # Convert JS timestamp to datetime
     last_log_timestamp = datetime.datetime.fromtimestamp(timestamp / 1000)
+
+    # Open current log file if any and get logs whose timestamp is greater than the one received
     response = []
     log_path = os.path.join(routes['logs'], "log")
     if os.path.exists(log_path):
+        # Open current log file into lines array
         with open(log_path, 'r') as log_file:
             log_file_lines = log_file.readlines()
+        # Iterate over log lines and get the most recent ones
         for log in log_file_lines:
             log_timestamp_str = log[2:25]
             log_timestamp = datetime.datetime.strptime(log_timestamp_str, "%Y-%m-%d %H:%M:%S,%f")
             if last_log_timestamp < log_timestamp:
                 response.append(log)
+
+    # Return response as JSON-like object
     return jsonify(response)
 
 
@@ -73,54 +80,54 @@ def past_logs_monitor():
     msg = request.args.get('msg')
 
     # Get all logs filenames and order them by timestamp
-    log_files = []
+    unsorted_past_logs = []
     for log_file in os.listdir(routes['logs']):
-        timestamp = datetime.datetime.strptime(log_file[4:], "%Y-%m-%d_%H-%M-%S").timestamp() \
-            if log_file != "log" else datetime.datetime.now().timestamp()
-        log_files.append((timestamp, log_file))
-    sorted_log_files = sorted(log_files)
-
-    # Load log contents
-    past_logs = []
-    for timestamp, log_file in sorted_log_files:
-
         # Read by lines
         file_path = os.path.join(routes['logs'], log_file)
         with open(file_path, 'r') as file:
             log_file_lines = file.readlines()
+        # Append logs
+        unsorted_past_logs.extend(log_file_lines)
 
-        # Parse each line
-        for log in log_file_lines:
-            log_elements = [e.replace('[', '').strip() for e in log.split("]")]
-            log_datetime = log_elements[0].split(' ')
-            log_date = log_datetime[0].split('-')
-            log_time = log_datetime[1].split(":")
-            parsed_log = {
-                "year": log_date[0],
-                "month": log_date[1],
-                "day": log_date[2],
-                "hour": log_time[0],
-                "minute": log_time[1],
-                "severity": log_elements[1],
-                "module_and_thread": log_elements[2],
-                "msg": log_elements[3]
-            }
+    # Get timestamps, parse logs and sort by  timestamp
+    sorted_past_logs = []
+    for log in unsorted_past_logs:
 
-            # Check if needs to be shown and append if so
-            is_appended = True
-            for k, v in parsed_log.items():
-                # Get value from URL
-                request_arg_value = request.args.get(k)
-                is_appended = is_appended and (
-                        request_arg_value == v or request_arg_value == "" or request_arg_value is None
-                )
+        # Get timestamp
+        timestamp = datetime.datetime.strptime(log[2:25], "%Y-%m-%d %H:%M:%S,%f").timestamp()
 
-            if is_appended:
-                past_logs.append(parsed_log)
+        # Parse log
+        log_elements = [e.replace('[', '').strip() for e in log.split("]")]
+        log_datetime = log_elements[0].split(' ')
+        log_date = log_datetime[0].split('-')
+        log_time = log_datetime[1].split(":")
+        parsed_log = {
+            "year": log_date[0],
+            "month": log_date[1],
+            "day": log_date[2],
+            "hour": log_time[0],
+            "minute": log_time[1],
+            "severity": log_elements[1],
+            "module_and_thread": log_elements[2],
+            "msg": log_elements[3]
+        }
+
+        # Append if necessary
+        is_appended = True
+        for k, v in parsed_log.items():
+            # Get value from URL
+            request_arg_value = request.args.get(k)
+            is_appended = is_appended and (
+                    request_arg_value == v or request_arg_value == "" or request_arg_value is None
+            )
+        if is_appended:
+            sorted_past_logs.append((timestamp, parsed_log))
+
+    sorted_past_logs.sort(key=lambda x: x[0], reverse=False)
 
     return render_template(
         "past_logs_monitor.html",
-        past_logs=past_logs,
+        past_logs=sorted_past_logs,
         attributes={
             "year": "Year",
             "month": "Month",

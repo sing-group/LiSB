@@ -3,3 +3,4 @@ routes = {
     "conf": "/etc/spamfilter/conf",
     "logs": "/etc/spamfilter/logs"
 }
+

@@ -28,7 +28,7 @@
             </tr>
             </thead>
             <tbody>
-            {% for log in past_logs %}
+            {% for timestamp, log in past_logs %}
                 <tr>
                     {% for attr in attributes %}
                         <td>{{ log[attr] }}</td>

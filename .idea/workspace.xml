@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Monitorización de eventos pasados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/filtering.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/filtering.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/logging.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/logging.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/configuration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/templates/past_logs_monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/past_logs_monitor.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +97,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="App web: configuración y monitorización en tiempo real" />

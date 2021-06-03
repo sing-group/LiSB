@@ -1,1 +1,13 @@
-{"enable_threading": true, "storing_frequency": 600, "black_listing_threshold": 10, "black_listed_days": 110, "time_limit": 3.5, "disabled_filters": [], "exceptions": {"ip_addresses": [], "email_addresses": [], "email_domains": []}}
+{
+    "enable_threading": true,
+    "storing_frequency": 600,
+    "black_listing_threshold": 10,
+    "black_listed_days": 110,
+    "time_limit": 3.5,
+    "disabled_filters": [],
+    "exceptions": {
+        "ip_addresses": [],
+        "email_addresses": [],
+        "email_domains": []
+    }
+}

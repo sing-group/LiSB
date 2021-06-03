@@ -7,6 +7,7 @@ import os
 import re
 import socket
 from os import listdir
+from smtplib import SMTP
 
 from schema import Schema, And, Or
 
@@ -42,16 +43,21 @@ filtering_schema = Schema(
     }
 )
 
-# SCHEMA FOR THE EMAIL ALERTS CONFIGURATION
+# LOGGING SCHEMA
 logging_schema = Schema(
     {
+        "console_level": Or("CRITICAL", "ERROR", "WARNING", "INFO", "DEBUG"),
+        "rotating_file": {
+            "when": Or("S", "M", "H", "D", "W0", "W1", "W2", "W3", "W4", "W5", "W6", "midnight"),
+            "interval": And(int, lambda interval: interval > 0),
+            "level": Or("CRITICAL", "ERROR", "WARNING", "INFO", "DEBUG")
+        },
         "email_alerts": {
             "status": Or("enabled", "disabled"),
             "level": Or("CRITICAL", "ERROR", "WARNING", "INFO", "DEBUG"),
             "msg_template": str
         }
-    },
-    ignore_extra_keys=True
+    }
 )
 
 # SCHEMA FOR THE COMMUNICATIONS CONFIGURATION
@@ -120,24 +126,70 @@ def load_server_config():
     return conf
 
 
+default_logging_conf = {
+    "version": 1,
+    "formatters": {
+        "default": {
+            "format": "[ %(asctime)s ] [ %(levelname)s ] [ %(module)s : %(threadName)s ] %(message)s"
+        }
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "default",
+            "level": "DEBUG",
+            "stream": "ext://sys.stdout"
+        },
+        "file": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "formatter": "default",
+            "filename": "logs/log",
+            "when": "s",
+            "interval": 10,
+            "level": "INFO"
+        }
+    },
+    "root": {
+        "level": "DEBUG",
+        "handlers": [
+            "console",
+            "file"
+        ]
+    },
+    "email_alerts": {
+        "status": "enabled",
+        "level": "WARNING",
+        "msg_template": "A new alert has been generated at %(asctime)s by %(module)s : %(message)s"
+    }
+}
+
+
 def config_logging(server_conf: dict):
     """
     This function configures logging using the configuration stored in the conf/logging.json file.
-    If any problem is encountered while setting up logging, then it defines a basic logging configuration.
     """
     # Create logging directory if it doesn't exist
     path = 'logs/'
     if not os.path.exists(path):
         os.makedirs(path)
 
+    # Configure logging from file
     logging_conf = server_conf.get('logging')
+    default_logging_conf['handlers']['console']['level'] = logging_conf['console_level']
+    default_logging_conf['handlers']['file']['when'] = logging_conf['rotating_file']['when']
+    default_logging_conf['handlers']['file']['interval'] = logging_conf['rotating_file']['interval']
+    default_logging_conf['handlers']['file']['level'] = logging_conf['rotating_file']['level']
+    logging.config.dictConfig(default_logging_conf)
 
-    try:
-        # Configure logging from file
-        logging.config.dictConfig(logging_conf)
+    # If email alerts are configured, then create email handler and configure it to send emails to admins
+    if logging_conf['email_alerts']['status'] == 'enabled':
 
-        # If email alerts are configured, then create email handler and configure it to send emails to admins
-        if logging_conf['email_alerts']['status'] == 'enabled':
+        # Try to connect to the remote SMTP server.
+        # If it is not possible, an exception will be raised
+        try:
+            # Connect to server
+            connection = SMTP(server_conf['forwarding']['remote_ip'], server_conf['forwarding']['remote_port'])
+
             # Get all parameters
             email_alerts_level = logging_conf['email_alerts']['level']
             msg_template = logging_conf['email_alerts']['msg_template']
@@ -159,14 +211,7 @@ def config_logging(server_conf: dict):
             logger = logging.getLogger()
             logger.addHandler(email_handler)
 
-    except Exception as e:
-        logging.basicConfig(
-            filename='logs/log',
-            format="[ %(asctime)s ] [ %(levelname)s ] [ %(module)s : %(threadName)s ] %(message)s",
-            level=logging.WARNING
-        )
-        logging.error(f"There was a problem while setting up logging. Using basic configuration:\n"
-                      f" - Storing logs in logs/\n"
-                      f" - Logging level: WARNING\n"
-                      f" - Using format [ %(asctime)s ] [ %(levelname)s ] [ %(module)s : %(threadName)s ] %(message)s\n"
-                      f"PROBLEM: {e}")
+            # Close connection
+            connection.close()
+        except Exception as e:
+            logging.error(f"There was a problem while setting up the email handler for logging: {e}")
