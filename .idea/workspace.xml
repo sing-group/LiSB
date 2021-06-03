@@ -136,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622711047890</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adaptación scripts backups a web. Listar y crear backups desde web.">
+      <created>1622735903719</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622735903719</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +165,7 @@
     <MESSAGE value="App web: configuración y monitorización en tiempo real" />
     <MESSAGE value="Monitorización de eventos pasados" />
     <MESSAGE value="Ordenación de log files según contenidos, arreglado bug conexión a SMTP remoto en logging, simplificación logging.json conf por compatibilidad con web" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ordenación de log files según contenidos, arreglado bug conexión a SMTP remoto en logging, simplificación logging.json conf por compatibilidad con web" />
+    <MESSAGE value="Adaptación scripts backups a web. Listar y crear backups desde web." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adaptación scripts backups a web. Listar y crear backups desde web." />
   </component>
 </project>
