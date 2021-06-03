@@ -1,6 +1,7 @@
 routes = {
-    "core" : "/etc/spamfilter/",
+    "base": "/etc/spamfilter/",
     "conf": "/etc/spamfilter/conf",
-    "logs": "/etc/spamfilter/logs"
+    "logs": "/etc/spamfilter/logs",
+    "backups": "/etc/spamfilter/backups",
+    "scripts": "/etc/spamfilter/core/scripts"
 }
-

@@ -1,30 +1,29 @@
 {% extends 'base.html' %}
 
 {% block head %}
-    <title>Past logs</title>
-    <script src="{{ url_for('static', filename='search-bar.js') }}"></script>
+    <title>Past Logs</title>
 {% endblock %}
 
 {% block body %}
-    <div>
-        <h1>Past logs</h1>
+    <h1>Past logs</h1>
 
-        <form name="search-form" method="get" action="/monitor/past-logs">
+    {% if past_logs %}
+        <form name="searchForm" method="get" action="/monitor/past-logs">
             {% for code, label in attributes.items() %}
                 <div class="form-group">
                     <label for="{{ code }}">{{ label }}</label>
-                    <input type="email" class="form-control" id="{{ code }}" name="{{ code }}">
+                    <input type="email" id="{{ code }}" name="{{ code }}">
                 </div>
             {% endfor %}
-            <span class="fas fa-search" onclick="send_form('search-form')"></span>
+            <span class="fas fa-search" onclick="document.searchForm.submit()"></span>
         </form>
 
         <table class="table">
             <thead>
             <tr>
-            {% for header in attributes.values() %}
-                <th>{{ header }}</th>
-            {% endfor %}
+                {% for header in attributes.values() %}
+                    <th>{{ header }}</th>
+                {% endfor %}
             </tr>
             </thead>
             <tbody>
@@ -37,6 +36,8 @@
             {% endfor %}
             </tbody>
         </table>
-    </div>
+    {% else %}
+        <p>There aren't any logs yet.</p>
+    {% endif %}
 
 {% endblock %}

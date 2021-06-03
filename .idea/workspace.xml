@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Monitorización de eventos pasados">
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web-app/templates/list_backups.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/filtering.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/filtering.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/logging.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/logging.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/backups.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/communications.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/filtering.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/forwarding.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/logging.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/server_params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/scripts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/scripts/common_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/common_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/scripts/create_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/create_backup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/scripts/restore_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/restore_backup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BlackListFilter.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/DKIMFilter.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SPFFilter.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/XFilter.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/static/real-time-monitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/real-time-monitoring.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/static/search-bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/edit_conf_file.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/edit_conf_file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/templates/past_logs_monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/past_logs_monitor.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +73,37 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\core" />
+      <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="enc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="spamfilter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.enc" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -81,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622656995186</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ordenación de log files según contenidos, arreglado bug conexión a SMTP remoto en logging, simplificación logging.json conf por compatibilidad con web">
+      <created>1622711047890</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622711047890</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +157,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="App web: configuración y monitorización en tiempo real" />
     <MESSAGE value="Monitorización de eventos pasados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Monitorización de eventos pasados" />
+    <MESSAGE value="Ordenación de log files según contenidos, arreglado bug conexión a SMTP remoto en logging, simplificación logging.json conf por compatibilidad con web" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ordenación de log files según contenidos, arreglado bug conexión a SMTP remoto en logging, simplificación logging.json conf por compatibilidad con web" />
   </component>
 </project>

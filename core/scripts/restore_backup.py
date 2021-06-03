@@ -10,7 +10,7 @@ from common_functions import decrypt_file
 command_schema = Schema({
     "--to-restore": And(str, lambda backup_file: len(backup_file) > 0),
     Optional("--s3"): And(str, lambda bucket_str: len(bucket_str.split("/", maxsplit=1)) == 2),
-    Optional("--decryption"): str
+    Optional("--decryption-key"): str
 })
 
 
@@ -37,12 +37,11 @@ def load_backup(options):
         print(f"The specified backup file {to_restore} doesn't exist at {backups_path}")
     else:
         if to_restore.rsplit(".", 1)[1] == "enc":
-            if '--decryption' in options:
+            if '--decryption-key' in options:
                 print("Decrypting backup file...")
                 # Decrypt backup file
-                private_key_file = options["--decryption"]
                 decrypted_path = to_restore_path[:-4]
-                decrypt_file(to_restore_path, decrypted_path, private_key_file)
+                decrypt_file(to_restore_path, decrypted_path, options['--decryption-key'])
                 # Remove encrypted file
                 os.remove(to_restore_path)
                 to_restore_path = decrypted_path
@@ -66,7 +65,7 @@ if __name__ == '__main__':
         options = {}
         n_args = len(sys.argv)
         for i in range(1, n_args):
-            arg = sys.argv[i].split("=")
+            arg = sys.argv[i].split("=", maxsplit=1)
             options[arg[0]] = None if len(arg) == 1 else arg[1]
 
         # Validate
@@ -76,6 +75,7 @@ if __name__ == '__main__':
         load_backup(validated)
 
     except Exception as e:
+        print(f"An error occurred: {e.__class__.__name__} - {e}\n")
         print("Usage: load_backup.py --to-restore=BACKUP_FILE [ --option1=val1,val2 ... ]")
         print("If options are not passed as parameters they are read from the 'conf/backups.json' file.\n")
         print("Options:\n")
@@ -83,5 +83,5 @@ if __name__ == '__main__':
         print("\t--s3=BUCKET_NAME/PATH\tThe S3 bucket and path where to find the backup file. "
               "If not specified, the backup file will be looked up locally at '/etc/spamfilter/backups/'. "
               "Remember that, for this options to work correctly, S3 Full access needs to be enabled.\n")
-        print("\t--decryption=PRIVATE_KEY_FILE\tDecrypt the backup file with the private key stored at the passed file.")
+        print("\t--decryption-key\tDecrypt the backup file with the specified key.")
         print("\t--help\tThis option shows all of the command options.")

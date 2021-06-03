@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-    <title>Main Page</title>
+    <title>Control Panel</title>
     <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet">
     <script src="{{ url_for('static', filename='real-time-monitoring.js') }}"></script>
 {% endblock %}
@@ -29,6 +29,13 @@
 
             <div class="control-panel-section">
                 <h2>Backups</h2>
+                <p>Backup options:</p>
+                <ul id="backup-options">
+                    <li><a href="/backups/list">List all backups</a></li>
+                    <li><a href="/backups/create">Create a new backup file</a></li>
+                    <li><a href="/backups/restore">Restore a backup file</a></li>
+                </ul>
+
             </div>
         </div>
 
@@ -37,7 +44,9 @@
             <div id="past-logs">
                 <a href="/monitor/past-logs">Past logs</a>
             </div>
-            <div id="logs"></div>
+            <div id="real-time-logs">
+                <p id="no-logs-yet-msg">There aren't any logs yet.</p>
+            </div>
         </div>
     </div>
 
