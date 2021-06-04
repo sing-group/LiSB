@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web-app/templates/list_backups.html" afterDir="false" />
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Adaptación scripts backups a web. Listar y crear backups desde web.">
+      <change afterPath="$PROJECT_DIR$/web-app/static/modals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/templates/errors/400.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/templates/errors/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/templates/errors/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/templates/restore_s3_backups.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/backups.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/communications.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/filtering.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/forwarding.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/logging.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/server_params.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/scripts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/scripts/common_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/common_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/scripts/create_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/create_backup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/scripts/restore_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/restore_backup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BlackListFilter.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DKIMFilter.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SPFFilter.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/XFilter.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/static/real-time-monitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/real-time-monitoring.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/static/search-bar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/edit_conf_file.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/edit_conf_file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/static/jquery-3.6.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/past_logs_monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/past_logs_monitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/list_backups.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/list_backups.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +118,9 @@
       <workItem from="1622580307368" duration="342000" />
       <workItem from="1622645027452" duration="1208000" />
       <workItem from="1622647830505" duration="13083000" />
+      <workItem from="1622736286814" duration="16000" />
+      <workItem from="1622736924821" duration="11000" />
+      <workItem from="1622802389074" duration="19135000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -143,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622735903719</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adaptación scripts backups a web. Listar y crear backups desde web.">
+      <created>1622736056695</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622736056695</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

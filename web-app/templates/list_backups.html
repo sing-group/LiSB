@@ -2,32 +2,37 @@
 
 {% block head %}
     <title>Backups List</title>
+    <script src="{{ url_for('static', filename='modals.js' ) }}"></script>
 {% endblock %}
 
 {% block body %}
     <h1>List of local backups</h1>
-    {% if backup_files %}
+    {% if backups_log %}
         <table class="table">
             <thead>
             <tr>
                 <th>Backup file</th>
+                <th>Date & Time</th>
                 <th>Contents</th>
                 <th>Uploaded to S3</th>
                 <th>Options</th>
             </tr>
             </thead>
             <tbody>
-            {% for backup_file in backup_files %}
+            {% for backup_file in backups_log %}
                 <tr>
                     <td>{{ backup_file }}</td>
-                    {% if backup_file in backups_log %}
-                        <td>{{ backups_log[backup_file]["backed-up"] }}</td>
-                        <td>{{ backups_log[backup_file]["uploaded-to-s3"] }}</td>
-                    {% else %}
-                        <td>Unknown</td>
-                        <td>Unknown</td>
-                    {% endif %}
-                    <td>Ops</td>
+                    <td>{{ backups_log[backup_file]["timestamp"] }}</td>
+                    <td>{{ backups_log[backup_file]["backed-up"] }}</td>
+                    <td>{{ backups_log[backup_file]["uploaded-to-s3"] }}</td>
+                    <td>
+                        <!-- Restore option -->
+                        <span class="fas fa-box-open" data-toggle="modal"
+                              onclick="open_restore_modal('{{ backup_file }}')"></span>
+                        <!-- Delete option -->
+                        <span class="fas fa-trash-alt" data-toggle="modal"
+                              onclick="open_delete_modal('{{ backup_file }}')"></span>
+                    </td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -35,4 +40,55 @@
     {% else %}
         <p>There aren't any backup files yet.</p>
     {% endif %}
+
+    <!-- Restore Modal -->
+    <div class="modal fade" id="restore-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="restore-modal-title">Restore backup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/backups/restore/local" method="post">
+                    <div id="restore-modal-body" class="modal-body">
+                        <p>Do you want to restore the '<span id="to-restore-backup-name"></span>' backup file? Current files will
+                            be overwritten.</p>
+                        <div id="decryption-key"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <input type="hidden" id="to-restore-input" name="to-restore" value="">
+                        <button type="submit" class="btn btn-primary">Restore</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delete-modal-title">Delete backup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/backups/delete" method="post">
+                    <div id="delete-modal-body" class="modal-body">
+                        <p>Do you want to delete the '<span id="to-delete-backup-name"></span>' backup file?
+                            This action cannot be undone.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <input type="hidden" id="to-delete-input" name="to-delete" value="">
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

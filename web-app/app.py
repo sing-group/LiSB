@@ -4,9 +4,11 @@ import json
 import re
 import sys
 import subprocess
+
+import boto3
 from schema import SchemaError
 from config import routes
-from flask import Flask, render_template, request, redirect, flash, jsonify
+from flask import Flask, render_template, request, redirect, flash, jsonify, abort
 
 app = Flask(__name__)
 
@@ -114,7 +116,7 @@ def past_logs_monitor():
                 # Get value from URL
                 request_arg_value = request.args.get(k)
                 is_appended = is_appended and (
-                        request_arg_value == v or request_arg_value == "" or request_arg_value is None
+                        request_arg_value == v or not request_arg_value
                 )
             if is_appended:
                 past_logs.append((timestamp, parsed_log))
@@ -140,19 +142,15 @@ def past_logs_monitor():
 
 @app.route('/backups/list', methods=["GET"])
 def list_backups():
-    # Get all backup file names if any and pass them to template
-    backup_files = [] if not os.path.exists(routes['backups']) \
-        else [backup_file for backup_file in os.listdir(routes['backups']) if backup_file != "backups_log.json"]
-
     # Get backups log from file
-    bacukps_log_path = os.path.join(routes['backups'], 'backups_log.json')
-    if os.path.exists(bacukps_log_path):
-        with open(bacukps_log_path, 'r') as file:
+    backups_log_path = os.path.join(routes['backups'], 'backups_log.json')
+    if os.path.exists(backups_log_path):
+        with open(backups_log_path, 'r') as file:
             backups_log = json.load(file)
     else:
         backups_log = {}
 
-    return render_template('list_backups.html', backup_files=backup_files, backups_log=backups_log)
+    return render_template('list_backups.html', backups_log=backups_log)
 
 
 @app.route('/backups/create', methods=["POST", "GET"])
@@ -178,7 +176,7 @@ def create_backups():
         if request.form.get('s3-upload') == 'yes':
             s3_bucket_name = request.form.get('s3-bucket-name')
             s3_bucket_path = request.form.get('s3-bucket-path')
-            if s3_bucket_name == "" or s3_bucket_path == "":
+            if not s3_bucket_name or not s3_bucket_path:
                 error = True
                 flash("Please, enter a valid S3 bucket configuration")
             else:
@@ -207,7 +205,140 @@ def create_backups():
                 key = key_regex.search(result).group(0)
                 flash(f"Used encryption key: {key}. Please store it securely for decryption.")
 
+            # Check if errors
+            errors_regex = re.compile("An error occurred: .*")
+            errors = re.findall(errors_regex, result)
+            if len(errors) > 0:
+                for error in errors:
+                    flash(error)
+
             return redirect('/backups/list')
+
+
+@app.route('/backups/restore/local', methods=["POST"])
+def restore_backups():
+    to_restore = request.form.get('to-restore')
+    if not to_restore:
+        # Return Bad Request code
+        flash()
+    else:
+        backup_path = os.path.join(routes['backups'], to_restore)
+        if os.path.exists(backup_path):
+            # Parse command line
+            command_line = [os.path.join(routes['scripts'], "restore_backup.py"), f"--to-restore={to_restore}"]
+            decryption_key = request.form.get('decryption-key')
+            if decryption_key is not None:
+                command_line.append(f"--decryption-key={decryption_key}")
+            # Execute command
+            result = subprocess.run(command_line, stdout=subprocess.PIPE).stdout.decode('utf-8')
+
+            # Check if errors
+            errors_regex = re.compile("An error occurred: .*")
+            errors = re.findall(errors_regex, result)
+            if len(errors) > 0:
+                for error in errors:
+                    flash(error)
+            else:
+                flash(f"The '{to_restore}' backup file was properly restored.")
+
+            # Redirect to backups list
+            return redirect('/backups/list')
+        else:
+            # Return Not Found code
+            abort(404)
+
+
+@app.route('/backups/delete', methods=["POST"])
+def delete_backups():
+    to_delete = request.form.get('to-delete')
+    if not to_delete:
+        # Return Bad Request code
+        abort(400)
+    else:
+        backup_path = os.path.join(routes['backups'], to_delete)
+        if os.path.exists(backup_path):
+            # Remove file and flash verbose
+            os.remove(backup_path)
+            flash(f"The '{to_delete}' backup file has been deleted.")
+            # Read logs file
+            backups_log_path = os.path.join(routes['backups'], 'backups_log.json')
+            with open(backups_log_path, 'r') as file:
+                logs = json.load(file)
+            # Delete from logs
+            logs.pop(to_delete, None)
+            # Update logs file
+            with open(backups_log_path, 'w') as file:
+                json.dump(logs, file, indent=4)
+            return redirect('/backups/list')
+        else:
+            # Return Not Found code
+            abort(404)
+
+
+@app.route('/backups/restore/s3', methods=["GET", "POST"])
+def s3_download_backups():
+    if request.method == "GET":
+        return render_template("restore_s3_backups.html")
+    else:
+
+        # Check if errors and redirect wit verbose if any; else parse
+        error = False
+
+        to_restore = request.form.get('to-restore')
+        if not to_restore:
+            error = True
+            flash("Please, enter a valid backup file.")
+
+        s3_bucket_name = request.form.get('s3-bucket-name')
+        s3_bucket_path = request.form.get('s3-bucket-path')
+        if not s3_bucket_name or not s3_bucket_path:
+            error = True
+            flash("Please, enter a valid S3 bucket configuration.")
+
+        if error:
+            return redirect('/backups/restore/s3')
+        else:
+
+            # Parse command line
+            command_line = [os.path.join(routes['scripts'], "restore_backup.py"), f"--to-restore={to_restore}",
+                            f"--s3={os.path.join(s3_bucket_name, s3_bucket_path)}"]
+
+            decryption_key = request.form.get('decryption-key')
+            if decryption_key is not None:
+                command_line.append(f"--decryption-key={decryption_key}")
+
+            # Execute command
+            result = subprocess.run(command_line, stdout=subprocess.PIPE).stdout.decode('utf-8')
+
+            # Check if errors in command execution
+            errors_regex = re.compile("An error occurred: .*")
+            errors = re.findall(errors_regex, result)
+            if len(errors) > 0:
+                for error in errors:
+                    flash(error)
+                return redirect('/backups/restore/s3')
+            else:
+                flash(f"The '{to_restore}' backup file was properly restored.")
+
+            # Redirect to backups list
+            return redirect('/backups/list')
+
+
+# ERROR HANDLERS
+
+@app.errorhandler(400)
+def page_not_found(e):
+    return render_template('errors/400.html'), 400
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('errors/404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('errors/500.html'), 500
 
 
 if __name__ == '__main__':

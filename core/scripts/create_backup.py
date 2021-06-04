@@ -7,7 +7,7 @@ import boto3
 import tarfile
 from datetime import datetime
 
-from schema import Schema, Optional, And, Or, Use
+from schema import Schema, Optional, And, Or
 
 from common_functions import encrypt_file
 
@@ -64,7 +64,7 @@ def create_backup(options):
                 uploaded = True
                 print(f"The backup file was successfully uploaded to '{s3_bucket}'")
         except Exception as e:
-            print(f"Error while uploading file to '{s3_bucket}': {e.__class__.__name__} - {e}")
+            print(f"An error occurred: {e.__class__.__name__} - {e}\n")
 
     # Add info to backups log file
 
@@ -78,6 +78,7 @@ def create_backup(options):
 
     backups_log[backup_name] = {
         'backed-up': backed_up,
+        'timestamp': datetime.now().strftime("%Y-%m-%d, %H:%M:%S"),
         'uploaded-to-s3': uploaded
     }
 
