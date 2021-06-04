@@ -5,6 +5,7 @@ import logging
 import time
 
 from core.EmailEnvelope import EmailEnvelope
+from core.GracefulKiller import GracefulKiller
 
 
 class MailForwarder:
@@ -13,7 +14,8 @@ class MailForwarder:
     _forward_port = None
     _n_threads = None
 
-    def __init__(self, ip: str, port: int = 1025, n_forwarder_threads: int = multiprocessing.cpu_count()):
+    def __init__(self, ip: str, port: int = 1025, n_forwarder_threads: int = multiprocessing.cpu_count(),
+                 killer: GracefulKiller = None):
         """
         This method creates a multi-thread mail forwarder based on queues
 
@@ -25,9 +27,10 @@ class MailForwarder:
         self._forward_ip = ip
         self._forward_port = port
         self._n_threads = n_forwarder_threads
+
         for i in range(n_forwarder_threads):
             worker = threading.Thread(target=MailForwarder.__forward_msg, name=f"Forwarder-{i}",
-                                      args=(self._msgs_to_forward, self._forward_ip, self._forward_port))
+                                      args=(self._msgs_to_forward, self._forward_ip, self._forward_port, killer))
             worker.start()
 
     def forward(self, msg: EmailEnvelope):
@@ -39,7 +42,7 @@ class MailForwarder:
         self._msgs_to_forward.put(msg)
 
     @staticmethod
-    def __forward_msg(msgs: multiprocessing.Queue, ip: str, port: int):
+    def __forward_msg(msgs: multiprocessing.Queue, ip: str, port: int, killer: GracefulKiller):
         """
         This static method is executed by the worker threads in order to forward the email messages from the queue
 
@@ -49,15 +52,19 @@ class MailForwarder:
         """
         server = None
         msg: EmailEnvelope = None
-        while True:
+        while not killer.kill_now or not msgs.empty():
             try:
                 server = smtplib.SMTP(ip, port)
                 logging.info(f"Ready to forward to {(ip, port)}")
-                while True:
-                    msg = msgs.get()
+
+                # Continue will not killed or if still has msgs to forward
+                while not killer.kill_now or not msgs.empty():
+                    # msg = msgs.get()
                     logging.info(f"Forwarding message")
-                    server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
+                    # server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
                     logging.info(f"Message forwarded")
+
+                server.close()
             except TimeoutError as e:
                 logging.error(f'Timeout while connecting to remote server')
             except smtplib.SMTPServerDisconnected as e:
@@ -72,3 +79,6 @@ class MailForwarder:
                     msgs.put(msg)
                     msg = None
                 time.sleep(15)
+
+        # After ending loop, inform
+        logging.info("Closing connection and shutting down...")

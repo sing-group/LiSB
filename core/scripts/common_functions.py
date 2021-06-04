@@ -1,7 +1,5 @@
 import base64
-
-from Cryptodome.Cipher import PKCS1_OAEP, AES
-from Cryptodome.PublicKey import RSA
+from Cryptodome.Cipher import AES
 from Cryptodome.Random import get_random_bytes
 from Cryptodome.Util.Padding import pad, unpad
 
@@ -26,7 +24,6 @@ def encrypt_file(unencrypted_path, encrypted_path):
 
 
 def decrypt_file(encrypted_path, decrypted_path, base64_key):
-
     key = base64.b64decode(base64_key)
 
     # Open encrypted file

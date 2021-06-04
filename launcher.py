@@ -16,6 +16,6 @@ if __name__ == '__main__':
         server = SpamFilterServer(server_conf)
         server.launch_server()
     except SchemaError as e:
-        logging.error(f"There was a syntax error in one of the configuration files:\n{e}")
+        logging.error(f"There was a syntax error in one of the configuration files: {e}")
     except Exception as e:
-        logging.error(f"An unexpected error occurred:\n\tError type: {e.__class__.__name__}\n\tDescription: {e}")
+        logging.error(f"An unexpected error occurred: {e.__class__.__name__} - {e}")

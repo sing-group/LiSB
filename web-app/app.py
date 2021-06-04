@@ -2,21 +2,58 @@ import datetime
 import os
 import json
 import re
+import signal
 import sys
 import subprocess
 
-import boto3
+import psutil
 from schema import SchemaError
 from config import routes
-from flask import Flask, render_template, request, redirect, flash, jsonify, abort
+from flask import Flask, render_template, request, redirect, flash, jsonify, abort, session
 
 app = Flask(__name__)
 
 
 @app.route('/', methods=['GET'])
 def index():
+    # Check if SMTP server is running
+    is_running = check_running_process('launcher.py')
+
+    # Get configuration files
     conf_files = [file[:-5] for file in os.listdir(routes['conf'])]
-    return render_template('index.html', config_files=conf_files)
+
+    return render_template('index.html', config_files=conf_files, is_running=is_running)
+
+
+def check_running_process(process):
+    for proc in psutil.process_iter():
+        print(proc)
+        if process == proc.name() and proc.status() != "zombie":
+            return proc.pid
+    return False
+
+
+@app.route('/ajax/start', methods=['POST'])
+def start_server():
+    # Run launcher if not yet launched and redirect to control panel
+    is_running = check_running_process('launcher.py')
+    if not is_running:
+        launcher_path = os.path.join(routes['base'], 'launcher.py')
+        subprocess.Popen(['nohup', launcher_path], stdout=open('/dev/null'))
+        return jsonify({"msg": "The server was started"}), 200
+    else:
+        return jsonify({"msg": "The server was already running"}), 400
+
+
+@app.route('/ajax/stop', methods=['POST'])
+def stop_server():
+    # Stop server and redirect to control panel
+    spamfilter_pid = check_running_process('launcher.py')
+    if spamfilter_pid:
+        os.kill(spamfilter_pid, signal.SIGTERM)
+        return jsonify({"msg": "The server was stopped"}), 200
+    else:
+        return jsonify({"msg": "The server is not running"}), 400
 
 
 @app.route('/conf/<filename>', methods=['GET', 'POST'])
@@ -48,7 +85,7 @@ def edit_conf_file(filename):
         return redirect(f"/conf/{filename}")
 
 
-@app.route('/monitor/real-time/<int:timestamp>')
+@app.route('/ajax/real-time-monitor/<int:timestamp>')
 def real_time_monitor(timestamp):
     # Convert JS timestamp to datetime
     last_log_timestamp = datetime.datetime.fromtimestamp(timestamp / 1000)
@@ -216,7 +253,7 @@ def create_backups():
 
 
 @app.route('/backups/restore/local', methods=["POST"])
-def restore_backups():
+def restore_local_backups():
     to_restore = request.form.get('to-restore')
     if not to_restore:
         # Return Bad Request code
@@ -248,35 +285,8 @@ def restore_backups():
             abort(404)
 
 
-@app.route('/backups/delete', methods=["POST"])
-def delete_backups():
-    to_delete = request.form.get('to-delete')
-    if not to_delete:
-        # Return Bad Request code
-        abort(400)
-    else:
-        backup_path = os.path.join(routes['backups'], to_delete)
-        if os.path.exists(backup_path):
-            # Remove file and flash verbose
-            os.remove(backup_path)
-            flash(f"The '{to_delete}' backup file has been deleted.")
-            # Read logs file
-            backups_log_path = os.path.join(routes['backups'], 'backups_log.json')
-            with open(backups_log_path, 'r') as file:
-                logs = json.load(file)
-            # Delete from logs
-            logs.pop(to_delete, None)
-            # Update logs file
-            with open(backups_log_path, 'w') as file:
-                json.dump(logs, file, indent=4)
-            return redirect('/backups/list')
-        else:
-            # Return Not Found code
-            abort(404)
-
-
 @app.route('/backups/restore/s3', methods=["GET", "POST"])
-def s3_download_backups():
+def restore_s3_backups():
     if request.method == "GET":
         return render_template("restore_s3_backups.html")
     else:
@@ -321,7 +331,35 @@ def s3_download_backups():
                 flash(f"The '{to_restore}' backup file was properly restored.")
 
             # Redirect to backups list
+
             return redirect('/backups/list')
+
+
+@app.route('/backups/delete', methods=["POST"])
+def delete_backups():
+    to_delete = request.form.get('to-delete')
+    if not to_delete:
+        # Return Bad Request code
+        abort(400)
+    else:
+        backup_path = os.path.join(routes['backups'], to_delete)
+        if os.path.exists(backup_path):
+            # Remove file and flash verbose
+            os.remove(backup_path)
+            flash(f"The '{to_delete}' backup file has been deleted.")
+            # Read logs file
+            backups_log_path = os.path.join(routes['backups'], 'backups_log.json')
+            with open(backups_log_path, 'r') as file:
+                logs = json.load(file)
+            # Delete from logs
+            logs.pop(to_delete, None)
+            # Update logs file
+            with open(backups_log_path, 'w') as file:
+                json.dump(logs, file, indent=4)
+            return redirect('/backups/list')
+        else:
+            # Return Not Found code
+            abort(404)
 
 
 # ERROR HANDLERS

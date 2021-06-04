@@ -6,6 +6,7 @@ import time
 from typing import Sequence
 
 from core.EmailEnvelope import EmailEnvelope
+from core.GracefulKiller import GracefulKiller
 from core.filtering.StorageManager import StorageManager
 from core.filtering.filters.BlackListFilter import BlackListFilter
 from core.filtering.filters.PastFilter import PastFilter
@@ -24,15 +25,16 @@ class FilteringManager:
     disabled_filters: list
     exceptions: dict
 
-    def __init__(self, enable_threading: int = 1, black_listing_threshold: int = 10, black_listed_days: int = 10,
-                 time_limit: float = 1.5, storing_frequency: int = 300, disabled_filters: list = [], exceptions=None):
+    def __init__(self, enable_threading: int = 1, black_listing_threshold: int = 10,
+                 black_listed_days: int = 10, time_limit: float = 1.5, storing_frequency: int = 300,
+                 disabled_filters: list = [], exceptions=None, killer: GracefulKiller = None):
         self.enable_threading = enable_threading
         self.black_listing_threshold = black_listing_threshold
         self.black_listed_days = black_listed_days
         self.time_limit = time_limit
         self.disabled_filters = disabled_filters
         self.exceptions = exceptions
-        self.storage_mgr = StorageManager("data/", storing_frequency)
+        self.storage_mgr = StorageManager("data/", storing_frequency, killer)
         self.set_up_filters()
         self.storage_mgr.launch_storage_daemon(self.filters)
 

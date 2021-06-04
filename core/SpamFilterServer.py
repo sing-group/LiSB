@@ -8,24 +8,35 @@ import time
 
 from aiosmtpd.controller import Controller
 
+from core.GracefulKiller import GracefulKiller
 from core.EmailEnvelope import EmailEnvelope
 from core.MailForwarder import MailForwarder
 from core.filtering.FilteringManager import FilteringManager
 
 
 class SpamFilterServer(Controller):
+    killer: GracefulKiller
 
     def __init__(self, conf):
+        # Create killer
+        self.killer = GracefulKiller()
+        # Call parent constructor with Handler and pass killer
         super().__init__(
-            handler=SpamFilterHandler(conf),
+            handler=SpamFilterHandler(conf, self.killer),
             hostname=conf["server_params"]["local_ip"],
             port=conf["server_params"]["local_port"],
             server_kwargs=conf["server_params"]["SMTP_parameters"]
         )
 
     def launch_server(self):
+        # Star server
         self.start()
-        asyncio.get_event_loop().run_forever()
+        # Wait until the process is killed
+        while not self.killer.kill_now:
+            pass
+        # Shut down gracefully
+        self.stop()
+        logging.info("Shutting down server...")
 
 
 class SpamFilterHandler:
@@ -36,7 +47,7 @@ class SpamFilterHandler:
                               "temporarily blocked for policy reasons)"
     _OK_MSG_RFC_5321 = "250 OK"
 
-    def __init__(self, conf: dict):
+    def __init__(self, conf: dict, killer: GracefulKiller):
         logging.info("Setting up SpamFilterServer server")
         self.conf = conf
 
@@ -47,7 +58,8 @@ class SpamFilterHandler:
         self.forwarder = MailForwarder(
             ip=self.conf["forwarding"]["remote_ip"],
             port=conf["forwarding"]["remote_port"],
-            n_forwarder_threads=n_forwarder_threads
+            n_forwarder_threads=n_forwarder_threads,
+            killer=killer
         )
 
         # Create filtering manager, which will filter all incoming messages
@@ -58,7 +70,8 @@ class SpamFilterHandler:
             black_listed_days=conf["filtering"]["black_listed_days"],
             time_limit=conf["filtering"]["time_limit"],
             disabled_filters=conf["filtering"]["disabled_filters"],
-            exceptions=conf["filtering"]["exceptions"]
+            exceptions=conf["filtering"]["exceptions"],
+            killer=killer
         )
         logging.info(
             f"Running SpamFilterServer server on "

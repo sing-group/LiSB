@@ -6,13 +6,15 @@ import schedule
 import threading as th
 from os.path import join
 
+from core.GracefulKiller import GracefulKiller
 from core.filtering.filters.PastFilter import PastFilter
 
 
 class StorageManager:
     path: str
+    killer: GracefulKiller
 
-    def __init__(self, path, storing_frequency):
+    def __init__(self, path: str, storing_frequency: int, killer: GracefulKiller):
         """
         This method creates a new storage manager. It uses JSON format to store files.
 
@@ -24,6 +26,7 @@ class StorageManager:
             os.makedirs(path)
         self.path = path
         self.storing_frequency = storing_frequency
+        self.killer = killer
 
     def store_data(self, filename, data):
         """
@@ -61,7 +64,8 @@ class StorageManager:
         :param filters: The filters to get the data from
         """
         schedule.every(self.storing_frequency).seconds.do(StorageManager.store_all_data, self, filters)
-        storage_daemon = th.Thread(target=StorageManager.__daemon_job, name="StorageDaemon")
+        storage_daemon = th.Thread(target=StorageManager.__daemon_job, args=(self, filters, self.killer),
+                                   name="StorageDaemon")
         storage_daemon.start()
 
     @staticmethod
@@ -72,6 +76,7 @@ class StorageManager:
         :param storage_mgr: The StorageManager object
         :param filters: The filters to get the data from
         """
+
         for current_filter in filters:
             cls = type(current_filter)
             if issubclass(cls, PastFilter):
@@ -80,10 +85,11 @@ class StorageManager:
                 storage_mgr.store_data(file_name, to_store)
 
     @staticmethod
-    def __daemon_job():
+    def __daemon_job(storage_mgr, filters, killer: GracefulKiller):
         """
         This static method is used by the storage daemon to wait for pending tasks to be ready to be executed
         """
-        while True:
+        while not killer.kill_now:
             schedule.run_pending()
             time.sleep(1)
+        StorageManager.store_all_data(storage_mgr, filters)

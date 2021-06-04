@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/core/scripts/restore_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/restore_backup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/GracefulKiller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/MailForwarder.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/MailForwarder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/SpamFilterServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/SpamFilterServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/filtering/FilteringManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/FilteringManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/filtering/StorageManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/StorageManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/scripts/common_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/common_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/launcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/static/real-time-monitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/ajax_queries.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -51,8 +64,9 @@
       <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\web-app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\core" />
       <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter" />
+      <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\core\scripts" />
+      <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\core" />
     </key>
   </component>
   <component name="RunManager">
@@ -102,7 +116,7 @@
       <workItem from="1622647830505" duration="13083000" />
       <workItem from="1622736286814" duration="16000" />
       <workItem from="1622736924821" duration="11000" />
-      <workItem from="1622802389074" duration="19620000" />
+      <workItem from="1622802389074" duration="37939000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -146,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622821989122</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="restore_backup.py actualiza logs de backups">
+      <created>1622822294071</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1622822294071</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +192,7 @@
     <MESSAGE value="Adaptación scripts backups a web. Listar y crear backups desde web." />
     <MESSAGE value="Restauración de backups" />
     <MESSAGE value="Restauración de backups y mensajes de error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restauración de backups y mensajes de error" />
+    <MESSAGE value="restore_backup.py actualiza logs de backups" />
+    <option name="LAST_COMMIT_MESSAGE" value="restore_backup.py actualiza logs de backups" />
   </component>
 </project>

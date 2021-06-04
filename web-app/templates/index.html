@@ -3,7 +3,7 @@
 {% block head %}
     <title>Control Panel</title>
     <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet">
-    <script src="{{ url_for('static', filename='real-time-monitoring.js') }}"></script>
+    <script src="{{ url_for('static', filename='ajax_queries.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -44,6 +44,13 @@
             <div id="past-logs">
                 <a href="/monitor/past-logs">Past logs</a>
             </div>
+            {% if is_running %}
+                <p>Server Status: <span id="status-msg" class="running">RUNNING</span></p>
+                <button id="status-button" class="btn btn-danger" onclick="do_stop_ajax_query()">Stop server</button>
+            {% else %}
+                <p>Server Status: <span id="status-msg"  class="not-running">NOT RUNNING</span></p>
+                <button id="status-button" class="btn btn-success" onclick="do_start_ajax_query()">Start server</button>
+            {% endif %}
             <div id="real-time-logs">
                 <p id="no-logs-yet-msg">There aren't any logs yet.</p>
             </div>
