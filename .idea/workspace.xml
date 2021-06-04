@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Adaptación scripts backups a web. Listar y crear backups desde web.">
-      <change afterPath="$PROJECT_DIR$/web-app/static/modals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-app/templates/errors/400.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-app/templates/errors/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-app/templates/errors/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-app/templates/restore_s3_backups.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/communications.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/filtering.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/forwarding.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/logging.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/server_params.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/scripts/create_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/create_backup.py" afterDir="false" />
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/core/scripts/restore_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/restore_backup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/static/jquery-3.6.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/list_backups.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/list_backups.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +102,7 @@
       <workItem from="1622647830505" duration="13083000" />
       <workItem from="1622736286814" duration="16000" />
       <workItem from="1622736924821" duration="11000" />
-      <workItem from="1622802389074" duration="19135000" />
+      <workItem from="1622802389074" duration="19620000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -150,7 +132,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622736056695</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Restauración de backups">
+      <created>1622821969247</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622821969247</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Restauración de backups y mensajes de error">
+      <created>1622821989122</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622821989122</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +169,8 @@
     <MESSAGE value="Monitorización de eventos pasados" />
     <MESSAGE value="Ordenación de log files según contenidos, arreglado bug conexión a SMTP remoto en logging, simplificación logging.json conf por compatibilidad con web" />
     <MESSAGE value="Adaptación scripts backups a web. Listar y crear backups desde web." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adaptación scripts backups a web. Listar y crear backups desde web." />
+    <MESSAGE value="Restauración de backups" />
+    <MESSAGE value="Restauración de backups y mensajes de error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restauración de backups y mensajes de error" />
   </component>
 </project>

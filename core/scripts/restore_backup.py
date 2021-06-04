@@ -1,4 +1,5 @@
 #!/etc/spamfilter/venv/bin/python3.8
+import json
 import os
 import sys
 import boto3
@@ -15,7 +16,6 @@ command_schema = Schema({
 
 
 def restore_backup(options):
-    base_path = "/etc/spamfilter/"
     backups_path = "/etc/spamfilter/backups/"
     to_restore = options['--to-restore']
     to_restore_path = backups_path + to_restore
@@ -29,6 +29,22 @@ def restore_backup(options):
         s3_bucket_name = s3_params[0]
         s3_file_path = s3_params[1] + to_restore
         s3_client.download_file(s3_bucket_name, s3_file_path, to_restore_path)
+
+        # Add info to backups log file
+        backups_log_path = '/etc/spamfilter/backups/backups_log.json'
+        if os.path.exists(backups_log_path):
+            with open(backups_log_path, 'r') as file:
+                backups_log = json.load(file)
+        else:
+            backups_log = {}
+        if to_restore not in backups_log:
+            backups_log[to_restore] = {
+                'backed-up': 'Unknown',
+                'timestamp': 'Unknown',
+                'uploaded-to-s3': True
+            }
+            with open(backups_log_path, 'w') as file:
+                json.dump(backups_log, file, indent=4)
 
     if not os.path.exists(to_restore_path):
         print(f"The specified backup file {to_restore} doesn't exist at {backups_path}")
