@@ -9,7 +9,8 @@ import subprocess
 import psutil
 from schema import SchemaError
 from config import routes
-from flask import Flask, render_template, request, redirect, flash, jsonify, abort, session
+from flask import Flask, render_template, request, redirect, flash, jsonify, abort
+from flask_paginate import Pagination, get_page_parameter
 
 app = Flask(__name__)
 
@@ -18,11 +19,7 @@ app = Flask(__name__)
 def index():
     # Check if SMTP server is running
     is_running = check_running_process('launcher.py')
-
-    # Get configuration files
-    conf_files = [file[:-5] for file in os.listdir(routes['conf'])]
-
-    return render_template('index.html', config_files=conf_files, is_running=is_running)
+    return render_template('monitor/monitor_server_status.html', is_running=is_running)
 
 
 def check_running_process(process):
@@ -65,7 +62,7 @@ def edit_conf_file(filename):
     if request.method == 'GET':
         with open(file_path, 'r') as conf_file:
             conf_file_contents = conf_file.read()
-        return render_template('edit_conf_file.html', filename=filename, conf_file_contents=conf_file_contents)
+        return render_template('config_edit.html', filename=filename, conf_file_contents=conf_file_contents)
 
     # If POST, then validate updated file contents and store them. Then, redirect.
     # If the updated contents don't pass the validation, then inform about it.
@@ -102,7 +99,13 @@ def real_time_monitor(timestamp):
             log_timestamp_str = log[2:25]
             log_timestamp = datetime.datetime.strptime(log_timestamp_str, "%Y-%m-%d %H:%M:%S,%f")
             if last_log_timestamp < log_timestamp:
-                response.append(log)
+                parsed_log = [e.replace('[', '').strip() for e in log.split("]")]
+                response.append({
+                    "timestamp": parsed_log[0],
+                    "level": parsed_log[1],
+                    "module_and_thread": parsed_log[2],
+                    "msg": parsed_log[3]
+                })
 
     # Return response as JSON-like object
     return jsonify(response)
@@ -161,9 +164,22 @@ def past_logs_monitor():
         # Sort logs by timestamp
         past_logs.sort(key=lambda x: x[0], reverse=False)
 
+    # Paginate
+    search = False
+    q = request.args.get('q')
+    if q:
+        search = True
+    page = request.args.get(get_page_parameter(), type=int, default=1)
+    per_page = 10
+    offset = (page - 1) * per_page
+
+    pagination = Pagination(page=page, css_framework='bootstrap', bs_version=4, total=len(past_logs), per_page=10,
+                            search=search, record_name='past logs')
+
     return render_template(
-        "past_logs_monitor.html",
-        past_logs=past_logs,
+        "monitor/monitor_past_logs.html",
+        past_logs=past_logs[offset:offset + per_page],
+        pagination=pagination,
         attributes={
             "year": "Year",
             "month": "Month",
@@ -187,13 +203,13 @@ def list_backups():
     else:
         backups_log = {}
 
-    return render_template('list_backups.html', backups_log=backups_log)
+    return render_template('backups/backups_list.html', backups_log=backups_log)
 
 
 @app.route('/backups/create', methods=["POST", "GET"])
 def create_backups():
     if request.method == 'GET':
-        return render_template('create_backups.html')
+        return render_template('backups/backups_create.html')
     else:
 
         # Parse form fields into command line and execute.
@@ -225,7 +241,7 @@ def create_backups():
             command_line.append("--encrypted")
 
         if error:
-            return render_template('create_backups.html')
+            return render_template('backups/backups_create.html')
         else:
 
             # Execute command and get output
@@ -288,7 +304,7 @@ def restore_local_backups():
 @app.route('/backups/restore/s3', methods=["GET", "POST"])
 def restore_s3_backups():
     if request.method == "GET":
-        return render_template("restore_s3_backups.html")
+        return render_template("backups/backups_restore_s3.html")
     else:
 
         # Check if errors and redirect wit verbose if any; else parse
@@ -360,6 +376,13 @@ def delete_backups():
         else:
             # Return Not Found code
             abort(404)
+
+
+# CONTEXT PROCESSOR THAT PASSES THE CONFIG FILES TO ALL TEMPLATES
+
+@app.context_processor
+def inject_config_files():
+    return dict(config_files=[file[:-5] for file in os.listdir(routes['conf'])])
 
 
 # ERROR HANDLERS

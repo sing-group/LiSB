@@ -5,20 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/GracefulKiller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/static/css/backups_create.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/static/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/static/css/config_edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/static/css/monitor_past_logs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/templates/monitor/monitor_past_logs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/templates/monitor/monitor_server_status.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/MailForwarder.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/MailForwarder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/SpamFilterServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/SpamFilterServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/filtering/FilteringManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/FilteringManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/filtering/StorageManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/StorageManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/scripts/common_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/common_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/launcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/communications.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/communications.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/static/real-time-monitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/ajax_queries.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/static/ajax_queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/js/ajax_queries.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/static/create-backups-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/js/backups_create_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/css/control_panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/static/modals.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/js/modals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/create_backups.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/backups/backups_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/edit_conf_file.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/config_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/errors/400.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/errors/400.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/errors/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/errors/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/errors/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/errors/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/list_backups.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/backups/backups_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/past_logs_monitor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/restore_s3_backups.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/backups/backups_restore_s3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +39,21 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -57,6 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -64,9 +87,11 @@
       <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\web-app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\web-app\templates\monitor" />
+      <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\web-app\templates\backups" />
+      <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\web-app\static\css" />
+      <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\web-app\static\js" />
       <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter" />
-      <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\core\scripts" />
-      <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\core" />
     </key>
   </component>
   <component name="RunManager">
@@ -116,7 +141,9 @@
       <workItem from="1622647830505" duration="13083000" />
       <workItem from="1622736286814" duration="16000" />
       <workItem from="1622736924821" duration="11000" />
-      <workItem from="1622802389074" duration="37939000" />
+      <workItem from="1622802389074" duration="38086000" />
+      <workItem from="1622886659662" duration="14363000" />
+      <workItem from="1622901952170" duration="22674000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -167,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622822294071</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Iniciar y parar servidor desde web. Graceful shutdown.">
+      <created>1622840666440</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622840666440</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Quitar script de test">
+      <created>1622840703091</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1622840703091</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +234,8 @@
     <MESSAGE value="Restauración de backups" />
     <MESSAGE value="Restauración de backups y mensajes de error" />
     <MESSAGE value="restore_backup.py actualiza logs de backups" />
-    <option name="LAST_COMMIT_MESSAGE" value="restore_backup.py actualiza logs de backups" />
+    <MESSAGE value="Iniciar y parar servidor desde web. Graceful shutdown." />
+    <MESSAGE value="Quitar script de test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quitar script de test" />
   </component>
 </project>

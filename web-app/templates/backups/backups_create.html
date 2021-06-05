@@ -2,15 +2,19 @@
 
 {% block head %}
     <title>Backups Creation</title>
-    <script src="{{ url_for('static', filename='create-backups-form.js' ) }}"></script>
+    <link href="{{ url_for('static', filename='css/backups_create.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/backups_create_form.js' ) }}"></script>
 {% endblock %}
 
-{% block body %}
-
+{% block page_header_title %}
     <h1>Create a new backup</h1>
-    <form action="/backups/create" method="post">
+{% endblock %}
+
+{% block content %}
+
+    <form class="flex-form" action="/backups/create" method="post">
         <div id="to-backup" class="form-group">
-            <p>Select files to backup</p>
+            <p>Select files to backup:</p>
             <div>
                 <input type="checkbox" name="logs" checked>
                 <label for="logs">Log files</label>
@@ -31,7 +35,7 @@
                 <option value="no">No</option>
             </select>
         </div>
-        <div>
+        <div class="form-group">
             <label for="encrypted">Do you want to upload the backup file to a S3 bucket?</label>
             <select id="s3-upload" name="s3-upload">
                 <option value="no" selected>No</option>
@@ -39,7 +43,7 @@
             </select>
         </div>
         <div id="s3-params"></div>
-        <button type="submit">Create backup</button>
+        <button id="create-backup-btn" class="btn btn-primary" type="submit">Create backup</button>
     </form>
 
 

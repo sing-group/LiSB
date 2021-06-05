@@ -6,6 +6,14 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icons/favicon.png') }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900;wght@700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -17,10 +25,63 @@
             integrity="sha384-O0KFT+SjJxUaWM5bLJAGoXlnokYypirRipoMtYIiagk2Ro40V3sAKAhCqKqBEvMC"
             crossorigin="anonymous"></script>
 
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+
     <!-- Customized header section -->
     {% block head %} {% endblock %}
 </head>
 <body>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="/">
+        SpamFilterWeb<img id="logo" src="{{ url_for('static', filename='icons/logo.svg') }}">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav">
+            <!-- Monitoring Dropdown-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbar-monitoring" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Monitoring
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbar-monitoring">
+                    <a class="dropdown-item" href="/">Server status</a>
+                    <a class="dropdown-item" href="/monitor/past-logs">See past logs</a>
+                </div>
+            </li>
+            <!-- Configuration Dropdown-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbar-configuration" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Configuration
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbar-configuration">
+                    {% for conf_file in config_files %}
+                        <a class="dropdown-item" href="/conf/{{ conf_file }}">Edit '{{ conf_file }}'</a>
+                    {% endfor %}
+                </div>
+            </li>
+            <!-- Backups Dropdown-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbar-monitoring" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Backups
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbar-monitoring">
+                    <a class="dropdown-item" href="/backups/list">List all backups</a>
+                    <a class="dropdown-item" href="/backups/create">Create a new backup</a>
+                    <a class="dropdown-item" href="/backups/restore/s3">Restore a S3 backup</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <!-- Flash messages if any -->
 {% with messages = get_flashed_messages() %}
@@ -33,8 +94,12 @@
     {% endif %}
 {% endwith %}
 
-<!-- Customized body section -->
-{% block body %} {% endblock %}
+{% block page_header_title %}{% endblock %}
+
+<!-- Page content -->
+<div id="content">
+    {% block content %} {% endblock %}
+</div>
 
 <!-- Optional JavaScript for Bootstrap-->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

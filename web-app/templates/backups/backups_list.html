@@ -2,11 +2,14 @@
 
 {% block head %}
     <title>Backups List</title>
-    <script src="{{ url_for('static', filename='modals.js' ) }}"></script>
+    <script src="{{ url_for('static', filename='js/modals.js' ) }}"></script>
 {% endblock %}
 
-{% block body %}
-    <h1>List of local backups</h1>
+{% block page_header_title %}
+    <h1>List of Local Backups</h1>
+{% endblock %}
+
+{% block content %}
     {% if backups_log %}
         <table class="table">
             <thead>
@@ -43,7 +46,7 @@
 
     <!-- Restore Modal -->
     <div class="modal fade" id="restore-modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-dialog-centered small-modal" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="restore-modal-title">Restore backup</h5>
@@ -51,9 +54,11 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="/backups/restore/local" method="post">
+                <form class="flex-form" action="/backups/restore/local" method="post">
                     <div id="restore-modal-body" class="modal-body">
-                        <p>Do you want to restore the '<span id="to-restore-backup-name"></span>' backup file? Current files will
+                        <p>Do you want to restore the '<span id="to-restore-backup-name" class="font-italic"></span>'
+                            backup file? Current
+                            files will
                             be overwritten.</p>
                         <div id="decryption-key"></div>
                     </div>
@@ -68,8 +73,8 @@
     </div>
 
     <!-- Delete Modal -->
-    <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade " id="delete-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered small-modal" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="delete-modal-title">Delete backup</h5>
@@ -77,9 +82,10 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="/backups/delete" method="post">
+                <form class="flex-form" action="/backups/delete" method="post">
                     <div id="delete-modal-body" class="modal-body">
-                        <p>Do you want to delete the '<span id="to-delete-backup-name"></span>' backup file?
+                        <p>Do you want to delete the '<span id="to-delete-backup-name" class="font-italic"></span>'
+                            backup file?
                             This action cannot be undone.</p>
                     </div>
                     <div class="modal-footer">

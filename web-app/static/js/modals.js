@@ -1,3 +1,5 @@
+var div;
+
 function open_restore_modal(backup_name) {
 
     // Change backup name
@@ -5,7 +7,7 @@ function open_restore_modal(backup_name) {
     document.getElementById('to-restore-input').value = backup_name;
 
     // Include field for key if encrypted backup
-    if (backup_name.includes(".enc")) {
+    if (backup_name.includes(".enc") && div == undefined) {
         const key_label = document.createElement('label');
         const key_input = document.createElement('input');
         key_input.name = 'decryption-key';
@@ -13,7 +15,8 @@ function open_restore_modal(backup_name) {
         key_label.htmlFor = 'decryption-key';
         key_label.innerHTML = "Please provide the decryption key:";
 
-        const div = document.getElementById('decryption-key');
+        div = document.getElementById('decryption-key');
+        div.classList.add('form-group');
         div.appendChild(key_label);
         div.appendChild(key_input);
     }

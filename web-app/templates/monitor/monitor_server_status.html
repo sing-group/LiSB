@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Control Panel</title>
+    <link href="{{ url_for('static', filename='css/monitor_server_status.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/ajax_queries.js') }}"></script>
+{% endblock %}
+
+{% block page_header_title %}
+    <h1>Server Status</h1>
+{% endblock %}
+
+{% block content %}
+
+    {% if is_running %}
+        <p>Server Status: <span id="status-msg" class="running">RUNNING</span></p>
+        <button id="status-button" class="btn btn-danger" onclick="do_stop_ajax_query()">Stop server</button>
+    {% else %}
+        <p>Server Status: <span id="status-msg" class="not-running">NOT RUNNING</span></p>
+        <button id="status-button" class="btn btn-success" onclick="do_start_ajax_query()">Start server</button>
+    {% endif %}
+    <div id="real-time-logs">
+        <p id="no-logs-yet-msg">Waiting for events...</p>
+    </div>
+
+{% endblock %}

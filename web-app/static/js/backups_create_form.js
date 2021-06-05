@@ -14,8 +14,8 @@ function manage_s3_section(index) {
         s3_params_div.innerHTML = "";
     } else {
         to_create = {
-            "s3-bucket-name": "Enter the S3 bucket name",
-            "s3-bucket-path": "Enter the S3 bucket path"
+            "s3-bucket-name": "Enter the S3 bucket name:",
+            "s3-bucket-path": "Enter the S3 bucket path:"
         };
         for (const [name, label_txt] of Object.entries(to_create)) {
             // Create input element
@@ -28,9 +28,10 @@ function manage_s3_section(index) {
             label.innerHTML = label_txt;
             // Create to append input and label to and append to section
             var div = document.createElement('div');
-            div.appendChild(label)
-            div.appendChild(input)
-            s3_params_div.appendChild(div)
+            div.classList.add('form-group');
+            div.appendChild(label);
+            div.appendChild(input);
+            s3_params_div.appendChild(div);
         }
     }
 }

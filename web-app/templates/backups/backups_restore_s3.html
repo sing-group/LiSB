@@ -2,13 +2,15 @@
 
 {% block head %}
     <title>Restore S3 Backups</title>
-    <script src="{{ url_for('static', filename='modals.js' ) }}"></script>
 {% endblock %}
 
-{% block body %}
+{% block page_header_title %}
+    <h1>Restore S3 Backups</h1>
+{% endblock %}
 
-    <h1>Download backup from an S3 bucket</h1>
-    <form action="/backups/restore/s3" method="post">
+{% block content %}
+
+    <form class="flex-form" action="/backups/restore/s3" method="post">
         <div class="form-group">
             <label for="to-restore">Enter the backup file name:</label>
             <input name="to-restore" type="text">
@@ -25,7 +27,7 @@
             <label for="decryption-key">Enter the decryption key, if necessary:</label>
             <input name="decryption-key" type="text">
         </div>
-        <button class="btn btn-primary" type="submit">Restore</button>
+        <button class="btn btn-primary" type="submit">Restore Backup</button>
     </form>
 
 

@@ -36,14 +36,36 @@ function update_logs(last_logs) {
             no_logs_msg.remove();
         }
 
-        // Add new log messages to DOM
-        last_timestamp_str = last_logs[last_logs.length - 1].substring(2, 25);
-        last_timestamp = parse_datetime(last_timestamp_str);
-        for (let log of last_logs) {
-            var new_log_p = document.createElement('p');
-            new_log_p.innerText = log;
-            logs_div.appendChild(new_log_p);
+        // Append logs by parts in p with spans
+        let log;
+        for (log of last_logs) {
+            let new_log_div = document.createElement('div');
+            for (let key of ['timestamp', 'level', 'module_and_thread']) {
+
+                let span = document.createElement('span');
+                span.innerText = `[ ${log[key]} ]`;
+                classes = key;
+                if (key === "level") {
+                    class_name = " level-" + log['level'].toLowerCase();
+                    classes += class_name;
+                }
+                span.classList = classes;
+                new_log_div.appendChild(span)
+            }
+
+            // Add message
+            let msg_span = document.createElement('span');
+            msg_span.classList.add('msg')
+            msg_span.innerText = log['msg'];
+            new_log_div.appendChild(msg_span)
+
+            logs_div.appendChild(new_log_div);
+            // Update scroll
+            logs_div.scrollTop = logs_div.scrollHeight
         }
+
+        // Update last time with last timestamp
+        last_timestamp = parse_datetime(log['timestamp']);
     }
 }
 

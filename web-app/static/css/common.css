@@ -1,0 +1,181 @@
+/* COLOR VARIABLES*/
+
+:root {
+    --important-color-0: #277AC3;
+    --important-color-1: #4D9FE7;
+    --important-color-2: #1B5689;
+    --grey-0: #F2F2F2;
+    --grey-1: #D9D9D9;
+    --grey-2: #545353;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    width: 100%;
+    background-color: var(--important-color-2);
+}
+
+.navbar a {
+    color: var(--grey-0);
+}
+
+.dropdown-menu .dropdown-item {
+    color: var(--grey-2);
+}
+
+.navbar-brand {
+
+    font-size: 30pt;
+    font-weight: 900;
+    font-style: italic;
+}
+
+nav #logo {
+    width: 60px;
+    margin: 0 3px;
+}
+
+/* PAGE DISPOSITION */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+}
+
+/* HEADERS */
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-weight: 700;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--grey-1);
+}
+
+/* ICONS */
+
+.fas, .far {
+    margin: 0 3px;
+    font-size: large;
+}
+
+.fas:hover, .far:hover {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    color: var(--important-color-0);
+}
+
+.fa-trash-alt:hover {
+    transition: color 0.2s ease-in-out;
+    color: red;
+}
+
+/* BUTTONS */
+.btn {
+    margin: 20px;
+    font-weight: 500;
+}
+
+/* TABLES */
+td, th {
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+thead {
+    background-color: var(--grey-1);
+    color: var(--grey-2);
+}
+
+tbody tr:hover {
+    background-color: var(--grey-0);
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* PAGINATION */
+.pagination-page-info {
+    margin: 20px 0 10px 0;
+}
+
+.page-link {
+    color: black;
+}
+
+.pagination {
+    margin-bottom: 20px;
+}
+
+/* FORMS */
+
+.flex-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-form .btn {
+    margin: 0 10px;
+    align-self: center;
+    width: fit-content;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    background: var(--grey-0);
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    padding: 8px;
+    width: 100%;
+}
+
+
+/* MODALS */
+
+.modal-dialog-centered {
+    max-width: 50% !important;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.modal-header h5 {
+    width: 100%;
+}
+
+.small-modal {
+    width: 520px;
+}
+
+.small-modal p {
+    margin: 0 15px;
+}

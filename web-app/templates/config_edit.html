@@ -2,26 +2,30 @@
 
 {% block head %}
     <title>Settings Editor</title>
+    <link href="{{ url_for('static', filename='css/config_edit.css' ) }}" rel="stylesheet" type="text/css">
     <link href="{{ url_for('static', filename='jsoneditor/jsoneditor.min.css' ) }}" rel="stylesheet" type="text/css">
     <script src="{{ url_for('static', filename='jsoneditor/jsoneditor.min.js' ) }}"></script>
 {% endblock %}
 
-{% block body %}
-
+{% block page_header_title %}
     <h1>Editing '{{ filename }}' settings</h1>
+{% endblock %}
+
+{% block content %}
 
     <div id="jsoneditor"></div>
 
     <form action="/conf/{{ filename }}" method="post">
-        <input name="updated-file-contents" id="updated-file-contents" type="hidden" value='{{ conf_file_contents|safe }}'>
-        <input type="submit">
+        <input name="updated-file-contents" id="updated-file-contents" type="hidden"
+               value='{{ conf_file_contents|safe }}'>
+        <button class="btn btn-primary" type="submit">Save changes</button>
     </form>
 
     <script>
         // create the editor
         const container = document.getElementById("jsoneditor")
         const options = {
-            onChange: function (){
+            onChange: function () {
                 document.getElementById('updated-file-contents').value = editor.getText()
             }
         }
@@ -29,6 +33,6 @@
 
         // set json
         const initialJson = {{ conf_file_contents|safe }}
-        editor.set(initialJson)
+            editor.set(initialJson)
     </script>
 {% endblock %}

@@ -1,0 +1,15 @@
+
+#to-backup input{
+    width: fit-content;
+    margin: 0 10px;
+}
+
+#to-backup p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#to-backup label {
+    font-weight: normal;
+    margin: 0;
+}
