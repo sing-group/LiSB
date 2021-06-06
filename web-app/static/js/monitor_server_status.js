@@ -87,7 +87,7 @@ function do_start_ajax_query() {
     document.body.style.cursor = 'wait';
 
     // Disabling status button and changing hovering style
-    let style = disable_status_button();
+    status_button.disabled = true;
 
     $.ajax({
         type: "POST",
@@ -104,7 +104,6 @@ function do_start_ajax_query() {
             // Restore cursor and button
             document.body.style.cursor = 'default';
             status_button.disabled = false;
-            style.remove();
         }
     });
 }
@@ -114,7 +113,7 @@ function do_stop_ajax_query() {
     document.body.style.cursor = 'wait';
 
     // Disabling status button and changing hovering style
-    let style = disable_status_button();
+    status_button.disabled = true;
 
     // Do ajax
     $.ajax({
@@ -132,16 +131,7 @@ function do_stop_ajax_query() {
             // Restore cursor and button
             document.body.style.cursor = 'default';
             status_button.disabled = false;
-            style.remove();
         }
     });
 }
 
-function disable_status_button() {
-    status_button.disabled = true;
-    let css = '#status-button:hover { cursor: not-allowed }';
-    let style = document.createElement('style');
-    style.appendChild(document.createTextNode(css));
-    document.getElementsByTagName('head')[0].appendChild(style);
-    return style;
-}

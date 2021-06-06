@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Estilo con CSS">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/static/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/static/js/ajax_queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/js/monitor_server_status.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/monitor/monitor_server_status.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/monitor/monitor_server_status.html" afterDir="false" />
-    </list>
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +119,7 @@
       <workItem from="1622802389074" duration="38086000" />
       <workItem from="1622886659662" duration="14363000" />
       <workItem from="1622901952170" duration="23030000" />
-      <workItem from="1622966172298" duration="6641000" />
+      <workItem from="1622966172298" duration="7331000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -198,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622925510570</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Estilos de monitorización finalizados. Start y stop esperan a acción completada.">
+      <created>1622974435156</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622974435156</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +227,7 @@
     <MESSAGE value="Iniciar y parar servidor desde web. Graceful shutdown." />
     <MESSAGE value="Quitar script de test" />
     <MESSAGE value="Estilo con CSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Estilo con CSS" />
+    <MESSAGE value="Estilos de monitorización finalizados. Start y stop esperan a acción completada." />
+    <option name="LAST_COMMIT_MESSAGE" value="Estilos de monitorización finalizados. Start y stop esperan a acción completada." />
   </component>
 </project>

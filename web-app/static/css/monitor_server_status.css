@@ -1,0 +1,70 @@
+/* STATUS STYLES */
+
+.running {
+    color: #28a745;
+}
+
+.not-running {
+    color: #dc3545;
+}
+
+button:disabled:hover,
+button[disabled]:hover{
+    cursor: not-allowed;
+}
+
+/* CONSOLE STYLES */
+
+#real-time-logs {
+    width: 80%;
+    height: 500px;
+    overflow-y: scroll;
+    background: black;
+    color: white;
+    font-family: 'Consolas', sans-serif;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.timestamp, .level, .module_and_thread {
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+/* MESSAGE */
+.msg {
+    font-weight: normal;
+}
+
+/* TIMESTAMP */
+.timestamp {
+    color: var(--grey-2);
+}
+
+/* MODULE AND THREAD */
+.module_and_thread {
+    color: darksalmon;
+}
+
+
+/* LEVELS */
+
+.level-critical {
+    color: mediumpurple;
+}
+
+.level-error {
+    color: red;
+}
+
+.level-warning {
+    color: orange;
+}
+
+.level-info {
+    color: dodgerblue;
+}
+
+.level-debug {
+    color: green;
+}
