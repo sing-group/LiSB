@@ -1,7 +1,0 @@
-setup.py
-SpamFilterWeb.egg-info/PKG-INFO
-SpamFilterWeb.egg-info/SOURCES.txt
-SpamFilterWeb.egg-info/dependency_links.txt
-SpamFilterWeb.egg-info/not-zip-safe
-SpamFilterWeb.egg-info/requires.txt
-SpamFilterWeb.egg-info/top_level.txt
