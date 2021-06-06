@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web-app/setup.py" afterDir="false" />
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Despliegue web: python3.7">
+      <change afterPath="$PROJECT_DIR$/web-app/waitress_server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/scripts/create_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/create_backup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/scripts/restore_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/restore_backup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/launcher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +127,7 @@
       <workItem from="1622886659662" duration="14363000" />
       <workItem from="1622901952170" duration="23030000" />
       <workItem from="1622966172298" duration="9060000" />
-      <workItem from="1622986518577" duration="6617000" />
+      <workItem from="1622986518577" duration="8272000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -221,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622988639828</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Despliegue web: python3.7">
+      <created>1622993250074</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1622993250074</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +259,7 @@
     <MESSAGE value="Estilos de monitorización finalizados. Start y stop esperan a acción completada." />
     <MESSAGE value="Disabled button not-allowed desde CSS" />
     <MESSAGE value="Estilos para flash messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Estilos para flash messages" />
+    <MESSAGE value="Despliegue web: python3.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Despliegue web: python3.7" />
   </component>
 </project>

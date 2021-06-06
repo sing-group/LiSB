@@ -1,4 +1,4 @@
-schedule
+schedule~=1.0.0
 schema~=0.7.4
 dnspython~=1.16.0
 aiosmtpd~=1.4.2
@@ -31,3 +31,4 @@ setuptools~=44.0.0
 CacheControl~=0.12.6
 requests~=2.22.0
 msgpack~=0.6.2
+waitress~=2.0.0

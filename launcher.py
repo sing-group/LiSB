@@ -1,4 +1,4 @@
-#!/etc/spamfilter/venv/bin/python3.7
+#!/etc/spamfilter/venv/bin/python3
 
 import logging
 from schema import SchemaError
