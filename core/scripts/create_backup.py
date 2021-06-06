@@ -1,4 +1,4 @@
-#!/etc/spamfilter/venv/bin/python3.8
+#!/etc/spamfilter/venv/bin/python3.7
 import json
 import os
 import sys
