@@ -5,8 +5,9 @@ import re
 import signal
 import sys
 import subprocess
-
 import psutil
+import waitress
+
 from schema import SchemaError
 from config import routes
 from flask import Flask, render_template, request, redirect, flash, jsonify, abort
@@ -426,4 +427,4 @@ if __name__ == '__main__':
 
     # Run web app
     app.secret_key = os.urandom(24)
-    app.run()
+    waitress.serve(app, host='0.0.0.0', port=80)
