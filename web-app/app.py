@@ -40,7 +40,6 @@ def index():
 
 def check_running_process(process):
     for proc in psutil.process_iter():
-        print(proc)
         if process == proc.name() and proc.status() != "zombie":
             return proc.pid
     return False
@@ -96,8 +95,7 @@ def edit_conf_file(filename):
                 json.dump(validated, conf_file, indent=4)
             flash(f"The '{filename}' settings file was correctly updated.")
         except SchemaError as e:
-            flash(f"There was an error: {e}")
-            flash("Changes couldn't be applied.")
+            flash(f"Changes couldn't be applied since there was an error: {e}.", "error")
         return redirect(f"/conf/{filename}")
 
 
@@ -240,7 +238,7 @@ def create_backups():
         error = False
         if not to_backup:
             error = True
-            flash("Please select which files you want to backup")
+            flash("Please select which files you want to backup.", "error")
         else:
             command_line.append(f"--to-backup={','.join(to_backup)}")
 
@@ -250,7 +248,7 @@ def create_backups():
             s3_bucket_path = request.form.get('s3-bucket-path')
             if not s3_bucket_name or not s3_bucket_path:
                 error = True
-                flash("Please, enter a valid S3 bucket configuration")
+                flash("Please, enter a valid S3 bucket configuration.", "error")
             else:
                 s3 = os.path.join(s3_bucket_name, s3_bucket_path)
                 command_line.append(f"--s3={s3}")
@@ -269,7 +267,7 @@ def create_backups():
             # Get backup name from output and flash it
             name_regex = re.compile("file '.*' at")
             name = name_regex.search(result).group(0)[5:-3]
-            flash(f"A new backup file has been created: {name}")
+            flash(f"A new backup file has been created: {name}.")
 
             # If encrypted, get encryption key from output and flash it
             if request.form.get('encrypted') == "yes":
@@ -282,7 +280,7 @@ def create_backups():
             errors = re.findall(errors_regex, result)
             if len(errors) > 0:
                 for error in errors:
-                    flash(error)
+                    flash(error, "error")
 
             return redirect('/backups/list')
 
@@ -292,7 +290,7 @@ def restore_local_backups():
     to_restore = request.form.get('to-restore')
     if not to_restore:
         # Return Bad Request code
-        flash()
+        abort(400)
     else:
         backup_path = os.path.join(routes['backups'], to_restore)
         if os.path.exists(backup_path):
@@ -309,7 +307,7 @@ def restore_local_backups():
             errors = re.findall(errors_regex, result)
             if len(errors) > 0:
                 for error in errors:
-                    flash(error)
+                    flash(error, "error")
             else:
                 flash(f"The '{to_restore}' backup file was properly restored.")
 
@@ -332,13 +330,13 @@ def restore_s3_backups():
         to_restore = request.form.get('to-restore')
         if not to_restore:
             error = True
-            flash("Please, enter a valid backup file.")
+            flash("Please, enter a valid backup file.", "error")
 
         s3_bucket_name = request.form.get('s3-bucket-name')
         s3_bucket_path = request.form.get('s3-bucket-path')
         if not s3_bucket_name or not s3_bucket_path:
             error = True
-            flash("Please, enter a valid S3 bucket configuration.")
+            flash("Please, enter a valid S3 bucket configuration.", "error")
 
         if error:
             return redirect('/backups/restore/s3')
@@ -360,7 +358,7 @@ def restore_s3_backups():
             errors = re.findall(errors_regex, result)
             if len(errors) > 0:
                 for error in errors:
-                    flash(error)
+                    flash(error, "error")
                 return redirect('/backups/restore/s3')
             else:
                 flash(f"The '{to_restore}' backup file was properly restored.")

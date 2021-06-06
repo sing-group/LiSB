@@ -1,5 +1,3 @@
-import psutil
-
 routes = {
     "base": "/etc/spamfilter/",
     "conf": "/etc/spamfilter/conf",
