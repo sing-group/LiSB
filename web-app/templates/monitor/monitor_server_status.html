@@ -3,22 +3,27 @@
 {% block head %}
     <title>Control Panel</title>
     <link href="{{ url_for('static', filename='css/monitor_server_status.css') }}" rel="stylesheet">
-    <script src="{{ url_for('static', filename='js/ajax_queries.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/monitor_server_status.js') }}"></script>
 {% endblock %}
 
 {% block page_header_title %}
-    <h1>Server Status</h1>
+    <h1>
+        Server Status:
+        <span id="status-msg" class="{{ server_status['msg-class'] }}">
+            {{ server_status['msg'] }}
+        </span>
+    </h1>
 {% endblock %}
 
 {% block content %}
 
-    {% if is_running %}
-        <p>Server Status: <span id="status-msg" class="running">RUNNING</span></p>
-        <button id="status-button" class="btn btn-danger" onclick="do_stop_ajax_query()">Stop server</button>
-    {% else %}
-        <p>Server Status: <span id="status-msg" class="not-running">NOT RUNNING</span></p>
-        <button id="status-button" class="btn btn-success" onclick="do_start_ajax_query()">Start server</button>
-    {% endif %}
+    <div id="control-buttons">
+        <button id="status-button" class="btn {{ server_status['btn-class'] }}" onclick="{{ server_status['ajax'] }}">
+            {{ server_status['btn-txt'] }}
+        </button>
+        <button id="clear-button" class="btn btn-secondary" onclick="clear_logs()">Clear Logs</button>
+    </div>
+
     <div id="real-time-logs">
         <p id="no-logs-yet-msg">Waiting for events...</p>
     </div>

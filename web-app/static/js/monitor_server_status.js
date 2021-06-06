@@ -1,6 +1,8 @@
 var last_timestamp = Date.now()
 var logs_div;
 var status_msg;
+var status_button;
+var no_logs_msg;
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -9,6 +11,7 @@ document.addEventListener(
         logs_div = document.getElementById('real-time-logs');
         status_button = document.getElementById('status-button');
         status_msg = document.getElementById('status-msg');
+        no_logs_msg = document.getElementById('no-logs-yet-msg');
     }
 )
 
@@ -30,8 +33,7 @@ function update_logs(last_logs) {
 
     if (last_logs.length !== 0) {
 
-        // Remove no logs yet message if it hasn't been removed yet
-        no_logs_msg = document.getElementById('no-logs-yet-msg');
+        // Hide no logs yet message if it hasn't been hidden yet
         if (no_logs_msg !== null) {
             no_logs_msg.remove();
         }
@@ -75,8 +77,18 @@ function parse_datetime(to_parse) {
     return Date.parse(splitted[0]) + parseInt(splitted[1]);
 }
 
+function clear_logs() {
+    // Restore contents
+    logs_div.innerHTML = "<p id=\"no-logs-yet-msg\">Waiting for events...</p>";
+}
 
 function do_start_ajax_query() {
+    // Change cursor to waiting and disable button
+    document.body.style.cursor = 'wait';
+
+    // Disabling status button and changing hovering style
+    let style = disable_status_button();
+
     $.ajax({
         type: "POST",
         url: '/ajax/start',
@@ -86,21 +98,50 @@ function do_start_ajax_query() {
             status_button.classList.remove('btn-success');
             status_button.classList.add('btn-danger');
             status_msg.innerHTML = "RUNNING";
+            status_msg.classList = ['running'];
+        },
+        complete: function () {
+            // Restore cursor and button
+            document.body.style.cursor = 'default';
+            status_button.disabled = false;
+            style.remove();
         }
     });
 }
 
 function do_stop_ajax_query() {
+    // Change cursor to waiting
+    document.body.style.cursor = 'wait';
+
+    // Disabling status button and changing hovering style
+    let style = disable_status_button();
+
+    // Do ajax
     $.ajax({
         type: "POST",
         url: '/ajax/stop',
         success: function () {
-            running = false;
             status_button.onclick = do_start_ajax_query;
             status_button.innerHTML = "Start Server";
             status_button.classList.remove('btn-danger');
             status_button.classList.add('btn-success');
             status_msg.innerHTML = "NOT RUNNING";
+            status_msg.classList = ['not-running'];
+        },
+        complete: function () {
+            // Restore cursor and button
+            document.body.style.cursor = 'default';
+            status_button.disabled = false;
+            style.remove();
         }
     });
+}
+
+function disable_status_button() {
+    status_button.disabled = true;
+    let css = '#status-button:hover { cursor: not-allowed }';
+    let style = document.createElement('style');
+    style.appendChild(document.createTextNode(css));
+    document.getElementsByTagName('head')[0].appendChild(style);
+    return style;
 }

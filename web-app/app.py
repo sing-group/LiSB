@@ -17,9 +17,25 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    # Check if SMTP server is running
+    # Check if SMTP server is running and pass sender status
     is_running = check_running_process('launcher.py')
-    return render_template('monitor/monitor_server_status.html', is_running=is_running)
+    server_status = {
+        "msg": "RUNNING",
+        "msg-class": "running",
+        "ajax": "do_stop_ajax_query()",
+        "btn-txt": "Stop Server",
+        "btn-class": "btn-danger"
+    } if is_running else {
+        "msg": "NOT RUNNING",
+        "msg-class": "not-running",
+        "ajax": "do_start_ajax_query()",
+        "btn-txt": "Start Server",
+        "btn-class": "btn-success"
+    }
+    return render_template(
+        'monitor/monitor_server_status.html',
+        server_status=server_status
+    )
 
 
 def check_running_process(process):
@@ -48,6 +64,9 @@ def stop_server():
     spamfilter_pid = check_running_process('launcher.py')
     if spamfilter_pid:
         os.kill(spamfilter_pid, signal.SIGTERM)
+        running = True
+        while running:
+            running = check_running_process('launcher.py')
         return jsonify({"msg": "The server was stopped"}), 200
     else:
         return jsonify({"msg": "The server is not running"}), 400
