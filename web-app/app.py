@@ -14,6 +14,8 @@ from flask import Flask, render_template, request, redirect, flash, jsonify, abo
 from flask_paginate import Pagination, get_page_parameter
 
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
+
 
 @app.route('/', methods=['GET'])
 def index():

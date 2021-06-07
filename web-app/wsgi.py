@@ -1,12 +1,7 @@
-import sys
 import os
-from app import app, cors
-from config import routes
+from app import app
 
 if __name__ == "__main__":
-
-
-    cors.init_app()
 
     # Run web app
     app.secret_key = os.urandom(24)
