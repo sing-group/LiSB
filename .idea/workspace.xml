@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/scripts/create_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/create_backup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/scripts/restore_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/restore_backup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/launcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +126,7 @@
       <workItem from="1622901952170" duration="23030000" />
       <workItem from="1622966172298" duration="9060000" />
       <workItem from="1622986518577" duration="11803000" />
-      <workItem from="1623066597742" duration="393000" />
+      <workItem from="1623066597742" duration="906000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -246,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622997347037</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Cambio de directorio para despliegue">
+      <created>1623067286600</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1623067286600</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +289,7 @@
     <MESSAGE value="Despliegue web: python3.7" />
     <MESSAGE value="Intentando desplegar con waitress" />
     <MESSAGE value="Despliegue sin HTTPS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Despliegue sin HTTPS" />
+    <MESSAGE value="Cambio de directorio para despliegue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio de directorio para despliegue" />
   </component>
 </project>
