@@ -4,6 +4,8 @@ import json
 import re
 import signal
 import subprocess
+import sys
+
 import psutil
 
 from schema import SchemaError
@@ -12,7 +14,6 @@ from flask import Flask, render_template, request, redirect, flash, jsonify, abo
 from flask_paginate import Pagination, get_page_parameter
 
 app = Flask(__name__)
-
 
 @app.route('/', methods=['GET'])
 def index():
@@ -89,8 +90,12 @@ def edit_conf_file(filename):
     # If the updated contents don't pass the validation, then inform about it.
     else:
         try:
+            # Import configuration module
+            sys.path.insert(1, routes['base'])
+            from core import configuration
+            # Validate and update if correct
             updated_file_contents = json.loads(request.form.get('updated-file-contents'))
-            validation_schema = core.configuration.get_config_schema(filename)
+            validation_schema = configuration.get_config_schema(filename)
             validated = validation_schema.validate(updated_file_contents)
             if validation_schema.ignore_extra_keys:
                 validated = updated_file_contents
@@ -404,6 +409,7 @@ def delete_backups():
 def inject_config_files():
     return dict(config_files=[file[:-5] for file in os.listdir(routes['conf'])])
 
+@app.be
 
 # ERROR HANDLERS
 

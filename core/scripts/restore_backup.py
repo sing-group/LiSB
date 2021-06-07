@@ -1,4 +1,5 @@
-#!/var/www/spamfilter/venv/bin/python3.7import json
+#!/var/www/spamfilter/venv/bin/python3.7
+import json
 import os
 import sys
 import boto3
@@ -26,7 +27,7 @@ def restore_backup(options):
         s3_client = boto3.client('s3')
         s3_params = s3_params.split("/", maxsplit=1)
         s3_bucket_name = s3_params[0]
-        s3_file_path = s3_params[1] + to_restore
+        s3_file_path = os.path.join(s3_params[1], to_restore)
         s3_client.download_file(s3_bucket_name, s3_file_path, to_restore_path)
 
         # Add info to backups log file

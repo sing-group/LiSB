@@ -1,4 +1,5 @@
-#!/var/www/spamfilter/venv/bin/python3.7import json
+#!/var/www/spamfilter/venv/bin/python3.7
+import json
 import os
 import sys
 
@@ -58,7 +59,7 @@ def create_backup(options):
             for s3_bucket in options['--s3']:
                 s3_params = s3_bucket.split("/", maxsplit=1)
                 s3_bucket_name = s3_params[0]
-                s3_file_path = s3_params[1] + backup_name
+                s3_file_path = os.path.join(s3_params[1], backup_name)
                 s3_client.upload_file(backup_file_path, s3_bucket_name, s3_file_path)
                 uploaded = True
                 print(f"The backup file was successfully uploaded to '{s3_bucket}'")

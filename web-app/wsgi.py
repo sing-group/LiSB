@@ -1,12 +1,12 @@
 import sys
 import os
-from app import app
+from app import app, cors
 from config import routes
 
 if __name__ == "__main__":
-    # Append core module to path and import it
-    sys.path.insert(1, routes['base'])
-    import core
+
+
+    cors.init_app()
 
     # Run web app
     app.secret_key = os.urandom(24)
