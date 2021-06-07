@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +125,7 @@
       <workItem from="1622966172298" duration="9060000" />
       <workItem from="1622986518577" duration="11803000" />
       <workItem from="1623066597742" duration="9004000" />
-      <workItem from="1623083143118" duration="2153000" />
+      <workItem from="1623083143118" duration="2770000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -309,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623086164231</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Carga de secret key">
+      <created>1623086425827</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1623086425827</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +358,7 @@
     <MESSAGE value="Cambios en requirements.txt" />
     <MESSAGE value="Bug en inicio de servidor" />
     <MESSAGE value="Arreglando import de configuration y pruebas de backups en web" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglando import de configuration y pruebas de backups en web" />
+    <MESSAGE value="Carga de secret key" />
+    <option name="LAST_COMMIT_MESSAGE" value="Carga de secret key" />
   </component>
 </project>

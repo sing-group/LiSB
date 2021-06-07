@@ -411,8 +411,6 @@ def delete_backups():
 def inject_config_files():
     return dict(config_files=[file[:-5] for file in os.listdir(routes['conf'])])
 
-@app.be
-
 # ERROR HANDLERS
 
 @app.errorhandler(400)
