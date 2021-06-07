@@ -125,7 +125,7 @@
       <workItem from="1622966172298" duration="9060000" />
       <workItem from="1622986518577" duration="11803000" />
       <workItem from="1623066597742" duration="9004000" />
-      <workItem from="1623083143118" duration="2770000" />
+      <workItem from="1623083143118" duration="5938000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -316,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623086425827</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Error app.be solucionado">
+      <created>1623087276236</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1623087276236</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,6 +366,7 @@
     <MESSAGE value="Bug en inicio de servidor" />
     <MESSAGE value="Arreglando import de configuration y pruebas de backups en web" />
     <MESSAGE value="Carga de secret key" />
-    <option name="LAST_COMMIT_MESSAGE" value="Carga de secret key" />
+    <MESSAGE value="Error app.be solucionado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error app.be solucionado" />
   </component>
 </project>

@@ -53,10 +53,10 @@ def start_server():
     is_running = check_running_process('launcher.py')
     if not is_running:
         subprocess.Popen(
-            ['nohup', './launcher.py'],
+            ['./launcher.py', '1>/dev/null', '2>/dev/null', '&'],
             cwd=routes['base'],
-            stdout=open('/dev/null', 'w'),
-            stderr=open('errors.log', 'w')
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL
         )
         return jsonify({"msg": "The server was started"}), 200
     else:
@@ -410,6 +410,7 @@ def delete_backups():
 @app.context_processor
 def inject_config_files():
     return dict(config_files=[file[:-5] for file in os.listdir(routes['conf'])])
+
 
 # ERROR HANDLERS
 
