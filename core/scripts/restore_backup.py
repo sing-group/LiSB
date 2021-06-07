@@ -1,4 +1,4 @@
-#!/etc/spamfilter/venv/bin/python3
+#!/home/admin/venv/bin/python3
 import json
 import os
 import sys
@@ -16,7 +16,7 @@ command_schema = Schema({
 
 
 def restore_backup(options):
-    backups_path = "/etc/spamfilter/backups/"
+    backups_path = "/home/admin/backups/"
     to_restore = options['--to-restore']
     to_restore_path = backups_path + to_restore
 
@@ -31,7 +31,7 @@ def restore_backup(options):
         s3_client.download_file(s3_bucket_name, s3_file_path, to_restore_path)
 
         # Add info to backups log file
-        backups_log_path = '/etc/spamfilter/backups/backups_log.json'
+        backups_log_path = '/home/admin/backups/backups_log.json'
         if os.path.exists(backups_log_path):
             with open(backups_log_path, 'r') as file:
                 backups_log = json.load(file)
@@ -93,7 +93,7 @@ if __name__ == '__main__':
         print("Options:\n")
         print("\t--to-restore\tThe backup file to be restored.\n")
         print("\t--s3=BUCKET_NAME/PATH\tThe S3 bucket and path where to find the backup file. "
-              "If not specified, the backup file will be looked up locally at '/etc/spamfilter/backups/'. "
+              "If not specified, the backup file will be looked up locally at '/home/admin/backups/'. "
               "Remember that, for this options to work correctly, S3 Full access needs to be enabled.\n")
         print("\t--decryption-key\tDecrypt the backup file with the specified key.")
         print("\t--help\tThis option shows all of the command options.")

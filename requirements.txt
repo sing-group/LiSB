@@ -31,4 +31,4 @@ setuptools~=44.0.0
 CacheControl~=0.12.6
 requests~=2.22.0
 msgpack~=0.6.2
-waitress~=2.0.0
+uwsgi

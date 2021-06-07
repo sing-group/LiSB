@@ -1,7 +1,7 @@
 routes = {
-    "base": "/etc/spamfilter/",
-    "conf": "/etc/spamfilter/conf",
-    "logs": "/etc/spamfilter/logs",
-    "backups": "/etc/spamfilter/backups",
-    "scripts": "/etc/spamfilter/core/scripts"
+    "base": "/home/admin/",
+    "conf": "/home/admin/conf",
+    "logs": "/home/admin/logs",
+    "backups": "/home/admin/backups",
+    "scripts": "/home/admin/core/scripts"
 }
