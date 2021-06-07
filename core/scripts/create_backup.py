@@ -1,5 +1,4 @@
-#!/var/www/spamfilter/venv/bin/python3
-import json
+#!/var/www/spamfilter/venv/bin/python3.7import json
 import os
 import sys
 
