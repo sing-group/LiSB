@@ -1,4 +1,4 @@
-#!/var/www/spamfilterweb/venv/bin/python3
+#!/var/www/spamfilter/venv/bin/python3
 import json
 import os
 import sys
@@ -21,8 +21,8 @@ command_schema = Schema({
 
 def create_backup(options):
     # Crate backups directory if necessary
-    base_path = "/var/www/spamfilterweb/"
-    backups_path = "/var/www/spamfilterweb/backups/"
+    base_path = "/var/www/spamfilter/"
+    backups_path = "/var/www/spamfilter/backups/"
     if not os.path.exists(backups_path):
         os.makedirs(backups_path)
 
@@ -68,7 +68,7 @@ def create_backup(options):
 
     # Add info to backups log file
 
-    backups_log_path = '/var/www/spamfilterweb/backups/backups_log.json'
+    backups_log_path = '/var/www/spamfilter/backups/backups_log.json'
 
     if os.path.exists(backups_log_path):
         with open(backups_log_path, 'r') as file:

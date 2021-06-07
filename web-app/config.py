@@ -1,7 +1,7 @@
 routes = {
-    "base": "/var/www/spamfilterweb/",
-    "conf": "/var/www/spamfilterweb/conf",
-    "logs": "/var/www/spamfilterweb/logs",
-    "backups": "/var/www/spamfilterweb/backups",
-    "scripts": "/var/www/spamfilterweb/core/scripts"
+    "base": "/var/www/spamfilter/",
+    "conf": "/var/www/spamfilter/conf",
+    "logs": "/var/www/spamfilter/logs",
+    "backups": "/var/www/spamfilter/backups",
+    "scripts": "/var/www/spamfilter/core/scripts"
 }

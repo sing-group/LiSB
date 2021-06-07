@@ -3,10 +3,8 @@ import os
 import json
 import re
 import signal
-import sys
 import subprocess
 import psutil
-import waitress
 
 from schema import SchemaError
 from config import routes
@@ -420,11 +418,3 @@ def internal_server_error(e):
     return render_template('errors/500.html'), 500
 
 
-if __name__ == '__main__':
-    # Append core module to path and import it
-    sys.path.insert(1, routes['base'])
-    import core
-
-    # Run web app
-    app.secret_key = os.urandom(24)
-    waitress.serve(app, host='0.0.0.0', port=80)

@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web-app/spamfilterweb.ini" afterDir="false" />
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Archivo de configuración uWSGI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/scripts/create_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/create_backup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/scripts/restore_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/restore_backup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/launcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +130,7 @@
       <workItem from="1622901952170" duration="23030000" />
       <workItem from="1622966172298" duration="9060000" />
       <workItem from="1622986518577" duration="11803000" />
-      <workItem from="1623066597742" duration="3257000" />
+      <workItem from="1623066597742" duration="4436000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -259,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623067518178</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Archivo de configuración uWSGI">
+      <created>1623072196020</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1623072196020</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +308,7 @@
     <MESSAGE value="Intentando desplegar con waitress" />
     <MESSAGE value="Despliegue sin HTTPS" />
     <MESSAGE value="Cambio de directorio para despliegue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambio de directorio para despliegue" />
+    <MESSAGE value="Archivo de configuración uWSGI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Archivo de configuración uWSGI" />
   </component>
 </project>
