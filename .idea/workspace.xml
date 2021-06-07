@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +123,7 @@
       <workItem from="1622901952170" duration="23030000" />
       <workItem from="1622966172298" duration="9060000" />
       <workItem from="1622986518577" duration="11803000" />
-      <workItem from="1623066597742" duration="5655000" />
+      <workItem from="1623066597742" duration="7014000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -280,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623073406960</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Cambios en requirements.txt">
+      <created>1623074718881</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1623074718881</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +325,7 @@
     <MESSAGE value="Archivo de configuración uWSGI" />
     <MESSAGE value="Cambio de rutas" />
     <MESSAGE value="Cambio de ejeutable de python" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambio de ejeutable de python" />
+    <MESSAGE value="Cambios en requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en requirements.txt" />
   </component>
 </project>

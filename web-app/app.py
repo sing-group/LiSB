@@ -50,7 +50,12 @@ def start_server():
     is_running = check_running_process('launcher.py')
     if not is_running:
         launcher_path = os.path.join(routes['base'], 'launcher.py')
-        subprocess.Popen(['nohup', launcher_path], stdout=open('/dev/null'))
+        subprocess.Popen(
+            ['nohup', launcher_path],
+            cwd=routes['base'],
+            stdout=open('/dev/null', 'w'),
+            stderr=open('errors.log', 'w')
+        )
         return jsonify({"msg": "The server was started"}), 200
     else:
         return jsonify({"msg": "The server was already running"}), 400
@@ -416,5 +421,3 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('errors/500.html'), 500
-
-
