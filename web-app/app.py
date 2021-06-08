@@ -110,10 +110,10 @@ def edit_conf_file(filename):
         return redirect(f"/conf/{filename}")
 
 
-@app.route('/ajax/real-time-monitor/<int:timestamp>')
+@app.route('/ajax/real-time-monitor/<timestamp>')
 def real_time_monitor(timestamp):
     # Convert JS timestamp to datetime
-    last_log_timestamp = datetime.datetime.fromtimestamp(timestamp / 1000)
+    last_log_timestamp = datetime.datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S,%f")
 
     # Open current log file if any and get logs whose timestamp is greater than the one received
     response = []

@@ -68,28 +68,18 @@ function update_logs(last_logs) {
         }
 
         // Update last time with last timestamp
-        last_timestamp = parse_datetime(log['timestamp']);
+        last_timestamp = log['timestamp'];
     }
 }
 
-function parse_datetime(to_parse) {
-    utc = to_parse.replace(" ", "T");
-    splitted = utc.split(",");
-    return Date.parse(splitted[0]) + parseInt(splitted[1]);
-}
-
 function convert_to_utc_timestamp(date) {
-    return new Date(
-        date.getUTCFullYear(),
-        date.getUTCMonth(),
-        date.getUTCDate(),
-        date.getUTCHours(),
-        date.getUTCMinutes(),
-        date.getUTCSeconds(),
-        date.getUTCMilliseconds()
-    ).getTime();
+    return [date.getUTCFullYear(), fix_date_zeros(date.getUTCMonth() + 1) , fix_date_zeros(date.getUTCDate())].join('-') + " " +
+        [fix_date_zeros(date.getUTCHours()), fix_date_zeros(date.getUTCMinutes()), fix_date_zeros(date.getUTCSeconds())].join(':') + "," + date.getUTCMilliseconds();
 }
 
+function fix_date_zeros(d){
+    return (d<10) ? "0" + d : d;
+}
 function clear_logs() {
     // Restore contents
     logs_div.innerHTML = "<p id=\"no-logs-yet-msg\">Waiting for events...</p>";

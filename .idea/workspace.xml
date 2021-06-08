@@ -7,6 +7,7 @@
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/static/js/monitor_server_status.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/js/monitor_server_status.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +151,8 @@
       <workItem from="1623066597742" duration="9004000" />
       <workItem from="1623083143118" duration="6845000" />
       <workItem from="1623145863592" duration="1817000" />
-      <workItem from="1623148676338" duration="14427000" />
+      <workItem from="1623148676338" duration="15490000" />
+      <workItem from="1623176592543" duration="2027000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -376,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623167468917</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Quitado import erróneo">
+      <created>1623174982752</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1623174982753</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
