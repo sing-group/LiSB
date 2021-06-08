@@ -3,6 +3,7 @@ import threading
 import multiprocessing
 import logging
 import time
+from queue import Empty
 
 from core.EmailEnvelope import EmailEnvelope
 from core.GracefulKiller import GracefulKiller
@@ -59,10 +60,13 @@ class MailForwarder:
 
                 # Continue will not killed or if still has msgs to forward
                 while not killer.kill_now or not msgs.empty():
-                    msg = msgs.get()
-                    logging.info(f"Forwarding message")
-                    server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
-                    logging.info(f"Message forwarded")
+                    try:
+                        msg = msgs.get(timeout=5)
+                        logging.info(f"Forwarding message")
+                        server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
+                        logging.info(f"Message forwarded")
+                    except Empty:
+                        logging.debu(f"Woken up but no emails to forward. Going back to sleep...")
 
                 server.close()
             except TimeoutError as e:

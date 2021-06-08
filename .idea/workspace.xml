@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/MailForwarder.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/MailForwarder.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +150,7 @@
       <workItem from="1623083143118" duration="6845000" />
       <workItem from="1623145863592" duration="1817000" />
       <workItem from="1623148676338" duration="15490000" />
-      <workItem from="1623176592543" duration="2795000" />
+      <workItem from="1623176592543" duration="3604000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -391,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623178786705</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Descomentado envío de emails en MailForwarder.py">
+      <created>1623180250782</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1623180250782</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +416,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adaptación scripts backups a web. Listar y crear backups desde web." />
     <MESSAGE value="Restauración de backups" />
     <MESSAGE value="Restauración de backups y mensajes de error" />
     <MESSAGE value="restore_backup.py actualiza logs de backups" />
@@ -435,6 +440,7 @@
     <MESSAGE value="Server start arreglado" />
     <MESSAGE value="Inicio de servidor con systemd" />
     <MESSAGE value="Quitado import erróneo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quitado import erróneo" />
+    <MESSAGE value="Descomentado envío de emails en MailForwarder.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Descomentado envío de emails en MailForwarder.py" />
   </component>
 </project>
