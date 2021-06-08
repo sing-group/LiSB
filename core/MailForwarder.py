@@ -66,7 +66,7 @@ class MailForwarder:
                         server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
                         logging.info(f"Message forwarded")
                     except Empty:
-                        logging.debu(f"Woken up but no emails to forward. Going back to sleep...")
+                        logging.debug(f"Woken up but no emails to forward. Going back to sleep...")
 
                 server.close()
             except TimeoutError as e:
