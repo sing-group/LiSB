@@ -8,7 +8,6 @@ import sys
 
 import psutil
 
-from pystemd.systemd1 import Unit
 from schema import SchemaError
 from config import routes
 from flask import Flask, render_template, request, redirect, flash, jsonify, abort

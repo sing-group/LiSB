@@ -7,7 +7,6 @@
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/static/js/monitor_server_status.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/static/js/monitor_server_status.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +150,7 @@
       <workItem from="1623066597742" duration="9004000" />
       <workItem from="1623083143118" duration="6845000" />
       <workItem from="1623145863592" duration="1817000" />
-      <workItem from="1623148676338" duration="10990000" />
+      <workItem from="1623148676338" duration="11722000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -363,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623153468288</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Inicio de servidor con systemd">
+      <created>1623166815562</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1623166815562</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +388,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Monitorización de eventos pasados" />
     <MESSAGE value="Ordenación de log files según contenidos, arreglado bug conexión a SMTP remoto en logging, simplificación logging.json conf por compatibilidad con web" />
     <MESSAGE value="Adaptación scripts backups a web. Listar y crear backups desde web." />
     <MESSAGE value="Restauración de backups" />
@@ -407,6 +412,7 @@
     <MESSAGE value="Carga de secret key" />
     <MESSAGE value="Error app.be solucionado" />
     <MESSAGE value="Server start arreglado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Server start arreglado" />
+    <MESSAGE value="Inicio de servidor con systemd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inicio de servidor con systemd" />
   </component>
 </project>
