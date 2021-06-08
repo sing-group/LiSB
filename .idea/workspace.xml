@@ -150,7 +150,7 @@
       <workItem from="1623066597742" duration="9004000" />
       <workItem from="1623083143118" duration="6845000" />
       <workItem from="1623145863592" duration="1817000" />
-      <workItem from="1623148676338" duration="11722000" />
+      <workItem from="1623148676338" duration="14427000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -369,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623166815562</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Quitado import erróneo">
+      <created>1623167468917</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1623167468917</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +395,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ordenación de log files según contenidos, arreglado bug conexión a SMTP remoto en logging, simplificación logging.json conf por compatibilidad con web" />
     <MESSAGE value="Adaptación scripts backups a web. Listar y crear backups desde web." />
     <MESSAGE value="Restauración de backups" />
     <MESSAGE value="Restauración de backups y mensajes de error" />
@@ -413,6 +419,7 @@
     <MESSAGE value="Error app.be solucionado" />
     <MESSAGE value="Server start arreglado" />
     <MESSAGE value="Inicio de servidor con systemd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inicio de servidor con systemd" />
+    <MESSAGE value="Quitado import erróneo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quitado import erróneo" />
   </component>
 </project>
