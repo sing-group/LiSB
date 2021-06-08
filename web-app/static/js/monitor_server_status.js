@@ -1,4 +1,4 @@
-var last_timestamp = convert_to_utc_timestamp(new Date())
+var last_timestamp = convert_to_utc_timestamp(new Date());
 var logs_div;
 var status_msg;
 var status_button;
@@ -68,15 +68,14 @@ function update_logs(last_logs) {
         }
 
         // Update last time with last timestamp
-        let last_datetime = parse_datetime(log['timestamp']);
-        last_timestamp = convert_to_utc_timestamp(last_datetime);
+        last_timestamp = parse_datetime(log['timestamp']);
     }
 }
 
 function parse_datetime(to_parse) {
     utc = to_parse.replace(" ", "T");
     splitted = utc.split(",");
-    return new Date(Date.parse(splitted[0]) + parseInt(splitted[1]));
+    return Date.parse(splitted[0]) + parseInt(splitted[1]);
 }
 
 function convert_to_utc_timestamp(date) {

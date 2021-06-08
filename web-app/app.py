@@ -8,6 +8,7 @@ import sys
 
 import psutil
 
+from pystemd.systemd1 import Unit
 from schema import SchemaError
 from config import routes
 from flask import Flask, render_template, request, redirect, flash, jsonify, abort
@@ -52,12 +53,9 @@ def start_server():
     # Run launcher if not yet launched and redirect to control panel
     is_running = check_running_process('launcher.py')
     if not is_running:
-        launcher_path = os.path.join(routes['base'], 'launcher.py')
-        subprocess.Popen(
-            [launcher_path, '1>/dev/null', '2>/dev/null', '&'],
-            cwd=routes['base'],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL
+        process = subprocess.run(
+            "sudo /usr/bin/systemctl restart spamfilterserver.service 1>/dev/null 2>/dev/null &",
+            shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
         )
         return jsonify({"msg": "The server was started"}), 200
     else:
