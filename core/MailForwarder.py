@@ -59,9 +59,9 @@ class MailForwarder:
 
                 # Continue will not killed or if still has msgs to forward
                 while not killer.kill_now or not msgs.empty():
-                    # msg = msgs.get()
+                    msg = msgs.get()
                     logging.info(f"Forwarding message")
-                    # server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
+                    server.sendmail(from_addr=msg.mail_from, to_addrs=msg.rcpt_tos, msg=msg.email_msg.as_bytes())
                     logging.info(f"Message forwarded")
 
                 server.close()
