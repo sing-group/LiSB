@@ -1,4 +1,4 @@
-var last_timestamp = Date.now()
+var last_timestamp = convert_to_utc_timestamp(new Date())
 var logs_div;
 var status_msg;
 var status_button;
@@ -14,6 +14,7 @@ document.addEventListener(
         no_logs_msg = document.getElementById('no-logs-yet-msg');
     }
 )
+
 
 function do_monitoring_ajax_query() {
     $.ajax({
@@ -67,14 +68,27 @@ function update_logs(last_logs) {
         }
 
         // Update last time with last timestamp
-        last_timestamp = parse_datetime(log['timestamp']);
+        let last_datetime = parse_datetime(log['timestamp']);
+        last_timestamp = convert_to_utc_timestamp(last_datetime);
     }
 }
 
 function parse_datetime(to_parse) {
     utc = to_parse.replace(" ", "T");
     splitted = utc.split(",");
-    return Date.parse(splitted[0]) + parseInt(splitted[1]);
+    return new Date(Date.parse(splitted[0]) + parseInt(splitted[1]));
+}
+
+function convert_to_utc_timestamp(date) {
+    return new Date(
+        date.getUTCFullYear(),
+        date.getUTCMonth(),
+        date.getUTCDate(),
+        date.getUTCHours(),
+        date.getUTCMinutes(),
+        date.getUTCSeconds(),
+        date.getUTCMilliseconds()
+    ).getTime();
 }
 
 function clear_logs() {

@@ -1,4 +1,4 @@
-#!/var/www/spamfilter/venv/bin/python3.7
+#!/var/www/spamfilter/venv/bin/python
 import json
 import os
 import sys
@@ -28,7 +28,7 @@ def create_backup(options):
 
     # Create GZ-compressed local TAR backup file of information specified by '--to-backup'
     to_backup = ['conf', 'data', 'logs'] if '--to-backup' not in options else options['--to-backup']
-    backup_name = "backup" + datetime.now().strftime("%Y%m%d%H%M%S") + ".tar.gz"
+    backup_name = "backup" + datetime.utcnow().strftime("%Y%m%d%H%M%S") + ".tar.gz"
     backup_file_path = backups_path + backup_name
     print("Creating backup...")
     backed_up = []
@@ -78,7 +78,7 @@ def create_backup(options):
 
     backups_log[backup_name] = {
         'backed-up': backed_up,
-        'timestamp': datetime.now().strftime("%Y-%m-%d, %H:%M:%S"),
+        'timestamp': datetime.utcnow().strftime("%Y-%m-%d, %H:%M:%S"),
         'uploaded-to-s3': uploaded
     }
 

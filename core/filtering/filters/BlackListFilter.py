@@ -47,7 +47,7 @@ class BlackListFilter(PastFilter):
         :param data: the data to be filtered by expiry date and then loaded
         """
         filtered_data = {}
-        current_date = datetime.datetime.now()
+        current_date = datetime.datetime.utcnow()
         for peer in data["ip_addresses"]:
             peer_expiry_date = datetime.datetime.fromisoformat(data["ip_addresses"][peer]["expiry_date"])
             if peer_expiry_date > current_date:
@@ -62,7 +62,7 @@ class BlackListFilter(PastFilter):
         """
         if self.data["ip_addresses"].get(peer_ip) is None:
             self.data["ip_addresses"][peer_ip] = {}
-            self.data["ip_addresses"][peer_ip]["expiry_date"] = (datetime.datetime.now() + \
+            self.data["ip_addresses"][peer_ip]["expiry_date"] = (datetime.datetime.utcnow() + \
                                                                  datetime.timedelta(
                                                                      days=self.black_listed_days
                                                                  )).isoformat()

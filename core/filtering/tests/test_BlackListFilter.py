@@ -17,7 +17,7 @@ class TestBlackListFilter(TestCase):
         self.ip_in_bl_range = '1.19.1.25'
         data["ip_addresses"] = {
             self.bad_ip: {
-                "expiry_date": (datetime.datetime.now() + \
+                "expiry_date": (datetime.datetime.utcnow() + \
                                 datetime.timedelta(
                                     days=10
                                 )).isoformat(),

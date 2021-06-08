@@ -6,6 +6,7 @@ import logging.handlers
 import os
 import re
 import socket
+import time
 from os import listdir
 from smtplib import SMTP
 
@@ -89,6 +90,7 @@ forwarding_schema = Schema(
     }
 )
 
+
 def get_local_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.connect(("8.8.8.8", 80))
@@ -125,12 +127,17 @@ def load_server_config():
     return conf
 
 
+class UTCFormatter(logging.Formatter):
+    converter = time.gmtime
+
+
 default_logging_conf = {
     "version": 1,
     "formatters": {
         "default": {
-            "format": "[ %(asctime)s ] [ %(levelname)s ] [ %(module)s : %(threadName)s ] %(message)s"
-        }
+            "format": "[ %(asctime)s ] [ %(levelname)s ] [ %(module)s : %(threadName)s ] %(message)s",
+            "()": UTCFormatter
+        },
     },
     "handlers": {
         "console": {

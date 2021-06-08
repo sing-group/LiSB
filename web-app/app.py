@@ -52,8 +52,9 @@ def start_server():
     # Run launcher if not yet launched and redirect to control panel
     is_running = check_running_process('launcher.py')
     if not is_running:
+        launcher_path = os.path.join(routes['base'], 'launcher.py')
         subprocess.Popen(
-            ['./launcher.py', '1>/dev/null', '2>/dev/null', '&'],
+            [launcher_path, '1>/dev/null', '2>/dev/null', '&'],
             cwd=routes['base'],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL
