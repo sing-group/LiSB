@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/filtering/filters/NaiveBayesFilter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/filtering/filters/RandomForestFilter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/NaiveBayesFilter.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/RandomForestFilter.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/forwarding.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/forwarding.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/server_params.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/server_params.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/EmailEnvelope.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/EmailEnvelope.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/filtering/FilteringManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/FilteringManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/filtering/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +154,7 @@
       <workItem from="1623323724491" duration="2886000" />
       <workItem from="1623403777077" duration="723000" />
       <workItem from="1623426955753" duration="4699000" />
-      <workItem from="1623669798359" duration="876000" />
+      <workItem from="1623669798359" duration="1429000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -427,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623181069776</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Integración AIFilters">
+      <created>1623670704083</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1623670704083</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +441,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Restauración de backups y mensajes de error" />
     <MESSAGE value="restore_backup.py actualiza logs de backups" />
     <MESSAGE value="Iniciar y parar servidor desde web. Graceful shutdown." />
     <MESSAGE value="Quitar script de test" />
@@ -471,6 +465,7 @@
     <MESSAGE value="Quitado import erróneo" />
     <MESSAGE value="Descomentado envío de emails en MailForwarder.py" />
     <MESSAGE value="Timeout en MailForwarder.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Timeout en MailForwarder.py" />
+    <MESSAGE value="Integración AIFilters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integración AIFilters" />
   </component>
 </project>
