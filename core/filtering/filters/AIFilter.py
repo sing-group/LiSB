@@ -1,3 +1,4 @@
+import logging
 import jsonpickle
 from core.EmailEnvelope import EmailEnvelope
 from core.filtering.filters.PastFilter import PastFilter
@@ -32,4 +33,7 @@ class AIFilter(PastFilter):
         :return: if 1 then is spam and return true, else false
         """
         email_params = envelope.ai_matrix_for_email()
-        return True if self.data.predict([email_params]) == [1] else False
+        is_spam = True if self.data.predict([email_params]) == [1] else False
+        if is_spam:
+            logging.info(f"An AIFilter has detected the email as spam")
+        return is_spam

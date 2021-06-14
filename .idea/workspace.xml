@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/filtering/filters/NaiveBayesFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/NaiveBayesFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/filtering/filters/RandomForestFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/RandomForestFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +156,7 @@
       <workItem from="1623323724491" duration="2886000" />
       <workItem from="1623403777077" duration="723000" />
       <workItem from="1623426955753" duration="4699000" />
-      <workItem from="1623669798359" duration="2411000" />
+      <workItem from="1623669798359" duration="3756000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -441,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623671352728</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Despliegue AIFilters">
+      <created>1623672560915</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1623672560915</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +464,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="restore_backup.py actualiza logs de backups" />
     <MESSAGE value="Iniciar y parar servidor desde web. Graceful shutdown." />
     <MESSAGE value="Quitar script de test" />
     <MESSAGE value="Estilo con CSS" />
@@ -485,6 +488,7 @@
     <MESSAGE value="Descomentado envío de emails en MailForwarder.py" />
     <MESSAGE value="Timeout en MailForwarder.py" />
     <MESSAGE value="Integración AIFilters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integración AIFilters" />
+    <MESSAGE value="Despliegue AIFilters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Despliegue AIFilters" />
   </component>
 </project>
