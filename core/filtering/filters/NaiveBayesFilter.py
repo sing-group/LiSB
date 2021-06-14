@@ -1,4 +1,4 @@
-from spamfilter.AIFilter import AIFilter
+from core.filtering.filters.AIFilter import AIFilter
 
 
 class NaiveBayesFilter(AIFilter):

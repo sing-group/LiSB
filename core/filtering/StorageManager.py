@@ -8,6 +8,7 @@ from os.path import join
 
 from core.GracefulKiller import GracefulKiller
 from core.filtering.filters.PastFilter import PastFilter
+from core.filtering.filters.AIFilter import AIFilter
 
 
 class StorageManager:
@@ -79,7 +80,7 @@ class StorageManager:
 
         for current_filter in filters:
             cls = type(current_filter)
-            if issubclass(cls, PastFilter):
+            if issubclass(cls, PastFilter) and not issubclass(cls, AIFilter):
                 to_store = current_filter.get_data()
                 file_name = cls.__name__
                 storage_mgr.store_data(file_name, to_store)

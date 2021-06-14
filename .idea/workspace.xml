@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="" />
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/filtering/filters/NaiveBayesFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/NaiveBayesFilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/filtering/filters/RandomForestFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/RandomForestFilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,7 +159,7 @@
       <workItem from="1623323724491" duration="2886000" />
       <workItem from="1623403777077" duration="723000" />
       <workItem from="1623426955753" duration="4699000" />
-      <workItem from="1623669798359" duration="1429000" />
+      <workItem from="1623669798359" duration="2411000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -422,7 +427,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623670704083</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Integración AIFilters">
+      <created>1623671244343</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1623671244343</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Integración AIFilters">
+      <created>1623671352728</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1623671352728</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

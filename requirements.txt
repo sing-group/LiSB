@@ -34,4 +34,4 @@ requests~=2.22.0
 msgpack~=0.6.2
 uWSGI~=2.0.19.1
 jsonpickle~=2.0.0
-scikit-learn~=0.24.1
+scikit-learn==0.24.1
