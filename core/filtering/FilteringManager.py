@@ -9,8 +9,9 @@ from core.EmailEnvelope import EmailEnvelope
 from core.GracefulKiller import GracefulKiller
 from core.filtering.StorageManager import StorageManager
 from core.filtering.filters.BlackListFilter import BlackListFilter
-from core.filtering.filters.PastFilter import PastFilter
 from core.filtering.filters.Filter import Filter
+from core.filtering.filters.PastFilter import PastFilter
+from core.filtering.filters.AIFilter import AIFilter
 
 
 class FilteringManager:
@@ -55,6 +56,9 @@ class FilteringManager:
                           cls.__name__ not in self.disabled_filters}
         filter_classes.pop('PastFilter')
         filter_classes.update({cls.__name__: cls for cls in PastFilter.__subclasses__() if
+                               cls.__name__ not in self.disabled_filters})
+        filter_classes.pop('AIFilter')
+        filter_classes.update({cls.__name__: cls for cls in AIFilter.__subclasses__() if
                                cls.__name__ not in self.disabled_filters})
 
         # Instantiate all Filters from filter class names and append to filters list

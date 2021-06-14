@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/core/MailForwarder.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/MailForwarder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/NaiveBayesFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filtering/filters/RandomForestFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/NaiveBayesFilter.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/RandomForestFilter.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/forwarding.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/forwarding.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/server_params.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/server_params.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/EmailEnvelope.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/EmailEnvelope.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/filtering/FilteringManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/FilteringManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/filtering/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +65,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../var/www/spamfilter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\var\www\spamfilter\data" />
+      <recent name="\\wsl$\Ubuntu-20.04\var\www\spamfilter\core\filtering\filters" />
       <recent name="\\wsl$\Ubuntu-20.04\etc\spamfilter\web-app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -150,7 +162,11 @@
       <workItem from="1623083143118" duration="6845000" />
       <workItem from="1623145863592" duration="1817000" />
       <workItem from="1623148676338" duration="15490000" />
-      <workItem from="1623176592543" duration="3903000" />
+      <workItem from="1623176592543" duration="5554000" />
+      <workItem from="1623323724491" duration="2886000" />
+      <workItem from="1623403777077" duration="723000" />
+      <workItem from="1623426955753" duration="4699000" />
+      <workItem from="1623669798359" duration="876000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -404,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623181044943</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Timeout en MailForwarder.py">
+      <created>1623181069776</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1623181069776</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

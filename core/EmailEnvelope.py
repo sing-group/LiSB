@@ -1,4 +1,5 @@
 import re
+import sys
 import dns.resolver
 from typing import Sequence
 from email.message import EmailMessage
@@ -11,6 +12,24 @@ class EmailEnvelope:
     email_msg: EmailMessage = None
     kwargs = None
     _sender_domain = None
+    all_content_types = [
+        "text/html", "text/plain", "multipart/mixed", "application/octet-stream",
+        "multipart/alternative", "multipart/related", "image/jpeg", "image/gif", "message/rfc822",
+        "text/plain charset=us-ascii", "image/png", "text/x-vcard", "image/bmp",
+        "application/x-zip-compressed", "multipart/signed", "application/pgp-signature",
+        "text/enriched", "application/ms-tnef", "video/mng", "application/x-pkcs7-signature",
+        "multipart/report", "message/delivery-status", "text/rfc822-headers",
+        "application/x-java-applet", "application/x-patch"
+    ]
+    all_extension_types = [
+        "txt", "html", "jpg", "png", "gif", "lst", "JPG", "htm", "doc", "GIF", "JPE", "b64", "BIN",
+        "Jpg", "zip", "dat", "rar", "bmp", "jpe","jpeg", "gz", "PDF.html", "url", "ng", "spec.patch",
+        "spec", "patch", "p7s", "am"
+    ]
+    checks = [
+        "ai_check_count_images", "ai_check_count_urls", "ai_check_from_equals_reply_to",
+        "ai_check_return_path_equals_from_or_tos", "ai_check_email_client_id"
+    ]
 
     def __init__(self, peer, mail_from, rcpt_tos, email_msg):
         """
@@ -26,7 +45,11 @@ class EmailEnvelope:
         self.mail_from = mail_from
         self.rcpt_tos = rcpt_tos
         self.email_msg = email_msg
-        self._sender_domain = mail_from.split("@")[1]
+        if self.get_parsed_from() is not None:
+            split_parsed_from = self.get_parsed_from().split("@")
+            self._sender_domain = None if len(split_parsed_from) != 2 else split_parsed_from[1]
+        else:
+            self._sender_domain = None
 
     def __str__(self):
         msg_verbose = "======================================================\n" \
@@ -48,7 +71,7 @@ class EmailEnvelope:
         :return: The parsed 'From' header
         """
         value = self.email_msg.get('From')
-        return EmailEnvelope.get_parsed(value)
+        return EmailEnvelope.get_parsed_email_address(value)
 
     def get_parsed_to_list(self):
         """
@@ -56,7 +79,9 @@ class EmailEnvelope:
 
         :return: The list of parsed recipients
         """
-        return [EmailEnvelope.get_parsed(to_parse) for to_parse in self.email_msg.get("To").split(",")]
+        email_tos = self.email_msg.get("To")
+        return None if email_tos is None \
+            else [EmailEnvelope.get_parsed_email_address(to_parse) for to_parse in email_tos.split(",")]
 
     def get_parsed_return_path(self):
         """
@@ -65,16 +90,16 @@ class EmailEnvelope:
         :return: The parsed 'Return-Path' header. None if the email doesn't have it.
         """
         value = self.email_msg.get('Return-Path')
-        return EmailEnvelope.get_parsed(value)
+        return EmailEnvelope.get_parsed_email_address(value)
 
     @staticmethod
-    def get_parsed(header_value):
+    def get_parsed_email_address(header_value):
         """
         This utility method parses 'From', 'To' and 'Return-Path' headers to only email format
         :param header_value: the header to be parsed
         :return: The parsed header
         """
-        if header_value is not None:
+        if header_value is not None and '@' in header_value:
             aux_list = header_value.split("<")
             list_length = len(aux_list)
             return aux_list[0] if list_length == 1 else aux_list[list_length - 1][:-1]
@@ -98,7 +123,7 @@ class EmailEnvelope:
         """
         dkim_params = {}
         dkim_data = self.email_msg.get('DKIM-Signature')
-        if  dkim_data is not None:
+        if dkim_data is not None:
             for to_parse in dkim_data.split(';'):
                 parsed = to_parse.replace("\n", "").strip().split('=')
                 dkim_params[parsed[0]] = parsed[1].strip()
@@ -133,3 +158,128 @@ class EmailEnvelope:
             for include in includes:
                 ip_ranges.extend(EmailEnvelope.get_all_domain_ip_ranges(include))
         return ip_ranges
+
+    # AI Methods
+
+    def get_content_type_frequencies(self):
+        """
+        This function reads all the existent types of content in a email
+
+        :return: dictionary with all types of content and their number of appearances
+        """
+        content_types = dict()
+
+        for type in EmailEnvelope.all_content_types:
+            content_types.__setitem__(type, 0)
+
+        for part in self.email_msg.walk():
+            content_type = part.get_content_type()
+            n = content_types.get(content_type)
+            if n is None:
+                n = 0
+            n += 1
+            content_types[content_type] = n
+        return content_types
+
+    def get_extension_frequencies(self):
+        """
+        This function reads all the existent extensions of files in a email
+
+        :return: dictionary with all types of content and their number of appearances
+        """
+        extension_types = dict()
+
+        for type in self.all_extension_types:
+            extension_types.__setitem__(type, 0)
+
+        for content in self.email_msg.walk():
+            if content.get('Content-Disposition') is not None:
+                filename = content.get_filename()
+                for extension in EmailEnvelope.all_extension_types:
+                    match = re.search(rf"\.{extension}$", str(filename))
+                    # if match is found
+                    if match:
+                        n = extension_types.get(extension)
+                        if n is None:
+                            n = 0
+                        n += 1
+                        extension_types[extension] = n
+        return extension_types
+
+    def ai_matrix_for_email(self):
+        """
+        This method build the vector of characteristics of the email.
+        This method calls each criteria function and obtains the result
+        :return: vector of characteristics of the email
+        """
+        email_matrix = []
+
+        for check in EmailEnvelope.checks:
+            check_result = getattr(self, check)()
+            email_matrix.append(check_result)
+
+        email_content_types = self.get_content_type_frequencies()
+        for content_type in self.all_content_types:
+            email_matrix.append(email_content_types.get(content_type))
+
+        email_extension_types = self.get_extension_frequencies()
+        for extension_type in self.all_extension_types:
+            email_matrix.append(email_extension_types.get(extension_type))
+
+        return email_matrix
+
+    def ai_check_count_urls(self):
+        """
+        Counter of urls appearances
+        :return: number of urls
+        """
+        num_urls = 0
+        for content in self.email_msg.get_payload():
+            num_urls += len(re.findall(r'https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+', str(content)))
+        return num_urls
+
+    def ai_check_count_images(self):
+        """
+        Counter of images appearances
+        :return: number of images
+        """
+        num_img = 0
+        for content in self.email_msg.get_payload():
+            num_img += len(re.findall(r'https?://(?:[-\w.]|/|(?:%[\da-fA-F]{2}))+\.(?:jpg|jpeg|gif|png)', str(content)))
+        return num_img
+
+    def ai_check_email_client_id(self):
+        """
+        This method calculates the hash of the sender domain. In order to obtain a positive hash, the python hash
+        is adjusted by doing the next operation: hash % ((sys.maxsize + 1) * 2)
+        Then, the hash is shortened by dividing it by the prime number 1111118111111
+        :return: hash of the sender domain.
+        """
+        email_client = self.get_sender_domain()
+        if email_client is not None:
+            hash = email_client.__hash__() % ((sys.maxsize + 1) * 2)
+            return int(round(hash / 1111118111111))
+        return 0
+
+    def ai_check_return_path_equals_from_or_tos(self):
+        """
+        This method checks if header Return-Path is different of header From
+        and header Return-Path is not in the header To
+        :return: True of False
+        """
+        parsed_return_path = self.get_parsed_return_path()
+        to_list = self.get_parsed_to_list()
+        if parsed_return_path is not None and to_list is not None:
+            return parsed_return_path != self.get_parsed_from() and parsed_return_path not in to_list
+        return False
+
+    def ai_check_from_equals_reply_to(self):
+        """
+        This method checks if header From equals to header Repply-To
+        :return: True or false
+        """
+        to_parse = self.email_msg.get('Reply-To')
+        parsed_reply_to = EmailEnvelope.get_parsed_email_address(to_parse)
+        if parsed_reply_to is not None:
+            return to_parse == self.get_parsed_from()
+        return False
