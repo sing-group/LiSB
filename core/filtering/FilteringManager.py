@@ -29,6 +29,17 @@ class FilteringManager:
     def __init__(self, enable_threading: int = 1, black_listing_threshold: int = 10,
                  black_listed_days: int = 10, time_limit: float = 1.5, storing_frequency: int = 300,
                  disabled_filters: list = [], exceptions=None, killer: GracefulKiller = None):
+        """
+        This method created a FilteringManager instance. It performs the filtering process.
+        :param enable_threading: determines whether to use threads during the filtering process.
+        :param black_listing_threshold: the number of times a sender can be detected as spam before being blacklisted
+        :param black_listed_days: the number of days a sender will be blacklisted
+        :param time_limit: the time limit in seconds for the filtering process
+        :param storing_frequency: the frequency in seconds for dumping the PastFilters data into disk
+        :param disabled_filters: a list of disabled filters
+        :param exceptions: email addresses, domains and sender IPs for which the filtering process is skipped.
+        :param killer: The GracefulKiller object for graceful shutdown
+        """
         self.enable_threading = enable_threading
         self.black_listing_threshold = black_listing_threshold
         self.black_listed_days = black_listed_days

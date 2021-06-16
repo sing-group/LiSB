@@ -92,6 +92,9 @@ forwarding_schema = Schema(
 
 
 def get_local_ip():
+    """
+    This function can be used to find the private IP address of the current device.
+    """
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.connect(("8.8.8.8", 80))
     ip = s.getsockname()[0]
@@ -100,6 +103,10 @@ def get_local_ip():
 
 
 def get_config_schema(filename) -> Schema:
+    """
+    This function is used in order to get the respective validation schema of a given file
+    :param filename: the name of the file to get validation schema for
+    """
     return globals().get(filename + "_schema")
 
 
@@ -128,9 +135,13 @@ def load_server_config():
 
 
 class UTCFormatter(logging.Formatter):
+    """
+    This class is used in order to format the logging timestamp to UTC time
+    """
     converter = time.gmtime
 
 
+# DEFAULT LOGGING CONFIGURATION
 default_logging_conf = {
     "version": 1,
     "formatters": {

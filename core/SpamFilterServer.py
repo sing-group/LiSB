@@ -1,4 +1,3 @@
-import asyncio
 import email
 import logging
 import logging.config
@@ -18,6 +17,9 @@ class SpamFilterServer(Controller):
     killer: GracefulKiller
 
     def __init__(self, conf):
+        """
+        This method creates an instance of the spam filter server
+        """
         # Create killer
         self.killer = GracefulKiller()
         # Call parent constructor with Handler and pass killer
@@ -29,6 +31,9 @@ class SpamFilterServer(Controller):
         )
 
     def launch_server(self):
+        """
+        This method launches the spam filter server instance and implements a safe shutdown mechanism
+        """
         # Star server
         self.start()
         # Wait until the process is killed
@@ -48,6 +53,11 @@ class SpamFilterHandler:
     _OK_MSG_RFC_5321 = "250 OK"
 
     def __init__(self, conf: dict, killer: GracefulKiller):
+        """
+        This method returns an instance of the spam filter handler, which implements methods for processing the SMTP transaction.
+        :param conf: The server configuration dictionary
+        :param killer: The GracefulKiller object for graceful shutdown
+        """
         logging.info("Setting up SpamFilterServer server")
         self.conf = conf
 
@@ -80,6 +90,13 @@ class SpamFilterHandler:
         logging.info("Waiting for mails to filter...")
 
     async def handle_DATA(self, server, session, envelope):
+        """
+        This asynchronous method implements the handler for the DATA part of the SMTP transaction. During this stage,
+        the filtering process is performed, resulting in the forwarding or rejecting of the received email, with the according SMTP codes.
+        :param server: The SMTP server instance
+        :param session: The session instance currently being handled
+        :param envelope: The envelope instance of the current SMTP Transaction
+        """
         logging.info("A new message has been received")
 
         # Parse message to EmailEnvelope

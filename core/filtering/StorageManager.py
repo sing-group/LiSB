@@ -89,6 +89,9 @@ class StorageManager:
     def __daemon_job(storage_mgr, filters, killer: GracefulKiller):
         """
         This static method is used by the storage daemon to wait for pending tasks to be ready to be executed
+        :param storage_mgr: the StorageManager instance to be awakened for data dumping.
+        :param filters: the list of filters
+        :param killer: The GracefulKiller object for graceful shutdown
         """
         while not killer.kill_now:
             schedule.run_pending()
