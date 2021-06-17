@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spamfilter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spamfilter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/GracefulKiller.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/GracefulKiller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/SpamFilterServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/SpamFilterServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/filtering/FilteringManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/FilteringManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/filtering/StorageManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/StorageManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/filtering/filters/NaiveBayesFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/NaiveBayesFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/filtering/filters/RandomForestFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/filtering/filters/RandomForestFilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/templates/monitor/monitor_past_logs.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/monitor/monitor_past_logs.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -169,6 +159,7 @@
       <workItem from="1623669798359" duration="4463000" />
       <workItem from="1623843798793" duration="359000" />
       <workItem from="1623844179386" duration="1775000" />
+      <workItem from="1623913022949" duration="326000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>

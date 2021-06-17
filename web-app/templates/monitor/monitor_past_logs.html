@@ -32,41 +32,41 @@
             </tbody>
         </table>
 
-        <a class="btn btn-secondary" data-toggle="modal" data-target="#filters-modal">Show available filters</a>
-        {{ pagination.info }}
-        {{ pagination.links }}
-
-        <!-- Available Filters Modal -->
-        <div class="modal fade" id="filters-modal" tabindex="-1" role="dialog"
-             aria-labelledby="filters-modal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="filters-modal-title">Available Filters</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <form id="filters-form" method="get" action="/monitor/past-logs">
-                        <div id="form-fields" class="modal-body">
-                            {% for code, label in attributes.items() %}
-                                <div class="form-group">
-                                    <label for="{{ code }}">{{ label }}</label>
-                                    <input type="txt" id="{{ code }}" name="{{ code }}">
-                                </div>
-                            {% endfor %}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Apply filters</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
     {% else %}
         <p>There aren't any logs yet.</p>
     {% endif %}
+
+    <a class="btn btn-secondary" data-toggle="modal" data-target="#filters-modal">Show available filters</a>
+    {{ pagination.info }}
+    {{ pagination.links }}
+
+    <!-- Available Filters Modal -->
+    <div class="modal fade" id="filters-modal" tabindex="-1" role="dialog"
+         aria-labelledby="filters-modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="filters-modal-title">Available Filters</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="filters-form" method="get" action="/monitor/past-logs">
+                    <div id="form-fields" class="modal-body">
+                        {% for code, label in attributes.items() %}
+                            <div class="form-group">
+                                <label for="{{ code }}">{{ label }}</label>
+                                <input type="txt" id="{{ code }}" name="{{ code }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Apply filters</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
