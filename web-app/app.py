@@ -67,9 +67,9 @@ def start_server():
 @app.route('/ajax/stop', methods=['POST'])
 def stop_server():
     # Stop server and redirect to control panel
-    spamfilter_pid = check_running_process('launcher.py')
-    if spamfilter_pid:
-        os.kill(spamfilter_pid, signal.SIGTERM)
+    lisb_pid = check_running_process('launcher.py')
+    if lisb_pid:
+        os.kill(lisb_pid, signal.SIGTERM)
         running = True
         while running:
             running = check_running_process('launcher.py')

@@ -13,7 +13,7 @@ from core.MailForwarder import MailForwarder
 from core.filtering.FilteringManager import FilteringManager
 
 
-class SpamFilterServer(Controller):
+class LiSBServer(Controller):
     killer: GracefulKiller
 
     def __init__(self, conf):
@@ -24,7 +24,7 @@ class SpamFilterServer(Controller):
         self.killer = GracefulKiller()
         # Call parent constructor with Handler and pass killer
         super().__init__(
-            handler=SpamFilterHandler(conf, self.killer),
+            handler=LiSBHandler(conf, self.killer),
             hostname=conf["server_params"]["local_ip"],
             port=conf["server_params"]["local_port"],
             server_kwargs=conf["server_params"]["SMTP_parameters"]
@@ -44,7 +44,7 @@ class SpamFilterServer(Controller):
         logging.info("Shutting down server...")
 
 
-class SpamFilterHandler:
+class LiSBHandler:
     conf: dict
     filtering_mgr: FilteringManager
     forwarder: MailForwarder
@@ -58,7 +58,7 @@ class SpamFilterHandler:
         :param conf: The server configuration dictionary
         :param killer: The GracefulKiller object for graceful shutdown
         """
-        logging.info("Setting up SpamFilterServer server")
+        logging.info("Setting up LiSBServer server")
         self.conf = conf
 
         # Create mail forwarder, which will forward valid emails
@@ -84,7 +84,7 @@ class SpamFilterHandler:
             killer=killer
         )
         logging.info(
-            f"Running SpamFilterServer server on "
+            f"Running LiSBServer server on "
             f"{(conf['server_params']['local_ip'], conf['server_params']['local_port'])}"
         )
         logging.info("Waiting for mails to filter...")

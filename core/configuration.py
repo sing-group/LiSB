@@ -218,7 +218,7 @@ def config_logging(server_conf: dict):
                 mailhost=(server_conf['forwarding']['remote_ip'], server_conf['forwarding']['remote_port']),
                 fromaddr=server_email,
                 toaddrs=admin_emails,
-                subject=f"SpamFilter server alert",
+                subject=f"LiSB server alert",
                 secure=None,
                 credentials=None
             )
