@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/communications.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/communications.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/SpamFilterServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/LiSBServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/scripts/create_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/create_backup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/scripts/restore_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/scripts/restore_backup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/launcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/spamfilterweb.ini" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/spamfilterweb.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/templates/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Renombrar a LiSB" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +158,7 @@
       <workItem from="1623843798793" duration="359000" />
       <workItem from="1623844179386" duration="1775000" />
       <workItem from="1623913022949" duration="326000" />
-      <workItem from="1647546575488" duration="1063000" />
+      <workItem from="1647546575488" duration="1386000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -466,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623674429203</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Renombrar a LiSB">
+      <created>1647547756134</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1647547756134</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +480,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Iniciar y parar servidor desde web. Graceful shutdown." />
     <MESSAGE value="Quitar script de test" />
     <MESSAGE value="Estilo con CSS" />
     <MESSAGE value="Estilos de monitorización finalizados. Start y stop esperan a acción completada." />
@@ -510,6 +504,7 @@
     <MESSAGE value="Timeout en MailForwarder.py" />
     <MESSAGE value="Integración AIFilters" />
     <MESSAGE value="Despliegue AIFilters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Despliegue AIFilters" />
+    <MESSAGE value="Renombrar a LiSB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renombrar a LiSB" />
   </component>
 </project>
