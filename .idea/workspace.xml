@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Versión de requests a 2.23.0 para evitar fallos de dependencias" />
+    <list default="true" id="0e3d417b-3bf6-435e-8afa-d1e2007baa3d" name="Default Changelist" comment="Dependencias fijas para evitar errores en instalación" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +159,7 @@
       <workItem from="1623844179386" duration="1775000" />
       <workItem from="1623913022949" duration="326000" />
       <workItem from="1647546575488" duration="4314000" />
-      <workItem from="1647633861457" duration="1716000" />
+      <workItem from="1647633861457" duration="2231000" />
     </task>
     <task id="LOCAL-00001" summary="Monitorización de eventos pasados">
       <created>1622656995185</created>
@@ -483,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647635383085</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Dependencias fijas para evitar errores en instalación">
+      <created>1647635851692</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1647635851692</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +509,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Estilos de monitorización finalizados. Start y stop esperan a acción completada." />
     <MESSAGE value="Disabled button not-allowed desde CSS" />
     <MESSAGE value="Estilos para flash messages" />
     <MESSAGE value="Despliegue web: python3.7" />
@@ -527,6 +533,7 @@
     <MESSAGE value="Renombrar a LiSB" />
     <MESSAGE value="Versión de requests a 0.23 para evitar fallos de dependencias" />
     <MESSAGE value="Versión de requests a 2.23.0 para evitar fallos de dependencias" />
-    <option name="LAST_COMMIT_MESSAGE" value="Versión de requests a 2.23.0 para evitar fallos de dependencias" />
+    <MESSAGE value="Dependencias fijas para evitar errores en instalación" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dependencias fijas para evitar errores en instalación" />
   </component>
 </project>
